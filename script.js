@@ -2,7 +2,7 @@
   
   
   function randomText () {
-    var text = ("日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｷﾑﾕﾗｾﾈｽﾀﾇﾍ:・.=*+-<>¦｜ﾘ01")
+    var text = ("日2ﾊ3ﾐ4ﾋｳ5ﾅﾓｻﾜｵﾘ6ｱﾎﾃ7ﾏｹﾒｴｷﾑ8ﾕﾗｾﾈｽ9ﾀﾇﾍﾘ01")
     letter = text[Math.floor(Math.random() * text.length)]
     return letter;
   }
