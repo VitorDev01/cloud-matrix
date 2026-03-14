@@ -55,20 +55,10 @@ alert("ACESSO NEGADO");
 
 }
 
-const audio = new Audio("Para Eles Somos Isso - Matrix  Dublado HD - Faz a Cena (youtube).mp3");
+const audio = new Audio("matrix1.mp3");
 audio.volume = 0.2;
 audio.loop = true;
 
 document.querySelector(".cloud").addEventListener("click", () => {
     audio.play();
 }, { once: true });
-
-  window.addEventListener('load', () => {
-    const audio = new Audio('Para Eles Somos Isso - Matrix  Dublado HD - Faz a Cena (youtube).mp3'); // coloque o caminho do seu mp3 aqui
-    audio.autoplay = true;
-    audio.loop = false; // se quiser que toque só uma vez
-    audio.volume = 1.0; // volume de 0.0 a 1.0
-    audio.play().catch(e => {
-      console.log('Não foi possível reproduzir o áudio automaticamente:', e);
-    });
-  });
