@@ -36,3 +36,21 @@ function rain() {
 setInterval(function(){
     rain()
 },20);
+
+  function verificarSenha(){
+
+let senha = prompt("Digite a senha de acesso:");
+
+if(senha === "matrix2026"){
+
+window.open("https://www.google.com/search?q=inurl%3At.me+intext%3Apuxadas","_blank");
+
+}
+
+else{
+
+alert("ACESSO NEGADO");
+
+}
+
+}
