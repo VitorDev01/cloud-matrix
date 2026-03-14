@@ -105,9 +105,9 @@
     }
   }
 
-  .texth1 {
+  h1 {
     color: #fff;
-    font-family: arial;
+    font-family: 'Share Tech Mono', monospace;
     text-align: center;
     margin-top: 300px;
     font-weight: 100;
