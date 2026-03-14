@@ -1,174 +1,205 @@
-  * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-  }
-
-  body {
-     justify-content: center;
-     align-items: center;
-     min-height: 100vh;
-     background: #181c1f;
-  }
-
-  .container {
-     position: relative;
-     width: 400px;
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     -webkit-box-reflex: 
-     below
-     1px linear-gradient(transparent, transparent,
-     transparent, transparent, #0005)
-     ;
-  }
-
-  .cloud {
-     display: flex;
-     position: relative;
-     margin-top: 130px;
-     width: 320px;
-     height: 100px;
-     background: #fff;
-     border-radius: 100px;
-     z-index: 100;
-     filter: drop-shadow(8px 8px 0 #0005);
-     animation: animateCloud 1s steps(1) infinite;
-  }
-
-  @keyframes animateCloud 
-  {
-    0%
-    {
-        filter: drop-shadow(8px 8px 0 #0005) drop-shadow(0 0 0 #181c1f)
-        brightness(1);
-    }
-    95%
-    {
-        filter: drop-shadow(8px 8px 0 #0005) drop-shadow(0 0 50px #fff5)
-        brightness(10);
-    }
-  }
-
-  .cloud::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 40px;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 90px 0 0 30px #fff;
-  }
-
-  .container .cloud::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #fff;
-    border-radius: 100px;
-    z-index: 1000;
-  }
-
-  .text {
-    position: absolute;
-    top: 40px;
-    color: #2ff315;
-    line-height: 20px;
-    text-transform: uppercase;
-    text-shadow: 0 0 5px #fff,
-    0 0 15px #fff
-    0 0 30px #fff;
-    transform-origin: bottom;
-    animation: animate 1s linear forwards;
-  }
-
-  @keyframes animate {
-   
-    0%
-    {
-        transform: translateY(0) scaleY(1);
-    }
-    70%
-    {
-        transform: translateY(290px) scaleY(1);
-    }
-    80%
-    {
-        transform: translateY(290px) scaleY(0);
-    }
-    100%
-    {
-        transform: translateY(290px) scaleY(0) scaleX(15);
-    }
-  }
-
-  .texth1 {
-    color: #fff;
-    font-family: 'Share Tech Mono', monospace;
-    text-align: center;
-    margin-top: 30px;
-    font-weight: 100;
-    
-  }
-
-   a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-
-  i {
-    color: #fff;
-  }
- 
-  ul {
-    font-family: 'Share Tech Mono', monospace;
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-    margin-left: 50px;
-    width: 90%;
-     
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-li {
-    font-size: 25px;
-    width: 90%;
-    height: 2em;
-    color: #fff;
-    border-left: 0.08em solid;
-    position: relative;
-    margin-top: 0.8em;
-    cursor: pointer;
+/* BODY */
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:100vh;
+  background:#181c1f;
 }
 
+/* CONTAINER */
+.container{
+  position:relative;
+  width:100%;
+  display:flex;
+  justify-content:center;
+
+  -webkit-box-reflex:
+  below 1px linear-gradient(
+  transparent,
+  transparent,
+  transparent,
+  transparent,
+  #0005
+  );
+}
+
+/* CLOUD */
+.cloud{
+  display:flex;
+  position:relative;
+  margin-top:130px;
+  width:320px;
+  height:100px;
+  background:#fff;
+  border-radius:100px;
+  z-index:100;
+
+  filter:drop-shadow(8px 8px 0 #0005);
+  animation:animateCloud 1s steps(1) infinite;
+}
+
+@keyframes animateCloud{
+
+  0%{
+    filter:drop-shadow(8px 8px 0 #0005)
+    drop-shadow(0 0 0 #181c1f)
+    brightness(1);
+  }
+
+  95%{
+    filter:drop-shadow(8px 8px 0 #0005)
+    drop-shadow(0 0 50px #fff5)
+    brightness(10);
+  }
+}
+
+/* PARTES DA NUVEM */
+.cloud::before{
+  content:'';
+  position:absolute;
+  top:-50px;
+  left:40px;
+
+  width:110px;
+  height:110px;
+
+  border-radius:50%;
+  background:#fff;
+
+  box-shadow:90px 0 0 30px #fff;
+}
+
+.container .cloud::after{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:#fff;
+  border-radius:100px;
+
+  z-index:1000;
+}
+
+/* TEXTO DA CHUVA */
+.text{
+  position:absolute;
+  top:40px;
+
+  color:#2ff315;
+  line-height:20px;
+
+  text-transform:uppercase;
+
+  text-shadow:
+  0 0 5px #fff,
+  0 0 15px #fff,
+  0 0 30px #fff;
+
+  transform-origin:bottom;
+
+  animation:animate 1s linear forwards;
+}
+
+@keyframes animate{
+
+  0%{
+    transform:translateY(0) scaleY(1);
+  }
+
+  70%{
+    transform:translateY(290px) scaleY(1);
+  }
+
+  80%{
+    transform:translateY(290px) scaleY(0);
+  }
+
+  100%{
+    transform:translateY(290px) scaleY(0) scaleX(15);
+  }
+}
+
+/* TITULO */
+.texth1{
+  color:#fff;
+  font-family:'Share Tech Mono', monospace;
+  text-align:center;
+  margin-top:30px;
+  font-weight:100;
+}
+
+/* LINKS */
+a{
+  text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+i{
+  color:#fff;
+}
+
+/* LISTA */
+ul{
+  font-family:'Share Tech Mono', monospace;
+  list-style:none;
+  text-align:center;
+
+  width:90%;
+  max-width:600px;
+}
+
+li{
+  font-size:25px;
+  width:100%;
+  height:2em;
+
+  color:#fff;
+
+  border-left:0.08em solid;
+
+  position:relative;
+  margin-top:0.8em;
+
+  cursor:pointer;
+}
+
+/* BOTÃO MATRIX */
 .matrix-btn{
-  font-family: monospace;
-  font-size: 22px;
-  width: 100%;
-  height: 60px;
 
-  color: #00ff41;
-  background: transparent;
+  font-family:'Share Tech Mono', monospace;
+  font-size:22px;
 
-  border: 2px solid #00ff41;
+  width:100%;
+  height:60px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color:#00ff41;
+  background:transparent;
 
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
+  border:2px solid #00ff41;
 
-  transition: 0.3s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:0.3s;
 }
 
 /* brilho neon */
 .matrix-btn:hover{
-  color: #000;
+
+  color:#000;
   background:#00ff41;
 
   box-shadow:
@@ -180,18 +211,21 @@ li {
 
 /* efeito energia */
 .matrix-btn::before{
+
   content:"";
   position:absolute;
+
   top:0;
   left:-100%;
+
   width:100%;
   height:100%;
 
   background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(0,255,65,0.6),
-    transparent
+  120deg,
+  transparent,
+  rgba(0,255,65,0.6),
+  transparent
   );
 
   transition:0.5s;
