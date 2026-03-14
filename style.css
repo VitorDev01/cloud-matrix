@@ -62,7 +62,9 @@ margin-top:40px;
 }
 
 ul li{
-margin:20px 0;
+margin:20px auto;
+width:90%;
+max-width:600px;
 }
 
 /* BOTÃO MATRIX */
@@ -71,10 +73,9 @@ margin:20px 0;
 
 border-color:transparent;
 height:45px;
-width:260px;
-
+width:100%px;
+max-width:600px;
 font-size:18px;
-
 display:inline-flex;
 align-items:center;
 justify-content:center;
