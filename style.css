@@ -187,3 +187,48 @@ li span {
 li:hover span {
     transform: translateX(0.15em);
 }
+
+.matrix-btn{
+  font-family: monospace;
+  font-size: 20px;
+  padding: 12px 30px;
+  color: #00ff41;
+  background: transparent;
+  border: 2px solid #00ff41;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* brilho neon */
+.matrix-btn:hover{
+  color: #000;
+  background:#00ff41;
+  box-shadow:
+  0 0 5px #00ff41,
+  0 0 10px #00ff41,
+  0 0 20px #00ff41,
+  0 0 40px #00ff41;
+}
+
+/* efeito de energia passando */
+.matrix-btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,255,65,0.6),
+    transparent
+  );
+  transition:0.5s;
+}
+
+.matrix-btn:hover::before{
+  left:100%;
+}
