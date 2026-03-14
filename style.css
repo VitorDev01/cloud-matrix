@@ -46,9 +46,9 @@ margin-top:40px;
 }
 
 /* titulo */
- h1{
-font-size: 18px;
-margin-top:20px;
+h1{
+font-size: 15px;
+font-height:400;
 line-height:1.5;
 }
 
