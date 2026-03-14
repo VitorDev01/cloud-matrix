@@ -66,6 +66,26 @@ width:90%;
 max-width:600px;
 }
 
+.icon-btn{
+
+width:120px;
+gap:15px;
+font-size:22px;
+
+}
+
+.icon-btn i{
+
+color:#00ff66;
+transition:0.3s;
+
+}
+
+.icon-btn:hover i{
+
+color:#000;
+
+}
 /* BOTÃO MATRIX */
 
 .matrix-btn{
