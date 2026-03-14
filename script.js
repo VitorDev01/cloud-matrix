@@ -63,7 +63,6 @@ document.querySelector(".cloud").addEventListener("click", () => {
     audio.play();
 }, { once: true });
 
-<script>
   window.addEventListener('load', () => {
     const audio = new Audio('Para Eles Somos Isso - Matrix  Dublado HD - Faz a Cena (youtube).mp3'); // coloque o caminho do seu mp3 aqui
     audio.autoplay = true;
@@ -73,5 +72,3 @@ document.querySelector(".cloud").addEventListener("click", () => {
       console.log('Não foi possível reproduzir o áudio automaticamente:', e);
     });
   });
-</script>
- 
