@@ -54,3 +54,12 @@ alert("ACESSO NEGADO");
 }
 
 }
+
+const audio = new Audio("matrix.mp3");
+
+audio.loop = true;
+audio.volume = 0.2;
+
+document.addEventListener("click", () => {
+audio.play();
+});
