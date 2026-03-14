@@ -2,11 +2,9 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     
   }
 
   body {
-     font-family: 'Share Tech Mono', monospace;
      justify-content: center;
      align-items: center;
      min-height: 100vh;
@@ -126,6 +124,7 @@
   }
  
   ul {
+    font-family: 'Share Tech Mono', monospace;
     padding: 0;
     list-style-type: none;
     text-align: center;
@@ -135,6 +134,7 @@
 }
 
 li {
+    font-family: 'Share Tech Mono', monospace;
     font-size: 25px;
     width: 90%;
     height: 2em;
