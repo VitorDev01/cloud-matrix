@@ -39,9 +39,9 @@ setInterval(function(){
 
   function verificarSenha(){
 
-let senha = prompt("Digite a senha de acesso:");
+let senha = prompt("Parece que vc não tem permissão aqui :):");
 
-if(senha === "matrix2026"){
+if(senha === "40028922"){
 
 window.open("https://www.google.com/search?q=inurl%3At.me+intext%3Apuxadas","_blank");
 
