@@ -144,17 +144,25 @@ li {
     cursor: pointer;
 }
 
-
 .matrix-btn{
   font-family: monospace;
-  font-size: 20px;
-  padding: 12px 30px;
+  font-size: 22px;
+  width: 100%;
+  height: 60px;
+
   color: #00ff41;
   background: transparent;
+
   border: 2px solid #00ff41;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   cursor: pointer;
   position: relative;
   overflow: hidden;
+
   transition: 0.3s;
 }
 
@@ -162,6 +170,7 @@ li {
 .matrix-btn:hover{
   color: #000;
   background:#00ff41;
+
   box-shadow:
   0 0 5px #00ff41,
   0 0 10px #00ff41,
@@ -169,7 +178,7 @@ li {
   0 0 40px #00ff41;
 }
 
-/* efeito de energia passando */
+/* efeito energia */
 .matrix-btn::before{
   content:"";
   position:absolute;
@@ -177,12 +186,14 @@ li {
   left:-100%;
   width:100%;
   height:100%;
+
   background:linear-gradient(
     120deg,
     transparent,
     rgba(0,255,65,0.6),
     transparent
   );
+
   transition:0.5s;
 }
 
