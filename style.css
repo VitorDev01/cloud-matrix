@@ -7,6 +7,38 @@ text-align:center;
 color:white;
 }
 
+/* NUVEM */
+
+.cloud{
+width:200px;
+height:60px;
+background:#dcdcdc;
+border-radius:50px;
+position:relative;
+box-shadow:10px 10px 0 rgba(0,0,0,0.3);
+}
+
+.cloud::before{
+content:'';
+position:absolute;
+top:-30px;
+left:30px;
+width:80px;
+height:80px;
+background:#dcdcdc;
+border-radius:50%;
+}
+
+.cloud::after{
+content:'';
+position:absolute;
+top:-20px;
+right:30px;
+width:100px;
+height:100px;
+background:#dcdcdc;
+border-radius:50%;
+}
 /* container da nuvem */
 
 .container{
