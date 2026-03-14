@@ -54,11 +54,11 @@ alert("ACESSO NEGADO");
 }
 
 }
-const audio = new Audio("matrix.mp3");
 
+const audio = new Audio("matrix.mp3");
 audio.volume = 0.2;
 audio.loop = true;
 
-document.addEventListener("click", () => {
+document.querySelector(".cloud").addEventListener("click", () => {
     audio.play();
 }, { once: true });
