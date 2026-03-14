@@ -1,37 +1,38 @@
-  
-  
-  
-  function randomText () {
+function randomText () {
     var text = ("日2ﾊ3ﾐ4ﾋｳ5ﾅﾓｻﾜｵﾘ6ｱﾎﾃ7ﾏｹﾒｴｷﾑ8ﾕﾗｾﾈｽ9ﾀﾇﾍﾘ01")
-    letter = text[Math.floor(Math.random() * text.length)]
+    let letter = text[Math.floor(Math.random() * text.length)]
     return letter;
-  }
+}
 
-  
-  function rain() {
+function rain() {
+
     let cloud = document.querySelector('.cloud');
 
     let e = document.createElement('div');
 
     let left = Math.floor(Math.random() * 315);
-
     let size = Math.random() * 1.5;
+
+    /* variáveis que faltavam */
+    let height = Math.random() * 50;
+    let duration = Math.random() * 1;
 
     e.classList.add('text');
     cloud.appendChild(e);
 
-    e.innerText = randomText()
+    e.innerText = randomText();
+
     e.style.left = left + 'px';
     e.style.fontSize = 0.7 + size + 'em';
-   
     e.style.height = 0.5 + height + 'px';
-    e.style.animationDuration = 1+duration+'s';
+    e.style.animationDuration = 1 + duration + 's';
 
-    setTimeout(function() {
+    setTimeout(function(){
         cloud.removeChild(e);
     },2000)
-   } 
 
-  setInterval(function() {
+}
+
+setInterval(function(){
     rain()
-  },10);
+},20);
