@@ -200,3 +200,20 @@ color:#001a0f;
 a{
 text-decoration:none;
 }
+
+audio {
+  background-color: #000;            /* fundo preto */
+  color: #00FF00;                    /* letras verdes */
+  border: 2px solid #00FF00;         /* borda verde */
+  border-radius: 5px;                /* cantos arredondados */
+  width: 300px;                      /* largura do player */
+  height: 40px;                       /* altura do player */
+  outline: none;
+  box-shadow: 0 0 5px #00FF00;       /* brilho leve */
+}
+
+audio:focus {
+  box-shadow: 0 0 15px #00FF00;      /* brilho maior ao focar */
+  border-color: #00FF00;
+}
+
