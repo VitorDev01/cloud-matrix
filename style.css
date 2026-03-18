@@ -100,8 +100,8 @@ font-size:18px;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-text-shadow:0 0 6px #00ff66;
 color:#00ff66;
+text-shadow:0 0 3px #00ff66;
 text-decoration:none;
 
 background:linear-gradient(
