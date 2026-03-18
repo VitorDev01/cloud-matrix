@@ -1,5 +1,5 @@
 body{
-background:#0d1a1f;
+background:#020b0a;
 font-family:'Share Tech Mono', monospace;
 margin:0;
 padding:0;
@@ -100,7 +100,7 @@ font-size:18px;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-
+text-shadow:0 0 6px #00ff66;
 color:#00ff66;
 text-decoration:none;
 
