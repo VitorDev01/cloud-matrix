@@ -15,13 +15,15 @@ position:absolute;
 top:40px;
 
 color:#00ff66;
+text-shadow:0 0 5px #00ff66,
+0 0 10px #00ff66,
+0 0 20px #00ff66;
 
 font-family:'Share Tech Mono', monospace;
 
 animation:rain 2s linear forwards;
 
 }
-
 /* animação da queda */
 
 @keyframes rain{
