@@ -100,14 +100,14 @@ font-size:18px;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-color:#00ff66;
-text-shadow:0 0 3px #00ff66;
+color:#2ecc71;
+text-shadow:0 0 2px #2ecc71;
 text-decoration:none;
 
 background:linear-gradient(
 90deg,
-rgba(0,255,120,0.25),
-rgba(0,255,120,0.05)
+rgba(46,204,113,0.20),
+rgba(46,204,113,0.05)
 );
 
 border:2px solid #00ff66;
