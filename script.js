@@ -41,7 +41,7 @@ setInterval(function(){
 
 let senha = prompt("Parece que vc não tem permissão aqui :):");
 
-if(senha === "40028922"){
+if(senha === "adminadmin"){
 
 window.open("https://www.google.com/search?q=inurl%3At.me+intext%3Apuxadas","_blank");
 
