@@ -54,12 +54,6 @@ Respeite sempre a privacidade, a legislação e a ética ao realizar qualquer ti
 
 ---
 
-## 📌 Acesso ao projeto
-
-🔗 https://vitordev01.github.io/cloud-matrix/
-
----
-
 ## 📈 Futuras melhorias
 
 - 🔍 Sistema de busca interna
@@ -87,3 +81,11 @@ Desenvolvido por VitorDev01
 ## 🟢 Status do projeto
 
 🚧 Em desenvolvimento
+
+## 📌 Deploy
+
+Este projeto utiliza GitHub Pages para hospedagem.
+
+A versão em produção é sempre mantida atualizada com os arquivos mais recentes:
+
+🔗 https://vitordev01.github.io/cloud-matrix/
