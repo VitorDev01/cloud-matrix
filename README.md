@@ -1,1 +1,88 @@
-# links-investiga-o
+# 🟢 Cloud Matrix OSINT
+
+Cloud Matrix é um hub de ferramentas OSINT (Open Source Intelligence) desenvolvido para centralizar recursos de investigação digital em um único lugar.
+
+O projeto reúne diversas ferramentas úteis para coleta e análise de informações públicas na internet, organizadas de forma simples, rápida e acessível.
+
+---
+
+## 🚀 Funcionalidades
+
+- 🔎 Busca por ferramentas OSINT
+- 🧠 Organização por categorias
+- 🌐 Links diretos para ferramentas externas
+- 📱 Interface simples e responsiva
+- 🟢 Estilo visual inspirado no tema Matrix / hacker
+
+---
+
+## 📂 Categorias
+
+O Cloud Matrix organiza as ferramentas em categorias como:
+
+- 🔎 **Busca por Imagem**
+- 👤 **Username / Nickname**
+- 📱 **Telefone**
+- 🌐 **Redes Sociais**
+- 🇧🇷 **Dados Públicos (Brasil)**
+- 📧 **Email**
+- 🌍 **Geolocalização**
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## 🎯 Objetivo
+
+O objetivo do projeto é facilitar o acesso a ferramentas OSINT, ajudando investigadores, estudantes e profissionais de cibersegurança a encontrarem recursos de forma rápida e organizada.
+
+---
+
+## ⚠️ Aviso
+
+Este projeto tem fins **educacionais e informativos**.
+
+O uso das ferramentas listadas é de total responsabilidade do usuário.  
+Respeite sempre a privacidade, a legislação e a ética ao realizar qualquer tipo de investigação.
+
+---
+
+## 📌 Acesso ao projeto
+
+🔗 https://vitordev01.github.io/cloud-matrix/
+
+---
+
+## 📈 Futuras melhorias
+
+- 🔍 Sistema de busca interna
+- ⭐ Sistema de favoritos
+- 🧩 Adição de novas ferramentas
+- 🌙 Modo dark aprimorado
+- 📊 Organização avançada por tags
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!
+
+Sinta-se livre para abrir uma issue ou enviar um pull request com melhorias.
+
+---
+
+## 🧠 Autor
+
+Desenvolvido por VitorDev01
+
+---
+
+## 🟢 Status do projeto
+
+🚧 Em desenvolvimento
