@@ -93,6 +93,7 @@ color:#000;
 .matrix-btn{
 
 border-color:transparent;
+border-radius:6px;
 height:45px;
 width:100%;
 max-width:600px;
@@ -195,7 +196,7 @@ transform:scale(1,1);
 /* hover principal */
 
 .matrix-btn:hover{
-
+border-radius: 6px;
 background:#00ff66;
 color:#001a0f;
 
