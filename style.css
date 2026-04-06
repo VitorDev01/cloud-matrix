@@ -202,3 +202,74 @@ color:#001a0f;
 a{
 text-decoration:none;
 }
+
+.btn-blue{
+
+border:2px solid #0077ff;
+
+color:#00aaff;
+
+background:linear-gradient(
+90deg,
+rgba(0,30,60,0.8),
+rgba(0,120,255,0.2)
+);
+
+text-shadow:
+0 0 5px #00aaff,
+0 0 10px #0077ff;
+
+height:45px;
+width:100%;
+max-width:600px;
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+font-size:18px;
+text-decoration:none;
+
+border-radius:6px;
+
+transition:0.4s;
+
+position:relative;
+
+}
+
+.btn-blue:hover{
+
+background:#00aaff;
+color:#001a2b;
+
+box-shadow:
+0 0 10px #00aaff,
+0 0 25px #0077ff,
+0 0 50px #0055ff;
+
+transform:scale(1.03);
+
+}
+
+.btn-blue::after{
+
+content:'';
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+border:1px solid rgba(0,170,255,0.5);
+
+opacity:0;
+transition:0.3s;
+
+}
+
+.btn-blue:hover::after{
+opacity:1;
+}
