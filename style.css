@@ -8,10 +8,12 @@ color:white;
 }
 /*passarinhos*/
 .birds {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: -25px; 
+  left: 50%;
   gap: 20px;
-  margin-bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
 }
 
 .birds i {
