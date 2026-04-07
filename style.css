@@ -77,6 +77,8 @@ margin-top:40px;
 .img-app {
   width: 300px;
   border-radius: 20px;
+  display: block;
+  margin: 10px auto; /* centraliza e aproxima */
 
   filter: 
     drop-shadow(0 0 5px #00ff00)
