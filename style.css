@@ -304,12 +304,11 @@ opacity:1;
       color: #00ff00;
       padding: 12px 50px 12px 12px;
       width: 100%;
-      max-width: 600px;
       outline: none;
       font-size: 16px;
       font-family: "Courier New", monospace;
       border-radius: 6px;
-
+      padding: 14px 60px 14px 12px;
       box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
       box-sizing: border-box;
     }
