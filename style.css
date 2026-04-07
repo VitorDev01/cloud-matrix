@@ -287,17 +287,21 @@ opacity:1;
 
 /*caixa insta*/
 .box {
+      text-align: center;
+    }
+
     .input-wrapper {
       position: relative;
       display: inline-block;
-      width: 100%;
+      width: 90%;
+      max-width: 400px;
     }
 
     input {
       background: black;
       border: 1px solid #00ff00;
       color: #00ff00;
-      padding: 12px 50px 12px 12px; /* espaço pro botão */
+      padding: 12px 50px 12px 12px;
       width: 100%;
       outline: none;
       font-size: 16px;
@@ -336,11 +340,6 @@ opacity:1;
       box-shadow: 0 0 5px #00ff00;
     }
 
-    .enter-btn:hover {
-      background: #00ff00;
-      color: black;
-      box-shadow: 0 0 10px #00ff00;
-    }
     .enter-btn:hover {
       background: #00ff00;
       color: black;
