@@ -124,3 +124,64 @@ archiveInput.addEventListener("keypress", function(event) {
 });
 
 archiveBtn.addEventListener("click", buscarArchive);
+
+//animação h1
+
+const lines = [
+"(root㉿vitor)-[~/©vitordev01]",
+"└─# Hub Ferramentas OSINT",
+"└─# Busca Reversa IMG",
+"└─# Dados em Geral",
+"└─# Redes / WiFi"
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const speed = 50;
+
+function typeEffect() {
+  const el = document.querySelector(".typing");
+
+  let currentLine = lines[lineIndex];
+
+  if (!isDeleting) {
+    el.innerHTML = lines
+      .slice(0, lineIndex)
+      .join("<br>") +
+      (lineIndex > 0 ? "<br>" : "") +
+      currentLine.substring(0, charIndex++);
+
+  } else {
+    el.innerHTML = lines
+      .slice(0, lineIndex)
+      .join("<br>") +
+      (lineIndex > 0 ? "<br>" : "") +
+      currentLine.substring(0, charIndex--);
+  }
+
+  if (!isDeleting && charIndex === currentLine.length) {
+    setTimeout(() => {
+      if (lineIndex < lines.length - 1) {
+        lineIndex++;
+        charIndex = 0;
+      } else {
+        isDeleting = true;
+      }
+    }, 800);
+  }
+
+  else if (isDeleting && charIndex === 0) {
+    if (lineIndex > 0) {
+      lineIndex--;
+      charIndex = lines[lineIndex].length;
+    } else {
+      isDeleting = false;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 30 : speed);
+}
+
+typeEffect();
+
