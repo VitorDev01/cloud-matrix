@@ -54,6 +54,63 @@ alert("ACESSO NEGADO");
 }
 
 }
+//animação h1
+
+const lines = [
+"(root㉿vitor)-[~/©vitordev01]",
+"└─# Hub Ferramentas OSINT",
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const speed = 50;
+
+function typeEffect() {
+  const el = document.querySelector(".typing");
+
+  let currentLine = lines[lineIndex];
+
+  if (!isDeleting) {
+    el.innerHTML = lines
+      .slice(0, lineIndex)
+      .join("<br>") +
+      (lineIndex > 0 ? "<br>" : "") +
+      currentLine.substring(0, charIndex++);
+
+  } else {
+    el.innerHTML = lines
+      .slice(0, lineIndex)
+      .join("<br>") +
+      (lineIndex > 0 ? "<br>" : "") +
+      currentLine.substring(0, charIndex--);
+  }
+
+  if (!isDeleting && charIndex === currentLine.length) {
+    setTimeout(() => {
+      if (lineIndex < lines.length - 1) {
+        lineIndex++;
+        charIndex = 0;
+      } else {
+        isDeleting = true;
+      }
+    }, 800);
+  }
+
+  else if (isDeleting && charIndex === 0) {
+    if (lineIndex > 0) {
+      lineIndex--;
+      charIndex = lines[lineIndex].length;
+    } else {
+      isDeleting = false;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 40 : speed);
+}
+
+typeEffect();
+
 
 //caixa insta
 const input = document.getElementById("usernameInput");
@@ -125,60 +182,22 @@ archiveInput.addEventListener("keypress", function(event) {
 
 archiveBtn.addEventListener("click", buscarArchive);
 
-//animação h1
+//curtidos do insta
+function buscar() {
+  const user = document.getElementById("userInput").value.trim();
 
-const lines = [
-"(root㉿vitor)-[~/©vitordev01]",
-"└─# Hub Ferramentas OSINT",
-];
+  if (user === "") return;
 
-let lineIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const speed = 50;
+  const query = `user liked by ${user} instagram`;
+  const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
 
-function typeEffect() {
-  const el = document.querySelector(".typing");
-
-  let currentLine = lines[lineIndex];
-
-  if (!isDeleting) {
-    el.innerHTML = lines
-      .slice(0, lineIndex)
-      .join("<br>") +
-      (lineIndex > 0 ? "<br>" : "") +
-      currentLine.substring(0, charIndex++);
-
-  } else {
-    el.innerHTML = lines
-      .slice(0, lineIndex)
-      .join("<br>") +
-      (lineIndex > 0 ? "<br>" : "") +
-      currentLine.substring(0, charIndex--);
-  }
-
-  if (!isDeleting && charIndex === currentLine.length) {
-    setTimeout(() => {
-      if (lineIndex < lines.length - 1) {
-        lineIndex++;
-        charIndex = 0;
-      } else {
-        isDeleting = true;
-      }
-    }, 800);
-  }
-
-  else if (isDeleting && charIndex === 0) {
-    if (lineIndex > 0) {
-      lineIndex--;
-      charIndex = lines[lineIndex].length;
-    } else {
-      isDeleting = false;
-    }
-  }
-
-  setTimeout(typeEffect, isDeleting ? 40 : speed);
+  window.open(url, "_blank");
 }
 
-typeEffect();
+// ENTER também funciona
+document.getElementById("userInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    buscar();
+  }
+});
 
