@@ -102,9 +102,9 @@ line-height:1.5;
   color: #00ff00;
 
   text-shadow:
-    0 0 5px #00ff00,
-    0 0 10px #00ff00,
-    0 0 20px #00ff00;
+    0 0 3px #00ff00,
+    0 0 6px #00aa00,
+    0 0 10px #00aa00;
 }
 
 /* cursor piscando */
