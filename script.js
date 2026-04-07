@@ -41,7 +41,7 @@ setInterval(function(){
 
 let senha = prompt("Parece que vc não tem permissão aqui :):");
 
-if(senha === "adminadmin"){
+if(senha === "vocemeachou"){
 
 window.open("https://www.google.com/search?q=inurl%3At.me+intext%3Apuxadas","_blank");
 
@@ -54,3 +54,26 @@ alert("ACESSO NEGADO");
 }
 
 }
+
+//caixa insta
+const input = document.getElementById("usernameInput");
+  const btn = document.getElementById("enterBtn");
+
+  function abrirPerfil() {
+    let username = input.value.trim();
+
+    if (username !== "") {
+      let url = "https://threads.net/@" + username;
+      window.open(url, "_blank");
+    } else {
+      alert("Digite um usuário válido.");
+    }
+  }
+
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      abrirPerfil();
+    }
+  });
+
+  btn.addEventListener("click", abrirPerfil);
