@@ -288,13 +288,14 @@ opacity:1;
 /*caixa insta*/
 .box {
       text-align: center;
+      width: 100%;
     }
 
     .input-wrapper {
       position: relative;
       display: inline-block;
       width: 100%;
-      max-width: 400px;
+      max-width: 600px;
     }
 
     input {
@@ -303,6 +304,7 @@ opacity:1;
       color: #00ff00;
       padding: 12px 50px 12px 12px;
       width: 100%;
+      max-width: 600px;
       outline: none;
       font-size: 16px;
       font-family: "Courier New", monospace;
