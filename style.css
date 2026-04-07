@@ -75,10 +75,14 @@ margin-top:40px;
 }
 /*img*/
 .img-app {
-  width: 300px; /* tamanho médio tipo app */
-  height: auto;
+  width: 300px;
+  border-radius: 20px;
 
-  border-radius: 20px; /* bordas suaves estilo app */
+  filter: 
+    drop-shadow(0 0 5px #00ff00)
+    drop-shadow(0 0 10px #00ff00)
+    drop-shadow(0 0 20px #00ff00);
+}
 
   /* Neon verde matrix */
   box-shadow: 
