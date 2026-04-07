@@ -177,7 +177,7 @@ function typeEffect() {
     }
   }
 
-  setTimeout(typeEffect, isDeleting ? 30 : speed);
+  setTimeout(typeEffect, isDeleting ? 40 : speed);
 }
 
 typeEffect();
