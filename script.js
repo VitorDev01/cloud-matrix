@@ -78,7 +78,7 @@ const input = document.getElementById("usernameInput");
 
   btn.addEventListener("click", abrirPerfil);
 
-//caixa insta comentarios
+
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
@@ -101,3 +101,26 @@ searchInput.addEventListener("keypress", function(event) {
 });
 
 searchBtn.addEventListener("click", buscarTagging);
+
+//x posts
+const archiveInput = document.getElementById("archiveInput");
+const archiveBtn = document.getElementById("archiveBtn");
+
+function buscarArchive() {
+  let username = archiveInput.value.trim();
+
+  if (username !== "") {
+    let url = "https://web.archive.org/web/*/https://twitter.com/" + username + "/status/*";
+    window.open(url, "_blank");
+  } else {
+    alert("Digite um usuário válido.");
+  }
+}
+
+archiveInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    buscarArchive();
+  }
+});
+
+archiveBtn.addEventListener("click", buscarArchive);
