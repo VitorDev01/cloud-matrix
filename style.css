@@ -75,8 +75,7 @@ margin-top:40px;
 }
 /*img*/
 .img-app {
-  width: 300px;
-  border-radius: 20px;
+  width: 200px;
   display: block;
   margin: 10px auto; /* centraliza e aproxima */
 
