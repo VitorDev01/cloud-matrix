@@ -79,12 +79,10 @@ margin-top:40px;
   border-radius: 20px;
 
   filter: 
-    drop-shadow(0 0 5px #00ff00);
-    drop-shadow(0 0 10px #00ff00);
+    drop-shadow(0 0 5px #00ff00)
+    drop-shadow(0 0 10px #00ff00)
     drop-shadow(0 0 20px #00ff00);
-}
 
-  /* Neon verde matrix */
   box-shadow: 
     0 0 5px #00ff00,
     0 0 10px #00ff00,
@@ -93,6 +91,7 @@ margin-top:40px;
 
   border: 2px solid #00ff00;
 }
+
 /* titulo */
 h1{
 font-size: 15px;
