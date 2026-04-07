@@ -73,7 +73,22 @@ display:flex;
 justify-content:center;
 margin-top:40px;
 }
+/*img*/
+.img-app {
+  width: 300px; /* tamanho médio tipo app */
+  height: auto;
 
+  border-radius: 20px; /* bordas suaves estilo app */
+
+  /* Neon verde matrix */
+  box-shadow: 
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00,
+    0 0 40px #00ff00;
+
+  border: 2px solid #00ff00;
+}
 /* titulo */
 h1{
 font-size: 15px;
