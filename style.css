@@ -346,3 +346,13 @@ opacity:1;
       color: black;
       box-shadow: 0 0 10px #00ff00;
     }
+
+    @media (max-width: 600px) {
+  .input-wrapper {
+    max-width: 95%;
+  }
+
+  input {
+    font-size: 18px;
+  }
+}
