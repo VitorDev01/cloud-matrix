@@ -77,3 +77,27 @@ const input = document.getElementById("usernameInput");
   });
 
   btn.addEventListener("click", abrirPerfil);
+
+//caixa insta comentarios
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+
+function buscarTagging() {
+  let username = searchInput.value.trim();
+
+  if (username !== "") {
+    let query = username + " instagram + tagging";
+    let url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    window.open(url, "_blank");
+  } else {
+    alert("Digite um usuário válido.");
+  }
+}
+
+searchInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    buscarTagging();
+  }
+});
+
+searchBtn.addEventListener("click", buscarTagging);
