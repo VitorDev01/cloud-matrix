@@ -349,7 +349,7 @@ opacity:1;
 
     @media (max-width: 600px) {
   .input-wrapper {
-    max-width: 95%;
+    max-width: 90%;
   }
 
   input {
