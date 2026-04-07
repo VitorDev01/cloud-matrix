@@ -380,13 +380,14 @@ opacity:1;
   }
 
   .android-icon {
-  color: #00ff00;
-  font-size: 30px;
+  color: #3DDC84;
 
   text-shadow: 
-    0 0 5px #00ff00,
-    0 0 10px #00ff00,
-    0 0 20px #00ff00;
+    0 0 5px #3DDC84,
+    0 0 10px #3DDC84,
+    0 0 20px #00ff00; /* mistura com verde matrix */
+  
+  font-size: 30px;
 }
 
   input {
