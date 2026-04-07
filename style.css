@@ -8,13 +8,10 @@ color:white;
 }
 /*passarinhos*/
 .birds {
-  margin:20px auto;
-  width:90%;
-  max-width:600px;
-  top: auto;
-  gap: 30px;
-  transform: translateX(-50%);
-  display: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px; /* espaço entre pássaros e h1 */
 }
 
 .birds i {
