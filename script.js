@@ -130,9 +130,6 @@ archiveBtn.addEventListener("click", buscarArchive);
 const lines = [
 "(root㉿vitor)-[~/©vitordev01]",
 "└─# Hub Ferramentas OSINT",
-"└─# Busca Reversa IMG",
-"└─# Dados em Geral",
-"└─# Redes / WiFi"
 ];
 
 let lineIndex = 0;
