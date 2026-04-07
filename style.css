@@ -8,7 +8,7 @@ color:white;
 }
 /*passarinhos*/
 .birds {
-  position: absolute;
+  position: relative;
   top: -25px; 
   left: 50%;
   gap: 20px;
