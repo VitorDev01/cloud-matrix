@@ -14,10 +14,10 @@ color:white;
 position:absolute;
 top:40px;
 
-color:#00ff66;
-text-shadow:0 0 5px #00ff66,
-0 0 10px #00ff66,
-0 0 20px #00ff66;
+color:#00aa00;
+text-shadow: 0 0 10px #00ff00, inset 0 0 10px #00ff0,
+0 0 10px #00aa00,
+0 0 20px #00aa00;
 
 font-family:'Share Tech Mono', monospace;
 
