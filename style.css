@@ -86,12 +86,38 @@ margin-top:40px;
 }
 
 /* titulo */
-h1{
+/*h1{
 font-size: 15px;
 font-weight:400;
 line-height:1.5;
+}*/
+
+.terminal {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
 }
 
+.typing {
+  color: #00ff00;
+
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
+}
+
+/* cursor piscando */
+.typing::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 /* lista de links */
 
 ul{
