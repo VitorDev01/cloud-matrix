@@ -9,8 +9,8 @@ color:white;
 /*passarinhos*/
 .birds {
   position: relative;
-  top: -21px; 
-  margin-right:50px;
+  top: -18px; 
+  margin-left:50px;
   gap: 30px;
   transform: translateX(-50%);
   display: center;
