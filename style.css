@@ -284,3 +284,54 @@ transition:0.3s;
 .btn-blue:hover::after{
 opacity:1;
 }
+
+/*caixa insta*/
+.box {
+
+    input {
+      background: black;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      padding: 12px 45px 12px 12px; /* espaço pro botão */
+      width: 280px;
+      outline: none;
+      font-size: 16px;
+      font-family: "Courier New", monospace;
+      border-radius: 6px;
+
+      box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
+    }
+
+    input::placeholder {
+      color: #00aa00;
+    }
+
+    input:focus {
+      box-shadow: 0 0 10px #00ff00, inset 0 0 10px #00ff00;
+    }
+
+    input {
+      caret-color: #00ff00;
+    }
+
+    .enter-btn {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-family: "Courier New", monospace;
+
+      box-shadow: 0 0 5px #00ff00;
+    }
+
+    .enter-btn:hover {
+      background: #00ff00;
+      color: black;
+      box-shadow: 0 0 10px #00ff00;
+    }
