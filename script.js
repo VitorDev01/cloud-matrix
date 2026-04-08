@@ -235,3 +235,24 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Input com id userInput não encontrado no HTML");
   }
 });
+
+//caixa spotify
+function buscarSpotify() {
+  const user = document
+    .getElementById("userSpotify")
+    .value.trim()
+    .replace("@", "");
+
+  if (user === "") return;
+
+  const url = `https://open.spotify.com/user/${user}`;
+  window.open(url, "_blank");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Alt" && !e.repeat) {
+      buscarSpotify();
+    }
+  });
+});
