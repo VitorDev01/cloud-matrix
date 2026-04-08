@@ -184,20 +184,37 @@ archiveBtn.addEventListener("click", buscarArchive);
 
 //curtidos do insta
 function buscar() {
-  const user = document.getElementById("userInput").value.trim();
+  const input = document.getElementById("userInput");
 
-  if (user === "") return;
+  if (!input) {
+    console.error("Input não encontrado");
+    return;
+  }
 
-  const query = `user liked by ${user} instagram`;
-  const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+  const user = input.value.trim();
+
+  if (user === "") {
+    alert("Digite um usuário");
+    return;
+  }
+
+  const query = `${user} liked by instagram`;
+  const url = "https://www.google.com/search?q=" + encodeURIComponent(query);
 
   window.open(url, "_blank");
 }
 
-// ENTER também funciona
-document.getElementById("userInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    buscar();
+// ENTER funcionando
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("userInput");
+
+  if (input) {
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        buscar();
+      }
+    });
+  } else {
+    console.error("Input com id userInput não encontrado no HTML");
   }
 });
-
