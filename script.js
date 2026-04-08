@@ -111,6 +111,23 @@ function typeEffect() {
 
 typeEffect();
 
+//caixa pinterest
+function buscarPinterest() {
+  const user = document.getElementById("userPinterest").value.trim();
+
+  if (user === "") return;
+
+  const url = `https://www.pinterest.com/${user}/`;
+
+  window.open(url, "_blank");
+}
+
+// ENTER também funciona
+document.getElementById("userPinterest").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    buscarPinterest();
+  }
+});
 
 //caixa insta
 const input = document.getElementById("usernameInput");
