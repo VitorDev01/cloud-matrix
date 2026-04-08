@@ -249,10 +249,3 @@ function buscarSpotify() {
   window.open(url, "_blank");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Alt" && !e.repeat) {
-      buscarSpotify();
-    }
-  });
-});
