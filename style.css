@@ -144,7 +144,7 @@ font-size:22px;
 
 .icon-btn i{
 
-color:#00ff66;
+color:#00ff00;
 transition:0.3s;
 
 }
@@ -177,11 +177,11 @@ rgba(46,204,113,0.20),
 rgba(46,204,113,0.05)
 );
 
-border:2px solid #00ff66;
+border:2px solid #00ff00;
 
 box-shadow:
 0 0 5px #00ff66,
-inset 0 0 5px #00ff66;
+inset 0 0 5px #00ff00;
 
 position:relative;
 
