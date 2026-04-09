@@ -129,6 +129,18 @@ function buscarWhats() {
   }
 }
 
+// caixa id google maps
+function buscarGoogleMaps() {
+  let id = document.getElementById("userGoogleId").value.trim();
+
+  if (id === "") return;
+
+  const url = `https://www.google.com/maps/contrib/${id}`;
+
+  // funciona melhor em todos dispositivos
+  window.location.href = url;
+}
+
 //caixa pinterest
 function buscarPinterest() {
   const user = document.getElementById("userPinterest").value.trim();
