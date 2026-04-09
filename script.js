@@ -119,8 +119,8 @@ function buscarWhats() {
   // remove tudo que não for número
   numero = numero.replace(/\D/g, "");
 
-  const url = `https://wa.me/${numero}`;
-  window.open(url, "_blank");
+  window.location.href = url;
+  const url = `https://api.whatsapp.com/send?phone=${numero}`;
 }
 
 //caixa pinterest
