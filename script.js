@@ -118,8 +118,7 @@ function buscarWhats() {
 
   // remove tudo que não for número
   numero = numero.replace(/\D/g, "");
-
-  window.location.href = url;
+  const url = `https://wa.me/${numero}`;
   const url = `https://api.whatsapp.com/send?phone=${numero}`;
 }
 
