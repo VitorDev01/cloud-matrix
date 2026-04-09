@@ -116,10 +116,17 @@ function buscarWhats() {
 
   if (numero === "") return;
 
-  // remove tudo que não for número
   numero = numero.replace(/\D/g, "");
-  const url = `https://wa.me/${numero}`;
-  const url = `https://api.whatsapp.com/send?phone=${numero}`;
+
+  // detecta se é mobile
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    const url = `https://api.whatsapp.com/send?phone=${numero}`;
+    window.location.href = url; // abre no mobile
+  } else {
+    alert("Essa função é melhor usada no celular 📱");
+  }
 }
 
 //caixa pinterest
