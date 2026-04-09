@@ -5,6 +5,11 @@ margin:0;
 padding:0;
 text-align:center;
 color:white;
+
+display: flex;
+flex-direction: column;
+ align-items: center;
+
 }
 /*passarinhos*/
 .birds {
@@ -357,9 +362,10 @@ opacity:1;
 
     .input-wrapper {
       position: relative;
-      display: inline-block;
+      display: block;
       width: 100%;
       max-width: 600px;
+      margin: 10px auto; /* centraliza */
     }
 
     input {
