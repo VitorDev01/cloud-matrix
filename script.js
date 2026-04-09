@@ -129,15 +129,14 @@ function buscarWhats() {
   }
 }
 
-// caixa id google maps
-function buscarGoogleMaps() {
-  let id = document.getElementById("userGoogleId").value.trim();
+// caixa id gmail
+function abrirEmail() {
+  let email = document.getElementById("userEmail").value.trim();
 
-  if (id === "") return;
+  if (email === "") return;
 
-  const url = `https://www.google.com/maps/contrib/${id}`;
+  const url = `mailto:${email}`;
 
-  // funciona melhor em todos dispositivos
   window.location.href = url;
 }
 
