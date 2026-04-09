@@ -110,6 +110,18 @@ function typeEffect() {
 }
 
 typeEffect();
+//caixa zap
+function buscarWhats() {
+  let numero = document.getElementById("userWhats").value.trim();
+
+  if (numero === "") return;
+
+  // remove tudo que não for número
+  numero = numero.replace(/\D/g, "");
+
+  const url = `https://wa.me/${numero}`;
+  window.open(url, "_blank");
+}
 
 //caixa pinterest
 function buscarPinterest() {
