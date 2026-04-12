@@ -296,21 +296,20 @@ function buscarMulti() {
 }
 
 //dorcks avançados
-function buscarAvancado() {
-  let user = document.getElementById("userDork").value.trim();
-  if (!user) return;
+function buscarMulti() {
+  let username = document.getElementById("userMulti").value.trim();
+  if (!username) return;
 
-  const dorks = [
-    `"${user}"`,
-    `"${user}" site:instagram.com`,
-    `"${user}" site:twitter.com`,
-    `"${user}" filetype:pdf`,
-    `"${user}" "@gmail.com"`,
-    `"${user}" vazamento`
+  const sites = [
+    "https://reddit.com/user/",
+    "https://tiktok.com/@",
+    "https://www.youtube.com/@"
   ];
 
-  dorks.forEach(d => {
-    window.open("https://www.google.com/search?q=" + encodeURIComponent(d), "_blank");
+  sites.forEach((site, i) => {
+    setTimeout(() => {
+      window.open(site + username, "_blank");
+    }, i * 500); // delay
   });
 }
 
@@ -335,10 +334,7 @@ function buscarNumero() {
   numero = numero.replace(/\D/g, "");
 
   // Google
-  window.open("https://www.google.com/search?q=" + numero, "_blank");
-
-  // WhatsApp
-  window.open(`https://api.whatsapp.com/send?phone=${numero}`, "_blank");
+  window.open("https://www.google.com/search?q=" + encodeURIComponent(`"${numero}"`), "_blank");
 }
 
 //leaks
