@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Plataforma de Investigação</title>
+      <link rel="stylesheet" href="style.css">
+       <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+       <link rel="icon" type="image/png" href="osint.png">
+     <link rel="shortcut icon" href="osint.png">
+    <link rel="apple-touch-icon" href="detetive3.png"> 
+</head>
+
+<body>
+ <div class="container">
+ <div class="cloud"></div>
+</div>
+<br>
+  
+<div class="title-box">
+  <div class="birds">
+    <i class="fa-brands fa-twitter"></i>
+     <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-twitter"></i>
+</div>
+ 
+<h1 class="terminal">
+  <span class="typing"></span>
+</h1>
+
+<img src="detetive3.png" class="img-app">
+  
+<ul class="links">
+
+<li>
+<a class="matrix-btn" href="https://cybdetective.com/osintmap/" target="_blank">
+<i class="fa fa-globe"></i>&nbsp;Osint Global&nbsp;<i class="fas fa-map-marker-alt"></i>
+</a>
+</li>
+  
+<h1>└─# Busca Reversa IMG</h1>
+
+<li>
+<a class="matrix-btn" href="https://yandex.com/images/" target="_blank">
+<i class="fa-solid fa-magnifying-glass"></i> &nbsp;Yandex Images &nbsp;<i class="fa-solid fa-images"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://pimeyes.com/en" target="_blank">
+<i class="fa-solid fa-magnifying-glass"></i> &nbsp;Pin Eyes &nbsp;<i class="fa-solid fa-images"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://facecheck.id/pt" target="_blank">
+<i class="fa-solid fa-face-smile"></i>&nbspFace Check&nbsp;<i class="fa-brands fa-google"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://exiftool.org/" target="_blank">
+<i class="fa-solid fa-clock"></i>&nbsp;Meta Dados IMG&nbsp;<i class="fa-solid fa-info"></i>
+</a>
+</li>
+
+<h1>└─# Dados em Geral</h1>
+
+<li>
+<a class="matrix-btn" href="https://donodozap.com/" target="_blank">
+<i class="fa-solid fa-user"></i>&nbsp;Dono Do Zap &nbsp;<i class="fa-brands fa-whatsapp"></i>
+</a>
+</li>
+   
+<!--caixa zap-->
+<div class="input-wrapper">
+  <input type="text" id="userWhats" placeholder="(ex: 5599999999999)">
+  <button class="enter-btn" onclick="buscarWhats()"><i class="fa-brands fa-whatsapp"></i>&nbsp;enviar</button>
+</div>
+   
+<!--caixa idgoogle-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="email" id="userEmail" placeholder="gmail = foto">
+  <button class="enter-btn" onclick="abrirEmail()">Email</button>
+</div>
+
+<!--caixa spotify-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userSpotify" placeholder="Usuário Spotify">
+  <button class="enter-btn" onclick="buscarSpotify()"><i class="fa-brands fa-spotify"></i>&nbsp;Espace</button>
+</div>
+
+<!--caixa pinterest-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userPinterest" placeholder="user Pinterest">
+  <button class="enter-btn" onclick="buscarPinterest()"><i class="fa-brands fa-pinterest"></i>&nbsp;Alt</button>
+</div>
+
+<div class="box">
+  <div class="input-wrapper" style="margin-top:16px;">
+    <input type="text" id="usernameInput" placeholder="Insta user = threads">
+    <button class="enter-btn" id="enterBtn"><i class="fa-brands fa-threads"></i>&nbsp;Esc</button>
+  </div>
+</div>
+
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="searchInput" placeholder="insta user = marcado ">
+  <button class="enter-btn" id="searchBtn"><i class="fa-brands fa-instagram"></i>&nbsp;Tab</button>
+</div>
+
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userInput" placeholder="curtido pelo user">
+  <button class="enter-btn" onclick="buscar()"><i class="fa-brands fa-instagram"></i>&nbsp;Enter</button>
+</div>
+
+<!--caixa x apagdos-->
+<div class="input-wrapper" style="margin-top:15px;">
+  <input type="text" id="archiveInput" placeholder="X user Post Apagado">
+  <button class="enter-btn" id="archiveBtn"><i class="fa-brands fa-x-twitter"></i>&nbsp;Ctrl</button>
+</div>
+
+<li>
+<a class="matrix-btn icon-btn" 
+href="https://www.google.com/search?q=inurl%3At.me+intext:sejacriativo"
+target="_blank"
+onclick="verificarSenha()"
+title="Busca de dados Telegram">
+
+<i class="fa fa-search"></i>
+ Vazamentos web
+<i class="fa-solid fa-terminal"></i>
+<i class="fa-solid fa-user-secret"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://behindtheemail.com/" target="_blank">
+<i class="fa-solid fa-envelope"></i>&nbsp;Por trás Do Gmail&nbsp;<i class="fa-brands fa-google"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://epieos.com/" target="_blank">
+<i class="fa-solid fa-envelope"></i>&nbsp;Google Id+Foto&nbsp;<i class="fa-brands fa-google"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://haveibeenpwned.com/" target="_blank">
+<i class="fa-solid fa-envelope"></i>&nbsp;Gmail-Senha&nbsp;<i class="fa-solid fa-key"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral#/atendimento-eleitor" target="_blank">
+<i class="fa-solid fa-card"></i>&nbsp;Titulo De Eleitor &nbsp;<i class="fa fa-flag"></i>
+</a>
+</li>
+  
+
+<li>
+<a class="matrix-btn" href="https://cnpja.com/" target="_blank">
+<i class="fas fa-map-marker-alt"></i>&nbsp;CNPJ #01&nbsp;<i class="fa fa-book"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://srwatson.io/" target="_blank">
+<i class="fas fa-map-marker-alt"></i>&nbsp;CNPJ Sr Watson&nbsp;<i class="fa fa-hat-cowboy"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://whatsmyname.app/" target="_blank">
+?WhAtS My NaMe? 
+</a>
+</li>
+  
+
+<li>
+<a class="matrix-btn" href="https://www.jusbrasil.com.br/consulta-processual/?_gl=1*1tj7bu8*_gcl_au*MTMyODY3ODcwNC4xNzY4OTQzMDgyLjE1MTY2NTcxOTguMTc2ODk0MzEzMC4xNzY4OTQzMTI5*_ga*NjAxMTQ2MDAwLjE3Njg5NDMwODE.*_ga_QCSXBQ8XPZ*czE3Njg5NDMwODIkbzEkZzEkdDE3Njg5NDMxMjkkajEzJGwwJGgw" target="_blank">
+B.O.s &nbsp;<i class="fa-solid fa-landmark"></i>
+</a>
+</li>
+        
+<h1>└─# Redes / WiFi</h1>
+
+<li>
+<a class="btn-blue" href="https://www.siteconfiavel.com.br/" target="_blank">
+<i class="fa-regular fa-circle-xmark"></i>&nbsp;Site Fake Ou Real&nbsp;<i class="fa-solid fa-check"></i>
+</a>
+</li>
+
+<li>
+<a class="btn-blue" href="https://play.google.com/store/apps/details?id=com.medhaapps.wififtpserver&hl=pt_BR" target="_blank">
+Wifi FTP&nbsp;<i class="fa-brands fa-android android-icon"></i>
+</a>
+</li>
+
+<li>
+<a class="btn-blue" href="https://wpsapp.softonic.com.br/android" target="_blank">
+Wifi WPS&nbsp;<i class="fa-brands fa-android android-icon"></i>
+</a>
+</li>
+  
+<li>
+<a class="btn-blue" href="https://registro.br/tecnologia/ferramentas/whois/" target="_blank">
+WhoIs .br
+</a>
+</li>
+
+<li>
+<a class="btn-blue" href="https://www.maxmind.com/en/home" target="_blank">
+IP Locator
+</a>
+</li>
+        
+<li>
+<a class="btn-blue" href="https://wigle.net/" target="_blank">
+<i class="fa fa-globe"></i>&nbsp;redes www
+</a>
+</li>
+
+
+<li>
+<a class="btn-blue" href="https://protonvpn.com/pt-br/free-vpn" target="_blank">
+Proton VPN
+</a>
+</li>
+
+<li>
+<a class="btn-blue" href="https://www.fing.com/desktop/download-windows/?utm_source=fing&utm_medium=email&utm_campaign=fing_desktop" target="_blank">
+Ips No Wifi
+</a>
+</li>
+  
+<li>
+<a class="btn-blue" href="https://wigle.net/" target="_blank">
+Wifi Locator
+</a>
+</li>
+
+</ul>
+</body>
+  <script src="script.js"></script>
+</html>
