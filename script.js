@@ -285,11 +285,9 @@ function buscarMulti() {
   if (!username) return;
 
   const sites = [
-    "https://github.com/",
     "https://reddit.com/user/",
     "https://tiktok.com/@",
     "https://www.youtube.com/@",
-    "https://www.snapchat.com/add/"
   ];
 
   sites.forEach(site => {
