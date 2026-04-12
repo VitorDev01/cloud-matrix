@@ -104,11 +104,43 @@
     <button class="enter-btn" id="enterBtn"><i class="fa-brands fa-threads"></i>&nbsp;Esc</button>
   </div>
 </div>
+   
+<!--1. BLOCO: Username MULTIPLATAFORMA-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userMulti" placeholder="Username geral (multi scan)">
+  <button class="enter-btn" onclick="buscarMulti()">Multi Scan</button>
+</div>
+   
+<!--2. BLOCO: Google Dorks avançado-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userDork" placeholder="Username para dorks">
+  <button class="enter-btn" onclick="buscarAvancado()">Dorks</button>
+</div>
+   
+<!--3. BLOCO: Enumeração de Email-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userEmailEnum" placeholder="Username → emails">
+  <button class="enter-btn" onclick="buscarEmail()">Email OSINT</button>
+</div>
 
+<!--4. BLOCO: Número OSINT (Google + Zap)-->
+<div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userNumber" placeholder="Número OSINT">
+  <button class="enter-btn" onclick="buscarNumero()">Número Scan</button>
+</div>
+
+ <!--5. BLOCO: Vazamentos / Leaks-->
+ <div class="input-wrapper" style="margin-top:16px;">
+  <input type="text" id="userLeak" placeholder="Buscar vazamentos">
+  <button class="enter-btn" onclick="buscarLeaks()">Leaks</button>
+</div>
+
+<!--marcados insta-->
 <div class="input-wrapper" style="margin-top:16px;">
   <input type="text" id="searchInput" placeholder="insta user = marcado ">
   <button class="enter-btn" id="searchBtn"><i class="fa-brands fa-instagram"></i>&nbsp;Tab</button>
 </div>
+
 
 <div class="input-wrapper" style="margin-top:16px;">
   <input type="text" id="userInput" placeholder="curtido pelo user">
