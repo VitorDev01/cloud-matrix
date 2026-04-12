@@ -1,7 +1,7 @@
 function randomText () {
-    var text = ("日2ﾊ3ﾐ4ﾋｳ5ﾅﾓｻﾜｵﾘ6ｱﾎﾃ7ﾏｹﾒｴｷﾑ8ﾕﾗｾﾈｽ9ﾀﾇﾍﾘ01")
-    let letter = text[Math.floor(Math.random() * text.length)]
-    return letter;
+     var text = ("日2ﾊ3ﾐ4ﾋｳ5ﾅﾓｻﾜｵﾘ6ｱﾎﾃ7ﾏｹﾒｴｷﾑ8ﾕﾗｾﾈｽ9ﾀﾇﾍﾘ01")
+      let letter = text[Math.floor(Math.random() * text.length)]
+     return letter;
 }
 
 function rain() {
@@ -58,7 +58,8 @@ alert("ACESSO NEGADO");
 
 const lines = [
 "(root㉿vitor)-[~/©vitordev01]",
-"└─# Hub Ferramentas OSINT",
+"└─#Investigação Digital && ",
+"└─#Osint + Cyber Segurança ",
 ];
 
 let lineIndex = 0;
