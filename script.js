@@ -279,3 +279,75 @@ function buscarSpotify() {
   window.open(url, "_blank");
 }
 
+//buscar em multiplas redes 
+function buscarMulti() {
+  let username = document.getElementById("userMulti").value.trim();
+  if (!username) return;
+
+  const sites = [
+    "https://github.com/",
+    "https://reddit.com/user/",
+    "https://tiktok.com/@",
+    "https://www.youtube.com/@",
+    "https://www.snapchat.com/add/"
+  ];
+
+  sites.forEach(site => {
+    window.open(site + username, "_blank");
+  });
+}
+
+//dorcks avançados
+function buscarAvancado() {
+  let user = document.getElementById("userDork").value.trim();
+  if (!user) return;
+
+  const dorks = [
+    `"${user}"`,
+    `"${user}" site:instagram.com`,
+    `"${user}" site:twitter.com`,
+    `"${user}" filetype:pdf`,
+    `"${user}" "@gmail.com"`,
+    `"${user}" vazamento`
+  ];
+
+  dorks.forEach(d => {
+    window.open("https://www.google.com/search?q=" + encodeURIComponent(d), "_blank");
+  });
+}
+
+//gmail 
+function buscarEmail() {
+  let username = document.getElementById("userEmailEnum").value.trim();
+  if (!username) return;
+
+  const dominios = ["gmail.com", "outlook.com", "yahoo.com"];
+
+  dominios.forEach(d => {
+    let email = `${username}@${d}`;
+    window.open(`https://www.google.com/search?q="${email}"`, "_blank");
+  });
+}
+
+//phone osint
+function buscarNumero() {
+  let numero = document.getElementById("userNumber").value.trim();
+  if (!numero) return;
+
+  numero = numero.replace(/\D/g, "");
+
+  // Google
+  window.open("https://www.google.com/search?q=" + numero, "_blank");
+
+  // WhatsApp
+  window.open(`https://api.whatsapp.com/send?phone=${numero}`, "_blank");
+}
+
+//leaks
+function buscarLeaks() {
+  let user = document.getElementById("userLeak").value.trim();
+  if (!user) return;
+
+  let query = `${user} leak OR vazamento OR database`;
+  window.open("https://www.google.com/search?q=" + encodeURIComponent(query), "_blank");
+}
