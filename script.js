@@ -408,11 +408,45 @@ function buscarNumero() {
   window.open("https://www.google.com/search?q=" + encodeURIComponent(`"${numero}"`), "_blank");
 }
 
-//leaks
-function buscarLeaks() {
-  let user = document.getElementById("userLeak").value.trim();
-  if (!user) return;
+// ==================== RED ZONE (Hetero) ====================
+function buscarRedZone() {
+  let username = document.getElementById("userRed").value.trim();
+  if (!username) return alert("Digite um username!");
 
-  let query = `${user} leak OR vazamento OR database`;
-  window.open("https://www.google.com/search?q=" + encodeURIComponent(query), "_blank");
+  const redSites = [
+    "https://www.pornhub.com/model/",
+    "https://www.xvideos.com/profiles/",
+    "https://xhamster.com/users/",
+    "https://www.youporn.com/models/",
+    "https://www.redtube.com/pornstar/"   // RedTube costuma usar /pornstar/
+  ];
+
+  redSites.forEach(site => {
+    window.open(site + username, '_blank');
+  });
+}
+
+// ==================== YELLOW ZONE - Gay ====================
+function buscarYellowZone() {
+  let username = document.getElementById("userYellow").value.trim();
+  if (!username) return alert("Digite um username!");
+
+  const yellowSites = [
+    "https://www.men.com/models/",                    // Men.com
+    "https://seancody.com/models/",                   // Sean Cody
+    "https://cockyboys.com/models/",                  // CockyBoys (adicionado)
+    "https://privegay.com.br/busca?termo=",           // PriveGay (BR)
+    "https://bananasfamosas.com.br/"                  // Bananas Famosas (BR)
+  ];
+
+  yellowSites.forEach(site => {
+    let url = site + username;
+    
+    // Ajuste específico para CockyBoys (melhor formato)
+    if (site.includes("cockyboys.com")) {
+      url = `https://cockyboys.com/models/${username}.html`;
+    }
+    
+    window.open(url, '_blank');
+  });
 }
