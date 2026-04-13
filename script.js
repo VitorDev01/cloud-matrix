@@ -408,45 +408,70 @@ function buscarNumero() {
   window.open("https://www.google.com/search?q=" + encodeURIComponent(`"${numero}"`), "_blank");
 }
 
-// ==================== RED ZONE (Hetero) ====================
+// ==================== RED ZONE - Hetero ====================
+let redClickCount = 0;
+
 function buscarRedZone() {
-  let username = document.getElementById("userRed").value.trim();
-  if (!username) return alert("Digite um username!");
+  redClickCount++;
 
-  const redSites = [
-    "https://www.pornhub.com/model/",
-    "https://www.xvideos.com/profiles/",
-    "https://xhamster.com/users/",
-    "https://www.youporn.com/models/",
-    "https://www.redtube.com/pornstar/"   // RedTube costuma usar /pornstar/
-  ];
+  if (redClickCount === 3) {
+    let username = document.getElementById("userRed").value.trim();
+    
+    if (!username) {
+      alert("Digite um username!");
+      redClickCount = 0;
+      return;
+    }
 
-  redSites.forEach(site => {
-    window.open(site + username, '_blank');
-  });
+    const redSites = [
+      "https://www.pornhub.com/model/",
+      "https://www.xvideos.com/profiles/",
+      "https://xhamster.com/users/",
+      "https://www.youporn.com/models/",
+      "https://www.redtube.com/pornstar/"
+    ];
+
+    redSites.forEach(site => {
+      window.open(site + username, '_blank');
+    });
+
+    redClickCount = 0; // reseta para próxima vez
+  }
 }
 
 // ==================== YELLOW ZONE - Gay ====================
+let yellowClickCount = 0;
+
 function buscarYellowZone() {
-  let username = document.getElementById("userYellow").value.trim();
-  if (!username) return alert("Digite um username!");
+  yellowClickCount++;
 
-  const yellowSites = [
-    "https://www.men.com/models/",                    // Men.com
-    "https://seancody.com/models/",                   // Sean Cody
-    "https://cockyboys.com/models/",                  // CockyBoys (adicionado)
-    "https://privegay.com.br/busca?termo=",           // PriveGay (BR)
-    "https://bananasfamosas.com.br/"                  // Bananas Famosas (BR)
-  ];
-
-  yellowSites.forEach(site => {
-    let url = site + username;
+  if (yellowClickCount === 3) {
+    let username = document.getElementById("userYellow").value.trim();
     
-    // Ajuste específico para CockyBoys (melhor formato)
-    if (site.includes("cockyboys.com")) {
-      url = `https://cockyboys.com/models/${username}.html`;
+    if (!username) {
+      alert("Digite um username antes de clicar 3 vezes!");
+      yellowClickCount = 0;
+      return;
     }
-    
-    window.open(url, '_blank');
-  });
+
+    const yellowSites = [
+      "https://www.men.com/models/",
+      "https://seancody.com/models/",
+      "https://cockyboys.com/models/",
+      "https://privegay.com.br/busca?termo=",
+      "https://bananasfamosas.com.br/"
+    ];
+
+    yellowSites.forEach(site => {
+      let url = site + username;
+      
+      if (site.includes("cockyboys.com")) {
+        url = `https://cockyboys.com/models/${username}.html`;
+      }
+      
+      window.open(url, '_blank');
+    });
+
+    yellowClickCount = 0; // reseta
+  }
 }
