@@ -295,7 +295,7 @@ function buscarMulti() {
   });
 }
 
-//dorcks avançados
+// ====================== BUSCAR MULTI (agora só 4 sites) ======================
 function buscarMulti() {
   let username = document.getElementById("userMulti").value.trim();
   if (!username) return;
@@ -303,84 +303,12 @@ function buscarMulti() {
   const sites = [
     "https://reddit.com/user/",
     "https://tiktok.com/@",
-    "https://www.youtube.com/@"
-    // === Redes Sociais ===
-  "https://twitter.com/",
-  "https://x.com/",
-  "https://instagram.com/",
-  "https://facebook.com/",
-  "https://www.linkedin.com/in/",
-  "https://www.twitch.tv/",
-  "https://snapchat.com/add/",
-  "https://pinterest.com/",
-  "https://www.threads.net/@",
-  "https://bsky.app/profile/",
-  "https://www.tumblr.com/",
-
-  // === Plataformas de Vídeo / Streaming ===
-  "https://www.kick.com/",
-  "https://rumble.com/c/",
-  "https://www.dailymotion.com/",
-
-  // === Programação / Tech ===
-  "https://github.com/",
-  "https://gitlab.com/",
-  "https://bitbucket.org/",
-  "https://dev.to/",
-  "https://stackoverflow.com/users/", // geralmente precisa do ID, mas funciona com slug
-  "https://leetcode.com/u/",
-
-  // === Gaming ===
-  "https://steamcommunity.com/id/",
-  "https://www.epicgames.com/id/",
-  "https://psnprofiles.com/",
-  "https://xboxgamertag.com/search/",
-  "https://www.roblox.com/users/search?keyword=",
-  "https://www.nintendo.com/profile/",
-
-  // === Fóruns e Comunidades ===
-  "https://forum.arduino.cc/u/",
-  "https://www.reddit.com/user/", // já tem, mas reforçando
-  "https://myanimelist.net/profile/",
-  "https://www.deviantart.com/",
-  "https://www.flickr.com/people/",
-  "https://www.behance.net/",
-  "https://dribbble.com/",
-  "https://medium.com/@",
-
-  // === Outros Populares ===
-  "https://soundcloud.com/",
-  "https://www.spotify.com/user/", // nem sempre funciona direto
-  "https://vimeo.com/",
-  "https://www.pinterest.com/",
-  "https://www.discord.com/users/", // só funciona com ID
-  "https://onlyfans.com/",
-  "https://www.patreon.com/",
-  "https://www.gumroad.com/",
-  "https://buymeacoffee.com/",
-  "https://ko-fi.com/",
-  "https://www.cashapp.com/$",
-  "https://www.paypal.com/paypalme/",
-
-  // === Mais Globais / Regionais ===
-  "https://vk.com/",
-  "https://ok.ru/",
-  "https://weibo.com/",
-  "https://www.t.me/", // Telegram
-  "https://www.strava.com/athletes/",
-  "https://letterboxd.com/",
-  "https://www.goodreads.com/user/show/",
-  "https://www.last.fm/user/",
-  "https://www.flickr.com/photos/",
-  "https://500px.com/",
-  "https://www.chess.com/member/",
-  "https://www.lichess.org/@/"
+    "https://www.youtube.com/@",
+    "https://snapchat.com/add/"
   ];
 
-  sites.forEach((site, i) => {
-    setTimeout(() => {
-      window.open(site + username, "_blank");
-    }, i * 500); // delay
+  sites.forEach(site => {
+    window.open(site + username, "_blank");
   });
 }
 
@@ -426,8 +354,6 @@ function buscarRedZone() {
     const redSites = [
       "https://www.pornhub.com/model/",
       "https://www.xvideos.com/profiles/",
-      "https://xhamster.com/users/",
-      "https://www.youporn.com/models/",
       "https://www.redtube.com/pornstar/"
     ];
 
@@ -455,20 +381,13 @@ function buscarYellowZone() {
     }
 
     const yellowSites = [
-      "https://www.men.com/models/",
-      "https://seancody.com/models/",
-      "https://cockyboys.com/models/",
       "https://privegay.com.br/busca?termo=",
-      "https://bananasfamosas.com.br/"
+      "https://bananasfamosas.com.br/",
+      "https://musculoduro.net/?s="          // musculoduro adicionado (busca)
     ];
 
     yellowSites.forEach(site => {
       let url = site + username;
-      
-      if (site.includes("cockyboys.com")) {
-        url = `https://cockyboys.com/models/${username}.html`;
-      }
-      
       window.open(url, '_blank');
     });
 
