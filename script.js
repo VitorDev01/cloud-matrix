@@ -394,3 +394,21 @@ function buscarYellowZone() {
     yellowClickCount = 0; // reseta
   }
 }
+
+// ====================== BADOO ======================
+function buscarBadoo() {
+  let username = document.getElementById("userBadoo").value.trim();
+  if (!username) return alert("Digite um username do Badoo!");
+
+  const url = `https://www.google.com/search?q=%22${encodeURIComponent(username)}%22+site:badoo.com`;
+  window.open(url, "_blank");
+}
+
+// ====================== HORNET ======================
+function buscarHornet() {
+  let username = document.getElementById("userHornet").value.trim();
+  if (!username) return alert("Digite um username do Hornet!");
+
+  const url = `https://www.google.com/search?q=%22${encodeURIComponent(username)}%22+site:hornet.com`;
+  window.open(url, "_blank");
+}
