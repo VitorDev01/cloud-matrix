@@ -304,6 +304,77 @@ function buscarMulti() {
     "https://reddit.com/user/",
     "https://tiktok.com/@",
     "https://www.youtube.com/@"
+    // === Redes Sociais ===
+  "https://twitter.com/",
+  "https://x.com/",
+  "https://instagram.com/",
+  "https://facebook.com/",
+  "https://www.linkedin.com/in/",
+  "https://www.twitch.tv/",
+  "https://snapchat.com/add/",
+  "https://pinterest.com/",
+  "https://www.threads.net/@",
+  "https://bsky.app/profile/",
+  "https://www.tumblr.com/",
+
+  // === Plataformas de Vídeo / Streaming ===
+  "https://www.kick.com/",
+  "https://rumble.com/c/",
+  "https://www.dailymotion.com/",
+
+  // === Programação / Tech ===
+  "https://github.com/",
+  "https://gitlab.com/",
+  "https://bitbucket.org/",
+  "https://dev.to/",
+  "https://stackoverflow.com/users/", // geralmente precisa do ID, mas funciona com slug
+  "https://leetcode.com/u/",
+
+  // === Gaming ===
+  "https://steamcommunity.com/id/",
+  "https://www.epicgames.com/id/",
+  "https://psnprofiles.com/",
+  "https://xboxgamertag.com/search/",
+  "https://www.roblox.com/users/search?keyword=",
+  "https://www.nintendo.com/profile/",
+
+  // === Fóruns e Comunidades ===
+  "https://forum.arduino.cc/u/",
+  "https://www.reddit.com/user/", // já tem, mas reforçando
+  "https://myanimelist.net/profile/",
+  "https://www.deviantart.com/",
+  "https://www.flickr.com/people/",
+  "https://www.behance.net/",
+  "https://dribbble.com/",
+  "https://medium.com/@",
+
+  // === Outros Populares ===
+  "https://soundcloud.com/",
+  "https://www.spotify.com/user/", // nem sempre funciona direto
+  "https://vimeo.com/",
+  "https://www.pinterest.com/",
+  "https://www.discord.com/users/", // só funciona com ID
+  "https://onlyfans.com/",
+  "https://www.patreon.com/",
+  "https://www.gumroad.com/",
+  "https://buymeacoffee.com/",
+  "https://ko-fi.com/",
+  "https://www.cashapp.com/$",
+  "https://www.paypal.com/paypalme/",
+
+  // === Mais Globais / Regionais ===
+  "https://vk.com/",
+  "https://ok.ru/",
+  "https://weibo.com/",
+  "https://www.t.me/", // Telegram
+  "https://www.strava.com/athletes/",
+  "https://letterboxd.com/",
+  "https://www.goodreads.com/user/show/",
+  "https://www.last.fm/user/",
+  "https://www.flickr.com/photos/",
+  "https://500px.com/",
+  "https://www.chess.com/member/",
+  "https://www.lichess.org/@/"
   ];
 
   sites.forEach((site, i) => {
