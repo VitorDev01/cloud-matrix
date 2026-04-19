@@ -336,64 +336,6 @@ function buscarNumero() {
   window.open("https://www.google.com/search?q=" + encodeURIComponent(`"${numero}"`), "_blank");
 }
 
-// ==================== RED ZONE - Hetero ====================
-let redClickCount = 0;
-
-function buscarRedZone() {
-  redClickCount++;
-
-  if (redClickCount === 3) {
-    let username = document.getElementById("userRed").value.trim();
-    
-    if (!username) {
-      alert("Digite um username!");
-      redClickCount = 0;
-      return;
-    }
-
-    const redSites = [
-      "https://www.pornhub.com/model/",
-      "https://www.xvideos.com/profiles/",
-      "https://www.redtube.com/pornstar/"
-    ];
-
-    redSites.forEach(site => {
-      window.open(site + username, '_blank');
-    });
-
-    redClickCount = 0; // reseta para próxima vez
-  }
-}
-
-// ==================== YELLOW ZONE - Gay ====================
-let yellowClickCount = 0;
-
-function buscarYellowZone() {
-  yellowClickCount++;
-
-  if (yellowClickCount === 3) {
-    let username = document.getElementById("userYellow").value.trim();
-    
-    if (!username) {
-      alert("Digite um username antes de clicar 3 vezes!");
-      yellowClickCount = 0;
-      return;
-    }
-
-    const yellowSites = [
-      "https://privegay.com.br/busca?termo=",
-      "https://bananasfamosas.com.br/",
-      "https://musculoduro.net/?s="          // musculoduro adicionado (busca)
-    ];
-
-    yellowSites.forEach(site => {
-      let url = site + username;
-      window.open(url, '_blank');
-    });
-
-    yellowClickCount = 0; // reseta
-  }
-}
 
 // ====================== BADOO ======================
 function buscarBadoo() {
