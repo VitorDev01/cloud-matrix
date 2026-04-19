@@ -354,3 +354,14 @@ function buscarHornet() {
   const url = `https://www.google.com/search?q=%22${encodeURIComponent(username)}%22+site:hornet.com`;
   window.open(url, "_blank");
 }
+
+// ============== busca facebook =====================
+function buscarFacebook() {
+  const nome = document.getElementById("userFacebook").value.trim();
+
+  if (!nome) return;
+
+  const url = "https://www.facebook.com/search/people/?q=" + encodeURIComponent(nome);
+
+  window.open(url, "_blank");
+}
