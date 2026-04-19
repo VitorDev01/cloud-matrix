@@ -57,7 +57,7 @@ alert("ACESSO NEGADO");
 //animação h1
 
 const lines = [
-"(root㉿vitor)-[~/©vitordev01]",
+"(root㉿God'sEye.js)-[~/©vitordev01]",
 "└─#Investigação Digital && ",
 "└─#Osint + Cyber Segurança ",
 ];
