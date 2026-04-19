@@ -357,9 +357,19 @@ function buscarHornet() {
 
 // ============== busca facebook =====================
 function buscarFacebook() {
-  const nome = document.getElementById("userFacebook").value.trim();
+  const input = document.getElementById("userFacebook");
 
-  if (!nome) return;
+  if (!input) {
+    console.log("input não encontrado");
+    return;
+  }
+
+  const nome = input.value.trim();
+
+  if (!nome) {
+    alert("Digite um nome");
+    return;
+  }
 
   const url = "https://www.facebook.com/search/people/?q=" + encodeURIComponent(nome);
 
