@@ -358,22 +358,24 @@ opacity:1;
   background-color: #000;
 
   background-image:
-    linear-gradient(45deg, #0a0a0a 25%, #ffffff 25%, #ffffff 50%, #0a0a0a 50%, #0a0a0a 75%, #ffffff 75%, #ffffff 100%),
-    linear-gradient(-45deg, #0a0a0a 25%, #ffffff 25%, #ffffff 50%, #0a0a0a 50%, #0a0a0a 75%, #ffffff 75%, #ffffff 100%);
+    repeating-linear-gradient(0deg, #0a0a0a 0 10px, #ffffff 10px 20px),
+    repeating-linear-gradient(90deg, #0a0a0a 0 10px, #ffffff 10px 20px);
 
   background-size: 20px 20px;
-  background-position: 0 0, 0 10px;
+  background-position: 0 0, 0 0;
 
   border: 1px solid transparent;
+
+  animation: moveGrid 2s linear infinite;
 }
 
 @keyframes moveGrid {
-  from { background-position: 0 0, 0 10px, 10px -10px, -10px 0; }
-  to   { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
-}
-
-.macon-box {
-  animation: moveGrid 2s linear infinite;
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 20px 20px, -20px -20px;
+  }
 }
 /*caixa insta*/
 .box {
