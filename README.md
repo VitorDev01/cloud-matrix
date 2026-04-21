@@ -18,7 +18,7 @@ O projeto reúne diversas ferramentas úteis para coleta e análise de informaç
 ---
 
 ## 📂 Categorias
-<img width="1536" height="1024" alt="ChatGPT Image Mar 27, 2026, 09_09_28 AM" src="https://raw.githubusercontent.com/VitorDev01/cloud-matrix/refs/heads/main/detetive3.png" />
+<img width="1536" height="1024" alt="ChatGPT Image Mar 27, 2026, 09_09_28 AM" src="https://github.com/VitorDev01/cloud-matrix/blob/gh-pages/eye.png?raw=true" />
 O Cloud Matrix organiza as ferramentas em categorias como:
 
 - 🔎 **Busca por Imagem**
