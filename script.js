@@ -554,7 +554,7 @@ function rodar() {
       <p>🔢 Número base: ${reduzido}</p>
       <p>🃏 Arcano: ${arcanoNum} - ${arcanos[arcanoNum]}</p>
 
-      <p>✡️ Letra: ${hebraico[arcanoNum]}</p>
+      <p>✡️ Letra hebraica: ${hebraico[arcanoNum]}</p>
       <p>📖 Significado: ${hebraicoSignificado[arcanoNum]}</p>
     `;
 
