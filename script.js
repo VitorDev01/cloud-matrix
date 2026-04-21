@@ -228,6 +228,20 @@ archiveInput.addEventListener("keypress", function(event) {
 });
 
 archiveBtn.addEventListener("click", buscarArchive);
+//processos
+function buscarProcessos() {
+  const nome = document.getElementById("userProcesso").value.trim();
+
+  if (!nome) return;
+
+  const q = encodeURIComponent(nome);
+
+  // JusBrasil
+  window.open(`https://www.jusbrasil.com.br/busca?q=${q}`, "_blank");
+
+  // Escavador
+  window.open(`https://www.escavador.com/busca?q=${q}`, "_blank");
+}
 
 // maçonaria
 function buscarMacon() {
