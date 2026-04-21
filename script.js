@@ -513,6 +513,18 @@ function rodar() {
       7:"Descanso"
     };
 
+    // ================= PONTO DE RETORNO / NÃO RETORNO =================
+    let statusCiclo = "";
+
+    if (anos >= 21 && anos <= 25) {
+    statusCiclo = "Ponto de Retorno (fase flexível)";
+    } 
+    else if (anos >= 26 && anos <= 27) {
+    statusCiclo = "Ponto de Não Retorno (fase de fixação)";
+    }
+    else {
+    statusCiclo = "";
+    }
     // ================= SOMA =================
     let somaTotal = val.replaceAll("-","").split("")
       .reduce((a,b)=>a+parseInt(b),0);
@@ -582,8 +594,7 @@ function rodar() {
       <p>⚜︎ Geração: ${ger}</p>
 
       <p>⏱︎ Ciclo: ${ciclo}º ano - ${fases[ciclo]}</p>
-
-      <hr>
+      <p>⚖︎ Status do ciclo: ${statusCiclo}</p>
 
       <p>Ⅵ Número base: ${reduzido}</p>
       <p>🃟 Arcano: ${arcanoNum} - ${arcanos[arcanoNum]}</p>
