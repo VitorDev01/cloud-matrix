@@ -376,6 +376,7 @@ function buscarFacebook() {
   window.open(url, "_blank");
 }
 
+// osint simbólico
 function rodar() {
   let input = document.getElementById("dataNascimento");
   let res = document.getElementById("resultado");
@@ -397,7 +398,7 @@ function rodar() {
 
   setTimeout(() => {
 
-    // 🔥 parsing seguro
+    // parsing seguro
     let partes = val.split("-");
     let nascimento = new Date(partes[0], partes[1]-1, partes[2]);
 
@@ -464,6 +465,20 @@ function rodar() {
     else if (ano >= 2013) ger = "Beta";
     else ger = "Antiga";
 
+    // ================= CICLO DE 7 ANOS =================
+    let ciclo = anos % 7;
+    if (ciclo === 0) ciclo = 7;
+
+    let fases = {
+      1:"Aprendizado",
+      2:"Serviço",
+      3:"Alianças",
+      4:"Oportunidades",
+      5:"Definição",
+      6:"Bênção",
+      7:"Descanso"
+    };
+
     // ================= SOMA =================
     let somaTotal = val.replaceAll("-","").split("")
       .reduce((a,b)=>a+parseInt(b),0);
@@ -492,20 +507,55 @@ function rodar() {
     };
 
     let hebraico = {
-      1:"א",2:"ב",3:"ג",4:"ד",5:"ה",6:"ו",7:"ז",8:"ח",9:"ט",
-      10:"י",11:"כ",12:"ל",13:"מ",14:"נ",15:"ס",16:"ע",
-      17:"פ",18:"צ",19:"ק",20:"ר",21:"ש",22:"ת"
+      1:"א (Alef)",2:"ב (Bet)",3:"ג (Gimel)",4:"ד (Dalet)",
+      5:"ה (He)",6:"ו (Vav)",7:"ז (Zayin)",8:"ח (Chet)",
+      9:"ט (Tet)",10:"י (Yod)",11:"כ (Kaf)",12:"ל (Lamed)",
+      13:"מ (Mem)",14:"נ (Nun)",15:"ס (Samekh)",16:"ע (Ayin)",
+      17:"פ (Pe)",18:"צ (Tsade)",19:"ק (Qof)",20:"ר (Resh)",
+      21:"ש (Shin)",22:"ת (Tav)"
     };
 
+    let hebraicoSignificado = {
+      1:"Unidade / início",
+      2:"Casa / dualidade",
+      3:"Movimento / crescimento",
+      4:"Porta / estrutura",
+      5:"Revelação / graça",
+      6:"Conexão / ligação",
+      7:"Perfeição espiritual",
+      8:"Vida / transcendência",
+      9:"Verdade / bem",
+      10:"Ação / mão",
+      11:"Força / potencial",
+      12:"Aprendizado",
+      13:"Transformação",
+      14:"Continuidade",
+      15:"Proteção",
+      16:"Visão",
+      17:"Expressão",
+      18:"Justiça",
+      19:"Propósito",
+      20:"Liderança",
+      21:"Poder",
+      22:"Aliança"
+    };
+
+    // ================= RESULTADO =================
     res.innerHTML = `
-      <p>🧬 ${anos} anos ${meses} meses</p>
-      <p>🎂 em ${mesesRest}m ${diasRest}d</p>
-      <p>♈ ${signo(d,m)}</p>
-      <p>📊 ${ger}</p>
+      <p>🧬 Idade: ${anos} anos ${meses} meses</p>
+      <p>🎂 Aniversário em: ${mesesRest}m ${diasRest}d</p>
+      <p>♈ Signo: ${signo(d,m)}</p>
+      <p>📊 Geração: ${ger}</p>
+
+      <p>🧭 Ciclo: ${ciclo}º ano - ${fases[ciclo]}</p>
+
       <hr>
-      <p>🔢 ${reduzido}</p>
-      <p>🃏 ${arcanoNum} - ${arcanos[arcanoNum]}</p>
-      <p>✡️ ${hebraico[arcanoNum]}</p>
+
+      <p>🔢 Número base: ${reduzido}</p>
+      <p>🃏 Arcano: ${arcanoNum} - ${arcanos[arcanoNum]}</p>
+
+      <p>✡️ Letra: ${hebraico[arcanoNum]}</p>
+      <p>📖 Significado: ${hebraicoSignificado[arcanoNum]}</p>
     `;
 
   }, 800);
