@@ -513,18 +513,27 @@ function rodar() {
       7:"Descanso"
     };
 
-    // ================= PONTO DE RETORNO / NÃO RETORNO =================
-    let statusCiclo = "";
+   // ================= PONTO DE RETORNO / NÃO RETORNO =================
+let statusCiclo = "";
 
-    if (anos >= 21 && anos <= 25) {
-    statusCiclo = "Ponto de Retorno (fase flexível)";
-    } 
-    else if (anos >= 26 && anos <= 27) {
-    statusCiclo = "Ponto de Não Retorno (fase de fixação)";
-    }
-    else {
-    statusCiclo = "";
-    }
+if (anos >= 21 && anos <= 25) {
+  statusCiclo = "Ponto de Retorno";
+} 
+else if (anos >= 26 && anos <= 27) {
+  statusCiclo = "Ainda há Retorno";
+} 
+else if (anos >= 28 && anos <= 34) {
+  statusCiclo = "Não Retorno";
+} 
+else if (anos >= 35 && anos <= 41) {
+  statusCiclo = "Retorno Complicado";
+} 
+else if (anos >= 42) {
+  statusCiclo = "Ja Decidido";
+} 
+else {
+  statusCiclo = "Ciclo inicial (formação)";
+}
     // ================= SOMA =================
     let somaTotal = val.replaceAll("-","").split("")
       .reduce((a,b)=>a+parseInt(b),0);
