@@ -229,6 +229,26 @@ archiveInput.addEventListener("keypress", function(event) {
 
 archiveBtn.addEventListener("click", buscarArchive);
 
+// maçonaria
+function buscarMacon() {
+  const nome = document.getElementById("userMacon").value.trim();
+
+  if (!nome) return;
+
+  const dork = `"${nome}" (maçonaria OR maçom OR "loja maçônica" OR freemason OR freemasonry OR "masonic lodge")`;
+
+  const url = "https://www.google.com/search?q=" + encodeURIComponent(dork);
+
+  window.open(url, "_blank");
+}
+
+document.getElementById("userMacon").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    buscarMacon();
+  }
+});
+
+
 //curtidos do insta
 function buscar() {
   const input = document.getElementById("userInput");
