@@ -576,20 +576,20 @@ function rodar() {
 
     // ================= RESULTADO =================
     res.innerHTML = `
-      <p>🧬 Idade: ${anos} anos ${meses} meses</p>
-      <p>🎂 Aniversário em: ${mesesRest}m ${diasRest}d</p>
-      <p>♈ Signo: ${signo(d,m)}</p>
-      <p>📊 Geração: ${ger}</p>
+      <p>☀ Idade: ${anos} anos ${meses} meses</p>
+      <p>★ Aniversário em: ${mesesRest}m ${diasRest}d</p>
+      <p>☉ Signo: ${signo(d,m)}</p>
+      <p>⚜︎ Geração: ${ger}</p>
 
-      <p>🧭 Ciclo: ${ciclo}º ano - ${fases[ciclo]}</p>
+      <p>⏱︎ Ciclo: ${ciclo}º ano - ${fases[ciclo]}</p>
 
       <hr>
 
-      <p>🔢 Número base: ${reduzido}</p>
-      <p>🃏 Arcano: ${arcanoNum} - ${arcanos[arcanoNum]}</p>
+      <p>Ⅵ Número base: ${reduzido}</p>
+      <p>🃟 Arcano: ${arcanoNum} - ${arcanos[arcanoNum]}</p>
 
-      <p>✡️ Letra hebraica: ${hebraico[arcanoNum]}</p>
-      <p>📖 Significado: ${hebraicoSignificado[arcanoNum]}</p>
+      <p>✡ Letra hebraica: ${hebraico[arcanoNum]}</p>
+      <p>☤ Significado: ${hebraicoSignificado[arcanoNum]}</p>
     `;
 
   }, 800);
