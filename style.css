@@ -357,14 +357,9 @@ opacity:1;
 
   background-color: #000;
 
-  background-image:
-    linear-gradient(45deg,
-      rgba(255,255,255,0.12) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(255,255,255,0.12) 75%,
-      rgba(255,255,255,0.12)
-    );
+ background-image:
+  linear-gradient(0deg, rgba(255,255,255,0.35) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.35) 1px, transparent 1px);
 
   background-size: 20px 20px;
 
@@ -375,10 +370,10 @@ opacity:1;
 
 @keyframes moveGrid {
   from {
-    background-position: 0 0;
+    background-position: 0 0, 0 0;
   }
   to {
-    background-position: 20px 20px;
+    background-position: 20px 20px, -20px -20px;
   }
 }
 /*caixa insta*/
