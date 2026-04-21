@@ -475,18 +475,18 @@ function rodar() {
     let m = nascimento.getMonth() + 1;
 
     function signo(d,m){
-      if((m==3&&d>=21)||(m==4&&d<=19)) return "Áries - Fogo";
-      if((m==4&&d>=20)||(m==5&&d<=20)) return "Touro - Terra";
-      if((m==5&&d>=21)||(m==6&&d<=20)) return "Gêmeos - Ar";
-      if((m==6&&d>=21)||(m==7&&d<=22)) return "Câncer - Água";
-      if((m==7&&d>=23)||(m==8&&d<=22)) return "Leão - Fogo";
-      if((m==8&&d>=23)||(m==9&&d<=22)) return "Virgem - Terra";
-      if((m==9&&d>=23)||(m==10&&d<=22)) return "Libra - Ar";
-      if((m==10&&d>=23)||(m==11&&d<=21)) return "Escorpião - Água";
-      if((m==11&&d>=22)||(m==12&&d<=21)) return "Sagitário - Fogo";
-      if((m==12&&d>=22)||(m==1&&d<=19)) return "Capricórnio - Terra";
-      if((m==1&&d>=20)||(m==2&&d<=18)) return "Aquário - Ar";
-      return "Peixes - Água";
+      if((m==3&&d>=21)||(m==4&&d<=19)) return "Áries - Impulsivo";
+      if((m==4&&d>=20)||(m==5&&d<=20)) return "Touro - Estavel";
+      if((m==5&&d>=21)||(m==6&&d<=20)) return "Gêmeos - Comunicativo";
+      if((m==6&&d>=21)||(m==7&&d<=22)) return "Câncer - Sentimental";
+      if((m==7&&d>=23)||(m==8&&d<=22)) return "Leão - Aparente";
+      if((m==8&&d>=23)||(m==9&&d<=22)) return "Virgem - Analítico";
+      if((m==9&&d>=23)||(m==10&&d<=22)) return "Libra - Indeciso";
+      if((m==10&&d>=23)||(m==11&&d<=21)) return "Escorpião - Profundo";
+      if((m==11&&d>=22)||(m==12&&d<=21)) return "Sagitário - Viajante";
+      if((m==12&&d>=22)||(m==1&&d<=19)) return "Capricórnio - Materialista";
+      if((m==1&&d>=20)||(m==2&&d<=18)) return "Aquário - Racional";
+      return "Peixes - Espiritual";
     }
 
     // ================= GERAÇÃO =================
