@@ -377,18 +377,35 @@ function buscarFacebook() {
 }
 
 function rodar() {
-  let val = document.getElementById("dataNascimento").value;
+  let input = document.getElementById("dataNascimento");
   let res = document.getElementById("resultado");
 
-  if (!val) return;
+  if (!input || !res) {
+    console.log("Elemento não encontrado");
+    return;
+  }
 
-  // efeito scan
+  let val = input.value;
+
+  if (!val) {
+    res.innerHTML = "⚠️ Selecione uma data";
+    return;
+  }
+
   res.style.display = "block";
   res.innerHTML = "🔍 Escaneando dados...";
 
   setTimeout(() => {
 
-    let nascimento = new Date(val);
+    // 🔥 parsing seguro
+    let partes = val.split("-");
+    let nascimento = new Date(partes[0], partes[1]-1, partes[2]);
+
+    if (isNaN(nascimento)) {
+      res.innerHTML = "❌ Data inválida";
+      return;
+    }
+
     let hoje = new Date();
 
     // ================= IDADE =================
@@ -423,18 +440,18 @@ function rodar() {
     let m = nascimento.getMonth() + 1;
 
     function signo(d,m){
-      if((m==3&&d>=21)||(m==4&&d<=19)) return "Áries - Fogo (agressivo)";
-      if((m==4&&d>=20)||(m==5&&d<=20)) return "Touro - Terra (estável)";
-      if((m==5&&d>=21)||(m==6&&d<=20)) return "Gêmeos - Ar (comunicador)";
-      if((m==6&&d>=21)||(m==7&&d<=22)) return "Câncer - Água (emocional)";
-      if((m==7&&d>=23)||(m==8&&d<=22)) return "Leão - Fogo (Brilho Natural)";
-      if((m==8&&d>=23)||(m==9&&d<=22)) return "Virgem - Terra (analítico)";
-      if((m==9&&d>=23)||(m==10&&d<=22)) return "Libra - Ar (equilibrado)";
-      if((m==10&&d>=23)||(m==11&&d<=21)) return "Escorpião - Água (profundo)";
-      if((m==11&&d>=22)||(m==12&&d<=21)) return "Sagitário - Fogo (explorador)";
-      if((m==12&&d>=22)||(m==1&&d<=19)) return "Capricórnio - Terra (disciplinado)";
-      if((m==1&&d>=20)||(m==2&&d<=18)) return "Aquário - Ar (inovador)";
-      return "Peixes - Água (espiritual)";
+      if((m==3&&d>=21)||(m==4&&d<=19)) return "Áries - Fogo";
+      if((m==4&&d>=20)||(m==5&&d<=20)) return "Touro - Terra";
+      if((m==5&&d>=21)||(m==6&&d<=20)) return "Gêmeos - Ar";
+      if((m==6&&d>=21)||(m==7&&d<=22)) return "Câncer - Água";
+      if((m==7&&d>=23)||(m==8&&d<=22)) return "Leão - Fogo";
+      if((m==8&&d>=23)||(m==9&&d<=22)) return "Virgem - Terra";
+      if((m==9&&d>=23)||(m==10&&d<=22)) return "Libra - Ar";
+      if((m==10&&d>=23)||(m==11&&d<=21)) return "Escorpião - Água";
+      if((m==11&&d>=22)||(m==12&&d<=21)) return "Sagitário - Fogo";
+      if((m==12&&d>=22)||(m==1&&d<=19)) return "Capricórnio - Terra";
+      if((m==1&&d>=20)||(m==2&&d<=18)) return "Aquário - Ar";
+      return "Peixes - Água";
     }
 
     // ================= GERAÇÃO =================
@@ -447,58 +464,48 @@ function rodar() {
     else if (ano >= 2013) ger = "Beta";
     else ger = "Antiga";
 
-    // ================= SOMA TOTAL =================
+    // ================= SOMA =================
     let somaTotal = val.replaceAll("-","").split("")
       .reduce((a,b)=>a+parseInt(b),0);
 
-    // ================= ARCANO (1–22) =================
+    // ARCANO
     let arcanoNum = somaTotal;
-
     while (arcanoNum > 22) {
       arcanoNum = arcanoNum.toString().split("")
         .reduce((a,b)=>a+parseInt(b),0);
     }
 
-    // ================= REDUÇÃO (1–9) =================
+    // REDUZIDO
     let reduzido = arcanoNum;
-
     while (reduzido > 9) {
       reduzido = reduzido.toString().split("")
         .reduce((a,b)=>a+parseInt(b),0);
     }
 
-    // ================= ARCANOS =================
     let arcanos = {
-      1:"O Mago", 2:"A Sacerdotisa", 3:"A Imperatriz", 4:"O Imperador",
-      5:"O Hierofante", 6:"Os Enamorados", 7:"O Carro", 8:"A Justiça",
-      9:"O Eremita", 10:"A Roda da Fortuna", 11:"A Força", 12:"O Enforcado",
-      13:"A Morte", 14:"A Temperança", 15:"O Diabo", 16:"A Torre",
-      17:"A Estrela", 18:"A Lua", 19:"O Sol", 20:"O Julgamento",
-      21:"O Mundo", 22:"O Louco"
+      1:"O Mago",2:"A Sacerdotisa",3:"A Imperatriz",4:"O Imperador",
+      5:"O Hierofante",6:"Os Enamorados",7:"O Carro",8:"A Justiça",
+      9:"O Eremita",10:"A Roda",11:"A Força",12:"O Enforcado",
+      13:"A Morte",14:"Temperança",15:"O Diabo",16:"A Torre",
+      17:"A Estrela",18:"A Lua",19:"O Sol",20:"Julgamento",
+      21:"O Mundo",22:"O Louco"
     };
 
-    // ================= HEBRAICO =================
     let hebraico = {
-      1:"א (Alef)", 2:"ב (Bet)", 3:"ג (Gimel)", 4:"ד (Dalet)",
-      5:"ה (He)", 6:"ו (Vav)", 7:"ז (Zayin)", 8:"ח (Chet)",
-      9:"ט (Tet)", 10:"י (Yod)", 11:"כ (Kaf)", 12:"ל (Lamed)",
-      13:"מ (Mem)", 14:"נ (Nun)", 15:"ס (Samekh)", 16:"ע (Ayin)",
-      17:"פ (Pe)", 18:"צ (Tsade)", 19:"ק (Qof)", 20:"ר (Resh)",
-      21:"ש (Shin)", 22:"ת (Tav)"
+      1:"א",2:"ב",3:"ג",4:"ד",5:"ה",6:"ו",7:"ז",8:"ח",9:"ט",
+      10:"י",11:"כ",12:"ל",13:"מ",14:"נ",15:"ס",16:"ע",
+      17:"פ",18:"צ",19:"ק",20:"ר",21:"ש",22:"ת"
     };
 
-    // ================= RESULTADO =================
     res.innerHTML = `
-      <p>🧬 Idade: ${anos} anos e ${meses} meses</p>
-      <p>🎂 Aniversário em: ${mesesRest} meses e ${diasRest} dias</p>
-      <p>♈ Signo: ${signo(d,m)}</p>
+      <p>🧬 ${anos} anos ${meses} meses</p>
+      <p>🎂 em ${mesesRest}m ${diasRest}d</p>
+      <p>♈ ${signo(d,m)}</p>
       <p>📊 ${ger}</p>
-
       <hr>
-
-      <p>🔢 Número base: ${reduzido}</p>
-      <p>🃏 Arcano (1-22): ${arcanoNum} - ${arcanos[arcanoNum]}</p>
-      <p>✡️ Letra hebraica: ${hebraico[arcanoNum]}</p>
+      <p>🔢 ${reduzido}</p>
+      <p>🃏 ${arcanoNum} - ${arcanos[arcanoNum]}</p>
+      <p>✡️ ${hebraico[arcanoNum]}</p>
     `;
 
   }, 800);
