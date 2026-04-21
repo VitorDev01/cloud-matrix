@@ -376,7 +376,6 @@ function buscarFacebook() {
   window.open(url, "_blank");
 }
 
-<script>
 function rodar() {
   let val = document.getElementById("dataNascimento").value;
   let res = document.getElementById("resultado");
@@ -504,4 +503,3 @@ function rodar() {
 
   }, 800);
 }
-</script>
