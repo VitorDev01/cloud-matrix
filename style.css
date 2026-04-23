@@ -574,7 +574,7 @@ input:not([type="radio"]) {
 }
 
 @keyframes glowPulse {
-  0% { text-shadow: 0 0 5px #00ff00; }
-  50% { text-shadow: 0 0 25px #00ff00; }
-  100% { text-shadow: 0 0 5px #00ff00; }
+  0% { text-shadow: 0 0 4px #00ff00; }
+  50% { text-shadow: 0 0 10px #00ff00; }
+  100% { text-shadow: 0 0 4px #00ff00; }
 }
