@@ -390,20 +390,20 @@ opacity:1;
       margin: 10px auto; /* centraliza */
     }
 
-    input {
-      background: black;
-      border: 1px solid #00ff00;
-      color: #00ff00;
-      padding: 12px 50px 12px 12px;
-      width: 100%;
-      outline: none;
-      font-size: 16px;
-      font-family: "Courier New", monospace;
-      border-radius: 6px;
-      padding: 14px 60px 14px 12px;
-      box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
-      box-sizing: border-box;
-    }
+   /* ===== INPUT NORMAL (SO PRA TEXT, NAO RADIO) ===== */
+input:not([type="radio"]) {
+  background: black;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 12px;
+  box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
+  box-sizing: border-box;
+}
+
 
     input::placeholder {
       color: #00aa00;
@@ -480,49 +480,69 @@ opacity:1;
 
 /* ===== SCANNER DE ORIGEM ===== */
 
-#resultadoBastardia {
-  margin-top: 10px;
-  color: #00ff88;
-  font-size: 14px;
-  text-shadow: 0 0 5px #00ff00;
-}
-
-/* container interno das perguntas */
+/* perguntas */
 .input-wrapper p {
-  margin: 10px 0 5px;
+  margin: 15px 0 5px;
   color: #00ffcc;
-  font-size: 14px;
+  font-size: 15px;
+  text-align:left;
 }
 
-/* radios */
+/* labels (Sim / Não) */
 .input-wrapper label {
-  display: inline-block;
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
   font-size: 14px;
   color: #00ff88;
   cursor: pointer;
 }
 
-/* estilo do radio */
+/* RADIO CUSTOM (resolve aquele bug feio) */
 .input-wrapper input[type="radio"] {
-  accent-color: #00ff00; /* cor verde */
-  margin-right: 5px;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  background: transparent;
   cursor: pointer;
+  position: relative;
 }
 
-/* botão enviar (já usa matrix-btn mas reforça) */
+/* bolinha interna */
+.input-wrapper input[type="radio"]:checked {
+  background: #00ff00;
+  box-shadow: 0 0 6px #00ff00;
+}
+
+/* BOTÃO */
 .matrix-btn {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-/* evita quebrar layout em mobile */
+/* RESULTADO GRANDE E BONITO */
+#resultadoBastardia {
+  margin-top: 20px;
+  font-size: 22px; /* 👈 AUMENTADO */
+  font-weight: bold;
+  color: #00ff00;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
+  text-align: center;
+}
+
+/* MOBILE */
 @media (max-width: 600px) {
   .input-wrapper {
-    text-align: left;
+    max-width: 90%;
+    margin: auto;
   }
 
-  .input-wrapper label {
-    display: block;
-    margin-bottom: 5px;
+  #resultadoBastardia {
+    font-size: 20px;
   }
 }
