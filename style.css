@@ -587,3 +587,11 @@ input::placeholder {
   font-family: 'Share Tech Mono', monospace !important;
   color: #00aa00;
 }
+
+#resultadoToxico {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 8px currentColor;
+}
