@@ -636,7 +636,7 @@ else {
       <p>☤ Significado: ${hebraicoSignificado[arcanoNum]}</p>
     `;
   }
-};
+}, 10);
 }
 
 function calcularBastardia() {
