@@ -616,38 +616,48 @@ else {
 }
 
 function calcularBastardia() {
+  let res = document.getElementById("resultadoBastardia");
 
-  let respostas = {
-    q1: document.querySelector('input[name="q1"]:checked'),
-    q2: document.querySelector('input[name="q2"]:checked'),
-    q3: document.querySelector('input[name="q3"]:checked'),
-    q4: document.querySelector('input[name="q4"]:checked')
-  };
+  let q1 = document.querySelector('input[name="q1"]:checked');
+  let q2 = document.querySelector('input[name="q2"]:checked');
+  let q3 = document.querySelector('input[name="q3"]:checked');
+  let q4 = document.querySelector('input[name="q4"]:checked');
 
-  if (!respostas.q1 || !respostas.q2 || !respostas.q3 || !respostas.q4) {
-    document.getElementById("resultadoBastardia").innerHTML =
-      "⚠️ Responda todas as perguntas";
+  if (!q1 || !q2 || !q3 || !q4) {
+    res.innerHTML = "⚠️ Responda todas as perguntas";
     return;
   }
 
-  let score = 0;
+  // ===== TELA DE SCAN =====
+  res.className = "scanning";
+  res.innerHTML = "🔍 Escaneando origem...";
 
-  // regra do 100%
-  if (
-    respostas.q1.value === "sim" &&
-    respostas.q2.value === "sim" &&
-    respostas.q3.value === "sim" &&
-    respostas.q4.value === "nao"
-  ) {
-    score = 100;
-  } else {
-    // cálculo progressivo
-    if (respostas.q1.value === "nao") score += 30;
-    if (respostas.q2.value === "sim") score += 25;
-    if (respostas.q3.value === "sim") score += 25;
-    if (respostas.q4.value === "sim") score += 20;
-  }
+  setTimeout(() => {
 
-  document.getElementById("resultadoBastardia").innerHTML =
-    `⚠️ Resultado: ${score}% Bastardia`;
+    let pontos = 0;
+
+    if (q1.value === "nao") pontos += 25;
+    if (q2.value === "sim") pontos += 25;
+    if (q3.value === "sim") pontos += 25;
+    if (q4.value === "sim") pontos += 25;
+
+    let porcentagem = pontos;
+
+    // ===== ANIMAÇÃO DE CONTAGEM =====
+    let atual = 0;
+
+    res.className = "final";
+
+    let intervalo = setInterval(() => {
+      if (atual >= porcentagem) {
+        clearInterval(intervalo);
+
+        res.innerHTML = `⚠️ ${porcentagem}% BASTARDIA`;
+      } else {
+        atual++;
+        res.innerHTML = `⚠️ ${atual}%`;
+      }
+    }, 20);
+
+  }, 1200);
 }
