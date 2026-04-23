@@ -685,3 +685,36 @@ function calcularBastardia() {
 
   }, 1200);
 }
+
+function calcularToxico() {
+  let total = 5;
+  let pontos = 0;
+
+  for (let i = 1; i <= total; i++) {
+    let resposta = document.querySelector(`input[name="t${i}"]:checked`);
+    
+    if (resposta && resposta.value === "sim") {
+      pontos++;
+    }
+  }
+
+  let porcentagem = Math.round((pontos / total) * 100);
+  let res = document.getElementById("resultadoToxico");
+
+  // contador animado
+  let atual = 0;
+  res.innerHTML = "";
+  res.classList.add("show");
+
+  let intervalo = setInterval(() => {
+    atual++;
+    res.innerHTML = `Nível de toxicidade: ${atual}%`;
+
+    if (atual >= porcentagem) clearInterval(intervalo);
+  }, 20);
+
+  // cor dinâmica
+  if (porcentagem < 30) res.style.color = "#00ff88";
+  else if (porcentagem < 70) res.style.color = "#ffaa00";
+  else res.style.color = "#ff0033";
+}
