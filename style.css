@@ -8,6 +8,8 @@ color:white;
 align-items: center;
 
 }
+
+
 /*passarinhos*/
 .birds {
   display: flex;
@@ -390,20 +392,26 @@ opacity:1;
       margin: 10px auto; /* centraliza */
     }
 
-   /* ===== INPUT NORMAL (SO PRA TEXT, NAO RADIO) ===== */
-input:not([type="radio"]) {
-  background: black;
-  border: 1px solid #00ff00;
-  color: #00ff00;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  border-radius: 6px;
-  padding: 14px 12px;
-  box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
-  box-sizing: border-box;
-}
+    input::placeholder,
+      input::-webkit-input-placeholder,
+      input:-ms-input-placeholder {
+      font-family: 'Share Tech Mono', monospace;
+      color: #00aa00;
+    }
 
+   /* ===== INPUT NORMAL (SO PRA TEXT, NAO RADIO) ===== */
+    input:not([type="radio"]) {
+      background: black;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      width: 100%;
+      outline: none;
+      font-size: 16px;
+      border-radius: 6px;
+      padding: 14px 12px;
+      box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
+      box-sizing: border-box;
+    }
 
     input::placeholder {
       color: #00aa00;
