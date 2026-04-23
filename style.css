@@ -477,3 +477,52 @@ opacity:1;
   text-align: left;
   text-shadow: 0 0 5px #00ff00;
 }
+
+/* ===== SCANNER DE ORIGEM ===== */
+
+#resultadoBastardia {
+  margin-top: 10px;
+  color: #00ff88;
+  font-size: 14px;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* container interno das perguntas */
+.input-wrapper p {
+  margin: 10px 0 5px;
+  color: #00ffcc;
+  font-size: 14px;
+}
+
+/* radios */
+.input-wrapper label {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #00ff88;
+  cursor: pointer;
+}
+
+/* estilo do radio */
+.input-wrapper input[type="radio"] {
+  accent-color: #00ff00; /* cor verde */
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* botão enviar (já usa matrix-btn mas reforça) */
+.matrix-btn {
+  margin-top: 10px;
+}
+
+/* evita quebrar layout em mobile */
+@media (max-width: 600px) {
+  .input-wrapper {
+    text-align: left;
+  }
+
+  .input-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
