@@ -393,6 +393,9 @@ opacity:1;
     }
 
    /* ===== INPUT NORMAL (SO PRA TEXT, NAO RADIO) ===== */
+    input {
+      font-family: 'Share Tech Mono', monospace !important;
+    } 
     input:not([type="radio"]) {
       background: black;
       border: 1px solid #00ff00;
