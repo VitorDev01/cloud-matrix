@@ -392,11 +392,6 @@ opacity:1;
       margin: 10px auto; /* centraliza */
     }
 
-    input::placeholder {
-      font-family: 'Share Tech Mono', monospace !important;
-      color: #00aa00;
-    }
-
    /* ===== INPUT NORMAL (SO PRA TEXT, NAO RADIO) ===== */
     input:not([type="radio"]) {
       background: black;
@@ -583,4 +578,9 @@ opacity:1;
   0% { text-shadow: 0 0 4px #00ff00; }
   50% { text-shadow: 0 0 10px #00ff00; }
   100% { text-shadow: 0 0 4px #00ff00; }
+}
+
+input::placeholder {
+  font-family: 'Share Tech Mono', monospace !important;
+  color: #00aa00;
 }
