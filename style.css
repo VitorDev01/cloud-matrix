@@ -392,10 +392,8 @@ opacity:1;
       margin: 10px auto; /* centraliza */
     }
 
-    input::placeholder,
-      input::-webkit-input-placeholder,
-      input:-ms-input-placeholder {
-      font-family: 'Share Tech Mono', monospace;
+    input::placeholder {
+      font-family: 'Share Tech Mono', monospace !important;
       color: #00aa00;
     }
 
