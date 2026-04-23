@@ -624,7 +624,7 @@ else {
       <p>☀ Idade: ${anos} anos ${meses} meses</p>
       <p>★ Aniversário em: ${mesesRest}m ${diasRest}d</p>
       <p>☉ Signo: ${signo(d,m)}</p>
-      <p>Principado Inimigo: ${planeta(d,m)}</p>
+      <p>⚔︎ Principado Inimigo: ${planeta(d,m)}</p>
 
       <p>⏱︎ Ciclo: ${ciclo}º ano - ${fases[ciclo]}</p>
       <p>⚖︎ Status do ciclo: ${statusCiclo}</p>
