@@ -488,7 +488,22 @@ function rodar() {
       if((m==1&&d>=20)||(m==2&&d<=18)) return "Aquário - Racional";
       return "Peixes - Espiritual";
     }
-
+    // pincipado
+    function planeta(d, m){
+      if((m==3&&d>=21)||(m==4&&d<=19)) return "Marte - Violência";
+      if((m==4&&d>=20)||(m==5&&d<=20)) return "Vênus - Sensualidade";
+     if((m==5&&d>=21)||(m==6&&d<=20)) return "Mercúrio - Comunicação";
+     if((m==6&&d>=21)||(m==7&&d<=22)) return "Lua - Lilith";
+     if((m==7&&d>=23)||(m==8&&d<=22)) return "Sol - Apolo Homossexualidade";
+     if((m==8&&d>=23)||(m==9&&d<=22)) return "Mercúrio - Hermes";
+     if((m==9&&d>=23)||(m==10&&d<=22)) return "Vênus Indecisão Dualidade";
+     if((m==10&&d>=23)||(m==11&&d<=21)) return "Plutão - Hades Ocultismo";
+     if((m==11&&d>=22)||(m==12&&d<=21)) return "Júpiter Zeus Perversidade";
+     if((m==12&&d>=22)||(m==1&&d<=19)) return "Saturno - Tempo sexualidade";
+     if((m==1&&d>=20)||(m==2&&d<=18)) return "Urano - Nova Era";
+     return "Leviatã - Orgulho";
+    }
+     
     // ================= GERAÇÃO =================
     let ano = nascimento.getFullYear();
     let ger = "";
@@ -597,10 +612,11 @@ else {
 
     // ================= RESULTADO =================
     res.innerHTML = `
+      <p>⚜︎ Geração: ${ger}</p>
       <p>☀ Idade: ${anos} anos ${meses} meses</p>
       <p>★ Aniversário em: ${mesesRest}m ${diasRest}d</p>
       <p>☉ Signo: ${signo(d,m)}</p>
-      <p>⚜︎ Geração: ${ger}</p>
+      <p>Principado Inimigo: ${deusGrego(d,m)}</p>
 
       <p>⏱︎ Ciclo: ${ciclo}º ano - ${fases[ciclo]}</p>
       <p>⚖︎ Status do ciclo: ${statusCiclo}</p>
