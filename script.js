@@ -428,9 +428,17 @@ function rodar() {
   }
 
   res.style.display = "block";
-  res.innerHTML = "🔍 Escaneando dados...";
+  let progresso = 0;
 
-  setTimeout(() => {
+  let anim = setInterval(() => {
+  progresso++;
+
+  res.innerHTML = `🔍 Escaneando dados... ${progresso}%`;
+
+  if (progresso >= 100) {
+    clearInterval(anim);
+
+    // ================= TODO SEU CÓDIGO CONTINUA AQUI =================
 
     // parsing seguro
     let partes = val.split("-");
@@ -627,8 +635,8 @@ else {
       <p>✡ Letra hebraica: ${hebraico[arcanoNum]}</p>
       <p>☤ Significado: ${hebraicoSignificado[arcanoNum]}</p>
     `;
-
-  }, 800);
+  }
+};
 }
 
 function calcularBastardia() {
