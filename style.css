@@ -565,15 +565,9 @@ opacity:1;
 
 /* ===== RESULTADO FINAL ANIMADO ===== */
 #resultadoBastardia.final {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: bold;
   color: #00ff00;
-
-  text-shadow:
-    0 0 5px #00ff00,
-    0 0 15px #00ff00,
-    0 0 30px #00ff00;
-
   animation: glowPulse 1.5s infinite;
 }
 
