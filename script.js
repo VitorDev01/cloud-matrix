@@ -614,3 +614,40 @@ else {
 
   }, 800);
 }
+
+function calcularBastardia() {
+
+  let respostas = {
+    q1: document.querySelector('input[name="q1"]:checked'),
+    q2: document.querySelector('input[name="q2"]:checked'),
+    q3: document.querySelector('input[name="q3"]:checked'),
+    q4: document.querySelector('input[name="q4"]:checked')
+  };
+
+  if (!respostas.q1 || !respostas.q2 || !respostas.q3 || !respostas.q4) {
+    document.getElementById("resultadoBastardia").innerHTML =
+      "⚠️ Responda todas as perguntas";
+    return;
+  }
+
+  let score = 0;
+
+  // regra do 100%
+  if (
+    respostas.q1.value === "sim" &&
+    respostas.q2.value === "sim" &&
+    respostas.q3.value === "sim" &&
+    respostas.q4.value === "nao"
+  ) {
+    score = 100;
+  } else {
+    // cálculo progressivo
+    if (respostas.q1.value === "nao") score += 30;
+    if (respostas.q2.value === "sim") score += 25;
+    if (respostas.q3.value === "sim") score += 25;
+    if (respostas.q4.value === "sim") score += 20;
+  }
+
+  document.getElementById("resultadoBastardia").innerHTML =
+    `⚠️ Resultado: ${score}% Bastardia`;
+}
