@@ -159,7 +159,7 @@ color:#000;
 /* BOTÃO MATRIX */
 
 .matrix-btn{
-
+font-family: 'Share Tech Mono', monospace !important;
 border-color:transparent;
 border-radius:6px;
 height:45px;
