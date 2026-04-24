@@ -1,16 +1,14 @@
 body{
-background:#020b0a;
-font-family:'Share Tech Mono', monospace;
-margin:0;
-padding:0;
-text-align:center;
-color:white;
-align-items: center;
-
+  background:#020b0a;
+  font-family:'Share Tech Mono', monospace;
+  margin:0;
+  padding:0;
+  text-align:center;
+  color:white;
+  align-items: center;
 }
 
-
-/*passarinhos*/
+/*passarinhos twitter*/
 .birds {
   display: flex;
   justify-content: center;
@@ -51,32 +49,30 @@ text-shadow:0 0 5px #00ff66,
 
 
 font-family:'Share Tech Mono', monospace;
-
 animation:rain 2s linear forwards;
-
 }
-/* animação da queda */
 
+/* animação da queda */
 @keyframes rain{
 
 0%{
-transform:translateY(0);
-opacity:1;
+  transform:translateY(0);
+  opacity:1;
 }
 
 100%{
-transform:translateY(300px);
-opacity:0;
+  transform:translateY(300px);
+  opacity:0;
+}
 }
 
-}
 /* container da nuvem */
-
 .container{
-display:flex;
-justify-content:center;
-margin-top:40px;
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
 }
+
 /*img*/
 .img-app {
   width: 200px;
@@ -84,16 +80,16 @@ margin-top:40px;
   margin: 10px auto; /* centraliza e aproxima */
 
   filter: 
-    drop-shadow(0 0 5px #00ff00)
-    drop-shadow(0 0 10px #00ff00)
-    drop-shadow(0 0 20px #00ff00);
+  drop-shadow(0 0 5px #00ff00)
+  drop-shadow(0 0 10px #00ff00)
+  drop-shadow(0 0 20px #00ff00);
 }
 
 /* titulo */
 h1{
-font-size: 15px;
-font-weight:400;
-line-height:1.5;
+  font-size: 15px;
+  font-weight:400;
+  line-height:1.5;
 }
 
 .terminal {
@@ -104,11 +100,10 @@ line-height:1.5;
 
 .typing {
   color: #00ff00;
-
   text-shadow:
-    0 0 3px #00ff00,
-    0 0 6px #00aa00,
-    0 0 10px #00aa00;
+  0 0 3px #00ff00,
+  0 0 6px #00aa00,
+  0 0 10px #00aa00;
 }
 
 /* cursor piscando */
@@ -122,162 +117,119 @@ line-height:1.5;
   0%,100% { opacity: 1; }
   50% { opacity: 0; }
 }
-/* lista de links */
 
+/* lista de links */
 ul{
-list-style:none;
-padding:0;
-margin-top:40px;
+ list-style:none;
+ padding:0;
+ margin-top:40px;
 }
 
 ul li{
-margin:20px auto;
-width:90%;
-max-width:600px;
+ margin:20px auto;
+ width:90%;
+ max-width:600px;
 }
 
 .icon-btn{
-
-width:120px;
-gap:15px;
-font-size:22px;
-
+ width:120px;
+ gap:15px;
+ font-size:22px;
 }
 
 .icon-btn i{
-
-color:#00ff00;
-transition:0.3s;
-
+ color:#00ff00;
+ transition:0.3s;
 }
 
 .icon-btn:hover i{
-
-color:#000;
-
+ color:#000;
 }
+
 /* BOTÃO MATRIX */
-
 .matrix-btn{
-font-family: 'Share Tech Mono', monospace !important;
-border-color:transparent;
-border-radius:6px;
-height:45px;
-width:100%;
-max-width:600px;
-font-size:18px;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-color:#2ecc71;
-text-shadow:0 0 2px #2ecc71;
-text-decoration:none;
-
-background:linear-gradient(
-90deg,
-rgba(46,204,113,0.20),
-rgba(46,204,113,0.05)
+ font-family: 'Share Tech Mono', monospace !important;
+ border-color:transparent;
+ border-radius:6px;
+ height:45px;
+ width:100%;
+ max-width:600px;
+ font-size:18px;
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ color:#2ecc71;
+ text-shadow:0 0 2px #2ecc71;
+ text-decoration:none;
+ background:linear-gradient(
+ 90deg,
+ rgba(46,204,113,0.20),
+ rgba(46,204,113,0.05)
 );
 
-border:2px solid #00ff00;
+ border:2px solid #00ff00;
 
-box-shadow:
-0 0 5px #00ff66,
-inset 0 0 5px #00ff00;
-
-position:relative;
-
-transition:all 0.5s;
-
-cursor:pointer;
-
+ box-shadow:
+ 0 0 5px #00ff66,
+ inset 0 0 5px #00ff00;
+ position:relative;
+ transition:all 0.5s;
+ cursor:pointer;
 }
 
 /* efeito antes */
-
 .matrix-btn::before{
-
-content:'';
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-z-index:1;
-
-background-color:rgba(255,255,255,0.08);
-
-transition:all 0.3s;
-
+ content:'';
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ z-index:1;
+ background-color:rgba(255,255,255,0.08);
+ transition:all 0.3s;
 }
 
 /* hover before */
-
 .matrix-btn:hover::before{
-
 opacity:0;
-
 transform:scale(0.5,0.5);
-
 }
 
 /* efeito after */
-
 .matrix-btn::after{
-
 content:'';
-
 position:absolute;
-
 top:0;
 left:0;
-
 width:100%;
 height:100%;
-
 z-index:1;
-
 opacity:0;
-
 transition:all 0.3s;
-
 border:1px solid rgba(0,255,100,0.6);
-
 transform:scale(1.2,1.2);
-
 }
 
 /* hover after */
-
 .matrix-btn:hover::after{
-
 opacity:1;
-
 transform:scale(1,1);
-
 }
 
 /* hover principal */
-
 .matrix-btn:hover{
 border-radius: 6px;
 background:#00ff66;
 color:#001a0f;
-
 box-shadow:
 0 0 10px #00ff66,
 0 0 25px #00ff66,
 0 0 50px #00ff00,
 0 0 80px #00ff00;
-
 }
 
 /* efeito links */
-
 a{
 text-decoration:none;
 }
