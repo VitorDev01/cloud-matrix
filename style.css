@@ -214,18 +214,37 @@ h1{
   0%,100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
 /*img*/
-.img-app {
+.img-wrapper {
+  position: relative;
   width: 200px;
-  display: block;
-  margin: 10px auto; /* centraliza e aproxima */
-
-  filter: 
-  drop-shadow(0 0 5px #00ff00)
-  drop-shadow(0 0 10px #00ff00)
-  drop-shadow(0 0 20px #00ff00);
+  margin: 10px auto;
 }
+
+.img-wrapper img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* lado verde */
+.img-green {
+  filter: 
+    drop-shadow(-5px 0 5px #00ff00)
+    drop-shadow(-10px 0 10px #00ff00)
+    drop-shadow(-20px 0 20px #00ff00);
+}
+
+/* lado vermelho */
+.img-red {
+  filter: 
+    drop-shadow(5px 0 5px #ff0000)
+    drop-shadow(10px 0 10px #ff0000)
+    drop-shadow(20px 0 20px #ff0000);
+}
+
 /* lista de links */
 ul{
  list-style:none;
