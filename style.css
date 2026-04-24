@@ -73,16 +73,113 @@ animation:rain 2s linear forwards;
   margin-top:40px;
 }
 
-/*img*/
-.img-app {
-  width: 200px;
-  display: block;
-  margin: 10px auto; /* centraliza e aproxima */
+/* ===== OLHO SCANNER ===== */
 
-  filter: 
-  drop-shadow(0 0 5px #00ff00)
-  drop-shadow(0 0 10px #00ff00)
-  drop-shadow(0 0 20px #00ff00);
+.eye-container{
+  margin-top:80px;
+  display:flex;
+  justify-content:center;
+}
+
+.eye{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background: radial-gradient(circle, #001a0f 20%, #000 70%);
+  border:3px solid #00ff00;
+
+  box-shadow:
+    0 0 10px #00ff00,
+    inset 0 0 20px #00ff00;
+
+  position:relative;
+  overflow:hidden;
+}
+
+/* linha vermelha */
+.scan-line{
+  position:absolute;
+  width:100%;
+  height:2px;
+  background:red;
+
+  box-shadow:
+    0 0 5px red,
+    0 0 10px red,
+    0 0 20px red;
+
+  top:0;
+  left:0;
+
+  animation: scanMove 2.5s linear infinite;
+}
+
+@keyframes scanMove {
+  0% { top:0%; }
+  100% { top:100%; }
+}
+
+/* iris */
+.iris{
+  width:80px;
+  height:80px;
+  background:#00ff66;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+
+  box-shadow:
+    0 0 20px #00ff66,
+    0 0 40px #00ff00;
+}
+
+/* pupila */
+.pupil{
+  width:30px;
+  height:30px;
+  background:black;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+/* pálpebra */
+.eyelid{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#020b0a;
+  top:-100%;
+  left:0;
+
+  animation: blink 4s infinite;
+}
+
+@keyframes blink {
+  0% { top:-100%; }
+  45% { top:-100%; }
+  50% { top:0%; }
+  55% { top:-100%; }
+  100% { top:-100%; }
+}
+
+/* texto */
+.scan-text{
+  margin-top:20px;
+  font-size:14px;
+  color:#00ff88;
+  text-shadow:0 0 5px #00ff00;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{opacity:0.5;}
+  50%{opacity:1;}
+  100%{opacity:0.5;}
 }
 
 /* titulo */
