@@ -415,74 +415,89 @@ opacity:1;
 }
 
 /*btn verde vermelho rj*/
+/* container */
 .btn-container{
   display:flex;
   flex-direction:column;
-  gap:10px; /* espaço entre os botões */
+  gap:10px;
   max-width:600px;
   margin:20px auto;
 }
 
-/* botão base */
-.matrix-duo{
-  position:relative;
+/* ===== BOTÃO VERDE (MATRIX) ===== */
+.btn-matrix{
+  font-family:'Share Tech Mono', monospace;
   height:45px;
   display:flex;
   align-items:center;
   justify-content:center;
 
-  font-family:'Share Tech Mono', monospace;
-  font-size:18px;
+  color:#00ff66;
   text-decoration:none;
-
   border-radius:6px;
-  overflow:hidden;
-  color:white;
+
+  background:linear-gradient(
+    90deg,
+    rgba(0,255,100,0.2),
+    rgba(0,255,100,0.05)
+  );
 
   border:2px solid #00ff00;
 
-  /* fundo dividido */
-  background:linear-gradient(
-    90deg,
-    rgba(0,255,0,0.2) 50%,
-    rgba(255,0,0,0.2) 50%
-  );
+  box-shadow:
+    0 0 5px #00ff66,
+    inset 0 0 5px #00ff00;
 
   transition:0.4s;
 }
 
-/* brilho dividido */
-.matrix-duo::before{
-  content:'';
-  position:absolute;
-  inset:0;
+/* hover verde */
+.btn-matrix:hover{
+  background:#00ff66;
+  color:#001a0f;
 
   box-shadow:
-    -10px 0 20px #00ff00 inset,
-     10px 0 20px #ff0000 inset;
-
-  z-index:0;
+    0 0 10px #00ff66,
+    0 0 25px #00ff66,
+    0 0 50px #00ff00;
 }
 
-/* texto acima */
-.matrix-duo span,
-.matrix-duo{
-  position:relative;
-  z-index:2;
-}
+/* ===== BOTÃO VERMELHO (PINTEREST STYLE) ===== */
+.btn-red{
+  font-family:'Share Tech Mono', monospace;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-/* hover */
-.matrix-duo:hover{
+  color:#ff4d4d;
+  text-decoration:none;
+  border-radius:6px;
+
   background:linear-gradient(
     90deg,
-    #00ff00 50%,
-    #ff0000 50%
+    rgba(255,0,0,0.2),
+    rgba(255,0,0,0.05)
   );
 
-  color:#000;
+  border:2px solid #ff0000;
+
   box-shadow:
-    -10px 0 30px #00ff00,
-     10px 0 30px #ff0000;
+    0 0 5px #ff4d4d,
+    inset 0 0 5px #ff0000;
+
+  transition:0.4s;
+}
+
+/* hover vermelho */
+.btn-red:hover{
+  background:#ff0000;
+  color:#1a0000;
+
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 25px #ff0000,
+    0 0 50px #ff3333;
 }
 
 /*caixa maçom*/
