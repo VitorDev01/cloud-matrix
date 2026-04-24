@@ -267,7 +267,7 @@ ul li{
  width:100%;
  max-width:600px;
  font-size:18px;
- display:flex-inline;
+ display:inline-flex;
  align-items:center;
  justify-content:center;
  color:#2ecc71;
@@ -340,7 +340,6 @@ box-shadow:
 0 0 50px #00ff00,
 0 0 80px #00ff00;
 }
-
 /* efeito links */
 a{
 text-decoration:none;
