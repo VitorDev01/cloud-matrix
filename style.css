@@ -230,12 +230,15 @@ h1{
 /* lista de links */
 ul{
  list-style:none;
- padding:0;
- margin-top:40px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px; /* controla o espaço entre botões */
+ padding: 0;
+ margin-top: 20px;
 }
 
 ul li{
- margin:20px auto;
+ margin:8px auto;
  width:90%;
  max-width:600px;
 }
