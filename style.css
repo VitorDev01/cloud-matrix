@@ -215,6 +215,17 @@ h1{
   50% { opacity: 0; }
 }
 
+/*img*/
+.img-app {
+  width: 200px;
+  display: block;
+  margin: 10px auto; /* centraliza e aproxima */
+
+  filter: 
+  drop-shadow(0 0 5px #00ff00)
+  drop-shadow(0 0 10px #00ff00)
+  drop-shadow(0 0 20px #00ff00);
+}
 /* lista de links */
 ul{
  list-style:none;
