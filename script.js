@@ -107,6 +107,20 @@ function typeEffect() {
 }
 
 typeEffect();
+
+//olho 
+const iris = document.querySelector(".iris");
+
+document.addEventListener("mousemove", (e) => {
+
+  let x = (e.clientX / window.innerWidth - 0.5) * 40;
+  let y = (e.clientY / window.innerHeight - 0.5) * 40;
+
+  iris.style.transform =
+    `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+
+});
+
 //caixa zap
 function buscarWhats() {
     let numero = document.getElementById("userWhats").value.trim();
