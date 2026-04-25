@@ -755,3 +755,17 @@ function calcularToxico() {
     else if (porcentagem < 70) res.style.color = "#ffaa00";
     else res.style.color = "#ff0033";
 }
+
+//acordeom
+function togglePesquisa() {
+  const box = document.getElementById("pesquisaBox");
+  const title = document.querySelector(".toggle-title");
+
+  if (box.style.display === "none") {
+    box.style.display = "block";
+    title.innerHTML = "▲ Pesquisa pessoal";
+  } else {
+    box.style.display = "none";
+    title.innerHTML = "▼ Pesquisa pessoal";
+  }
+}
