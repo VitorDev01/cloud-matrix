@@ -756,7 +756,7 @@ function calcularToxico() {
     else res.style.color = "#ff0033";
 }
 
-//acordeom
+//acordeom pesquisa pessoal
 function togglePesquisa() {
   const box = document.getElementById("pesquisaBox");
   const title = document.querySelector(".toggle-title");
@@ -769,3 +769,27 @@ function togglePesquisa() {
     title.innerHTML = "▼ Pesquisa pessoal";
   }
 }
+// acordeom geral
+document.querySelectorAll(".accordion-title").forEach(title => {
+  title.addEventListener("click", () => {
+    
+    const content = title.nextElementSibling;
+
+    const isOpen = content.style.display === "block";
+
+    // fecha todos (opcional, estilo menu único)
+    document.querySelectorAll(".accordion-content").forEach(c => {
+      c.style.display = "none";
+    });
+
+    document.querySelectorAll(".accordion-title").forEach(t => {
+      t.innerHTML = t.innerHTML.replace("▲", "▼");
+    });
+
+    // abre o clicado
+    if (!isOpen) {
+      content.style.display = "block";
+      title.innerHTML = title.innerHTML.replace("▼", "▲");
+    }
+  });
+});
