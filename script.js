@@ -792,3 +792,13 @@ document.querySelectorAll(".accordion-title").forEach(title => {
     }
   });
 });
+// informação
+function toggleInfo() {
+  const box = document.getElementById("infoBox");
+
+  if (box.style.display === "flex") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "flex";
+  }
+}
