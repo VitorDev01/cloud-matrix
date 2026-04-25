@@ -765,6 +765,7 @@ input::placeholder {
 .accordion-title {
   cursor: pointer;
   color: #00ff88;
+  text-shadow: 0 0 10px #00ff00;
   transition: 0.3s;
 }
 
