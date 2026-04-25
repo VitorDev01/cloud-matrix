@@ -55,9 +55,8 @@ function verificarSenha() {
 //animação h1
 
 const lines = [
-    "(root㉿God'sEye.js)-[~/©vitordev01]",
-    "└─#Investigação Digital && ",
-    "└─#Osint + Cyber Segurança ",
+    "(root㉿Olho De Deus)-[~/©vitordev01]",
+    "└#Investigação Digital & Cyber Segurança ",
 ];
 
 let lineIndex = 0;
