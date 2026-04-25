@@ -757,3 +757,17 @@ input::placeholder {
 .toggle-title:hover {
   text-shadow: 0 0 10px #00ff00;
 }
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-title {
+  cursor: pointer;
+  color: #00ff88;
+  transition: 0.3s;
+}
+
+.accordion-title:hover {
+  text-shadow: 0 0 10px #00ff00;
+}
