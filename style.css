@@ -755,5 +755,5 @@ input::placeholder {
 }
 
 .toggle-title:hover {
-  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
 }
