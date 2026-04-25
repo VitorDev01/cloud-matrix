@@ -746,3 +746,14 @@ input::placeholder {
   text-align: center;
   text-shadow: 0 0 8px currentColor;
 }
+
+.toggle-title {
+  cursor: pointer;
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff00;
+  transition: 0.3s;
+}
+
+.toggle-title:hover {
+  color: #00ff00;
+}
