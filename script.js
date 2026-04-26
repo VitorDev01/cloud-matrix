@@ -59,7 +59,7 @@ window.onload = function () {
   let pos = 0;
 
   function animateScroll() {
-    pos -= 1.5;
+    pos -= 1.0;
 
     if (Math.abs(pos) >= text.scrollWidth / 2) {
       pos = 0;
