@@ -56,16 +56,16 @@ function verificarSenha() {
 window.onload = function () {
   const text = document.getElementById("scrollText");
 
-  let pos = window.innerWidth;
+  let pos = 0;
 
   function animateScroll() {
-    pos -= 0.7; //fluido
+    pos -= 0.5;
 
-    if (pos < -text.offsetWidth) {
-      pos = window.innerWidth;
+    if (Math.abs(pos) >= text.scrollWidth / 2) {
+      pos = 0;
     }
 
-    text.style.transform = `translate(${pos}px, -50%)`;
+    text.style.transform = `translateX(${pos}px)`;
 
     requestAnimationFrame(animateScroll);
   }
