@@ -17,7 +17,6 @@ body{
   height: 40px;
 
   background: rgba(0, 0, 0, 0.95);
-
   border-bottom: 1px solid #00ff00;
   box-shadow: 0 0 10px #00ff00;
 
@@ -25,33 +24,20 @@ body{
   z-index: 9999;
 }
 
-/* texto rolando */
-.scroll-text {
-  white-space: nowrap;
+#scrollText {
   position: absolute;
-  will-change: transform;
+  white-space: nowrap;
 
   color: #00ff88;
   font-size: 14px;
+  letter-spacing: 1px;
 
   text-shadow:
     0 0 5px #00ff00,
     0 0 10px #00ff00;
-
-  animation: scrollLeft 15s linear infinite;
 }
 
-/* animação */
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* empurra o conteúdo pra não ficar escondido */
+/* empurra conteúdo */
 body {
   padding-top: 50px;
 }
