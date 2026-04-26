@@ -81,43 +81,88 @@ body {
 
 
 /* NUVEM */
-.cloud { display: flex; position: relative; margin-top: 130px; width: 320px; height: 100px; background: #fff; border-radius: 100px; z-index: 100; filter: drop-shadow(8px 8px 0 #0005); animation: animateCloud 1s steps(1) infinite; } @keyframes animateCloud { 0% { filter: drop-shadow(8px 8px 0 #0005) drop-shadow(0 0 0 #181c1f) brightness(1); } 95% { filter: drop-shadow(8px 8px 0 #0005) drop-shadow(0 0 50px #fff5) brightness(10); } } .cloud::before { content: ''; position: absolute; top: -50px; left: 40px; width: 110px; height: 110px; border-radius: 50%; background: #fff; box-shadow: 90px 0 0 30px #fff; } .container .cloud::after { content: ''; position: absolute; inset: 0; background: #fff; border-radius: 100px; z-index: 1000; } 
-.text{
-
-position:absolute;
-top: 20px;
-
-color:#00ff66;
-text-shadow:0 0 5px #00ff66,
-0 0 10px #00ff66,
-0 0 20px #00ff66;
-
-
-font-family:'Share Tech Mono', monospace;
-animation:rain 2s linear forwards;
+/* ===== CONTAINER ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* 👈 sobe a nuvem (ajuste aqui se quiser mais alto) */
+  position: relative;
 }
 
-/* animação da queda */
-@keyframes rain{
+/* ===== NUVEM ===== */
+.cloud {
+  position: relative;
+  width: 320px;
+  height: 100px;
 
-0%{
-  transform:translateY(0);
-  opacity:1;
+  background: #fff;
+  border-radius: 100px;
+
+  filter: drop-shadow(8px 8px 0 #0005);
+
+  animation: animateCloud 2s ease-in-out infinite;
 }
 
-100%{
-  transform:translateY(300px);
-  opacity:0;
-}
+/* topo da nuvem */
+.cloud::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 40px;
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+  background: #fff;
+
+  box-shadow: 90px 0 0 30px #fff;
 }
 
-/* container da nuvem */
-.container{
-  display:flex;
-  justify-content:center;
-  margin-top:-10px;
+/* base da nuvem */
+.cloud::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  border-radius: 100px;
 }
 
+/* animação glow */
+@keyframes animateCloud {
+  0% { filter: drop-shadow(8px 8px 0 #0005) brightness(1); }
+  50% { filter: drop-shadow(8px 8px 0 #0005) brightness(1.5); }
+  100% { filter: drop-shadow(8px 8px 0 #0005) brightness(1); }
+}
+
+/* ===== CHUVA (LETRAS) ===== */
+.text {
+  position: absolute;
+  top: 0; /* 👈 começa na nuvem */
+
+  color: #00ff66;
+  font-family: 'Share Tech Mono', monospace;
+
+  text-shadow:
+    0 0 5px #00ff66,
+    0 0 10px #00ff66,
+    0 0 20px #00ff66;
+
+  animation: rain 2s linear forwards;
+}
+
+/* animação queda */
+@keyframes rain {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(250px); /* 👈 menor queda = mais natural */
+    opacity: 0;
+  }
+}
 /* ===== OLHO SCANNER ===== */
 
 .eye-container{
