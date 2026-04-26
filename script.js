@@ -52,7 +52,26 @@ function verificarSenha() {
     }
 
 }
-//animação h1
+
+const text = document.getElementById("scrollText");
+
+let pos = window.innerWidth;
+
+function animateScroll() {
+  pos--;
+
+  // quando sair totalmente da tela, volta
+  if (pos < -text.offsetWidth) {
+    pos = window.innerWidth;
+  }
+
+  text.style.transform = `translateX(${pos}px)`;
+
+  requestAnimationFrame(animateScroll);
+}
+
+animateScroll();
+/*animação h1
 
 const lines = [
     "(root㉿Olho De Deus)-[~/©vitordev01]",
@@ -105,7 +124,7 @@ function typeEffect() {
     setTimeout(typeEffect, isDeleting ? 40 : speed);
 }
 
-typeEffect();
+typeEffect();*/
 
 //olho 
 const iris = document.querySelector(".iris");
