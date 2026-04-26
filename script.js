@@ -59,13 +59,13 @@ window.onload = function () {
   let pos = window.innerWidth;
 
   function animateScroll() {
-    pos -= 1; // velocidade
+    pos -= 0.7; //fluido
 
     if (pos < -text.offsetWidth) {
       pos = window.innerWidth;
     }
 
-    text.style.transform = `translateX(${pos}px)`;
+    text.style.transform = `translate(${pos}px, -50%)`;
 
     requestAnimationFrame(animateScroll);
   }
