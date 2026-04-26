@@ -53,24 +53,25 @@ function verificarSenha() {
 
 }
 
-const text = document.getElementById("scrollText");
+window.onload = function () {
+  const text = document.getElementById("scrollText");
 
-let pos = window.innerWidth;
+  let pos = window.innerWidth;
 
-function animateScroll() {
-  pos--;
+  function animateScroll() {
+    pos -= 1; // velocidade
 
-  // quando sair totalmente da tela, volta
-  if (pos < -text.offsetWidth) {
-    pos = window.innerWidth;
+    if (pos < -text.offsetWidth) {
+      pos = window.innerWidth;
+    }
+
+    text.style.transform = `translateX(${pos}px)`;
+
+    requestAnimationFrame(animateScroll);
   }
 
-  text.style.transform = `translateX(${pos}px)`;
-
-  requestAnimationFrame(animateScroll);
-}
-
-animateScroll();
+  animateScroll();
+};
 /*animação h1
 
 const lines = [
