@@ -22,8 +22,12 @@ body{
 
   overflow: hidden;
   z-index: 9999;
+
+  display: flex;
+  align-items: center; /* 👈 CENTRALIZA VERTICAL */
 }
 
+/* TEXTO */
 #scrollText {
   position: absolute;
   white-space: nowrap;
@@ -37,11 +41,10 @@ body{
     0 0 10px #00ff00;
 }
 
-/* empurra conteúdo */
+/* empurra o conteúdo da página */
 body {
   padding-top: 50px;
 }
-
 /*passarinhos twitter*/
 .birds {
   display: flex;
