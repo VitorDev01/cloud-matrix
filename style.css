@@ -85,7 +85,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* 👈 sobe a nuvem (ajuste aqui se quiser mais alto) */
+  margin-top: 40px; /* 👈 sobe a nuvem (ajuste aqui se quiser mais alto) */
   position: relative;
 }
 
