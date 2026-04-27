@@ -987,7 +987,7 @@ input::placeholder {
   font-family: 'Share Tech Mono', monospace;
   height: 45px;
   width: 90%;
-  max-width: 600px;
+  max-width: 400px;
 
   display: flex;
   align-items: center;
