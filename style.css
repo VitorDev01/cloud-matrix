@@ -857,10 +857,12 @@ input::placeholder {
   color: #00ff88;
   text-shadow: 0 0 10px #00ff00;
   transition: 0.3s;
+  background:rgba(0, 0, 0, .09); /*Remove a cor azul que aparece ao clicar em imagens e textos com links ancorados */
 }
 
 .accordion-title:hover {
   text-shadow: 0 0 10px #00ff00;
+  background:rgba(0, 0, 0, .09);
 }
 
 .footer-fixed {
