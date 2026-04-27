@@ -156,7 +156,11 @@ function scanRJ() {
             clearInterval(anim);
 
             res.innerHTML = `
-            
+            <p>➢ População Brasil: 212 milhões</p>
+            <p>➢ População RJ: 17 milhões</p>
+            <p>⛫ Capital RJ: 6,7 milhões</p>
+
+            <br>
             <p>✟ Católicos: 38,9%</p>
             <p>✝ Evangélicos: 32%</p>
             <p>☥ Espíritas: 3,5%</p>
