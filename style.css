@@ -1,3 +1,7 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body{
   background:#020b0a;
   font-family:'Share Tech Mono', monospace;
