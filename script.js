@@ -159,8 +159,10 @@ function scanRJ() {
             <p>➢ População Brasil: 212 milhões</p>
             <p>➢ População RJ: 17 milhões</p>
             <p>⛫ Capital RJ: 6,7 milhões</p>
-
+            <p>⛱︎ Angra dos Reis: 179 mil</p>
+            
             <br>
+            
             <p>✟ Católicos: 38,9%</p>
             <p>✝ Evangélicos: 32%</p>
             <p>☥ Espíritas: 3,5%</p>
@@ -186,7 +188,7 @@ function scanRJ() {
             <p>♀ Mulheres: 20% - 30%</p>
 
             <br>
-            <p>⚠️ Dados baseados em IBGE + estudos sociais</p>
+            <p>Dados baseados em IBGE + estudos sociais</p>
             `;
         }
     }, 20);
