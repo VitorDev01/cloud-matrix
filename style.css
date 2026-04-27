@@ -194,16 +194,38 @@ body {
 .iris{
   width:80px;
   height:80px;
-  background:#00ff66;
   border-radius:50%;
   position:absolute;
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
 
+  /* 👁️ iris + pupila juntas */
+  background: radial-gradient(
+    circle at center,
+    #001a0f 15%,   /* pupila escura */
+    #00ff66 40%,   /* iris */
+    #00cc55 60%,
+    #000 100%
+  );
+
   box-shadow:
     0 0 20px #00ff66,
     0 0 40px #00ff00;
+
+  animation: eyeMove 12s infinite;
+}
+
+.iris::after{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:#ccffcc;
+  border-radius:50%;
+  top:12px;
+  left:18px;
+  opacity:0.7;
 }
 
 /* pálpebra */
