@@ -140,6 +140,56 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
+// ibge rj
+function scanRJ() {
+    const res = document.getElementById("resultadoRJ");
+    res.style.display = "block";
+
+    let progresso = 0;
+
+    let anim = setInterval(() => {
+        progresso++;
+
+        res.innerHTML = `🔍 Escaneando dados do RJ... ${progresso}%`;
+
+        if (progresso >= 100) {
+            clearInterval(anim);
+
+            res.innerHTML = `
+            <p> === PERFIL SOCIAL – RIO DE JANEIRO ===</p>
+
+            <br>
+
+            <p>✟ Católicos: 38,9%</p>
+            <p>✝ Evangélicos: 32%</p>
+            <p>☥ Espíritas: 3,5%</p>
+            <p>✪ Umbanda/Candomblé: 2,6%</p>
+            <p>☠ Sem religião: 16,9%</p>
+            <p>☮ Outras: 5,8%</p>
+
+            <br>
+
+            <p>☉ LGBTQIA+ (oficial IBGE): 1,8%</p>
+            <p>☉ LGBTQIA+ (estimado real): 9% - 12%</p>
+
+            <br>
+
+            <p>❥ Infidelidade (estimativa BR):</p>
+            <p>♔ Homens: 50% - 70%</p>
+            <p>♕ Mulheres: 30% - 56%</p>
+
+            <br>
+
+            <p>☢ Consumo de pornografia (estimativa global):</p>
+            <p>♂ Homens: 70% - 80%</p>
+            <p>♀ Mulheres: 20% - 30%</p>
+
+            <br>
+            <p>⚠️ Dados baseados em IBGE + estudos sociais</p>
+            `;
+        }
+    }, 20);
+}
 //caixa zap
 function buscarWhats() {
     let numero = document.getElementById("userWhats").value.trim();
