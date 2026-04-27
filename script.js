@@ -822,3 +822,13 @@ function toggleInfo() {
     box.style.display = "flex";
   }
 }
+
+function toggleDica() {
+  const box = document.getElementById("dicaBox");
+
+  if (box.style.display === "flex") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "flex";
+  }
+}
