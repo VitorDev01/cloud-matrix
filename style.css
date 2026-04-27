@@ -190,29 +190,6 @@ body {
   overflow:hidden;
 }
 
-/* linha vermelha */
-.scan-line{
-  position:absolute;
-  width:100%;
-  height:2px;
-  background:red;
-
-  box-shadow:
-    0 0 5px red,
-    0 0 10px red,
-    0 0 20px red;
-
-  top:0;
-  left:0;
-
-  animation: scanMove 2.5s linear infinite;
-}
-
-@keyframes scanMove {
-  0% { top:0%; }
-  100% { top:100%; }
-}
-
 /* iris */
 .iris{
   width:80px;
@@ -259,6 +236,48 @@ body {
   50% { top:0%; }
   55% { top:-100%; }
   100% { top:-100%; }
+}
+
+/* ===== MOVIMENTO AUTOMÁTICO DO OLHO ===== */
+.iris,
+.pupil {
+  animation: olhar 12s infinite ease-in-out;
+}
+
+/* SEQUÊNCIA DO OLHAR */
+@keyframes olhar {
+
+  /* centro inicial */
+  0%   { transform: translate(-50%, -50%); }
+
+  /*  olha pra cima */
+  20%  { transform: translate(-50%, -80%); }
+
+  /*  segura 3s (aprox) */
+  35%  { transform: translate(-50%, -80%); }
+
+  /*  esquerda */
+  50%  { transform: translate(-80%, -50%); }
+
+  /*  direita */
+  70%  { transform: translate(-20%, -50%); }
+
+  /*  baixo */
+  85%  { transform: translate(-50%, -20%); }
+
+  /* volta pro centro */
+  100% { transform: translate(-50%, -50%); }
+}
+
+.pupil {
+  animation: olhar 12s infinite ease-in-out,
+             tremor 0.2s infinite;
+}
+
+@keyframes tremor {
+  0% { transform: translate(-50%, -50%) translateX(0); }
+  50% { transform: translate(-50%, -50%) translateX(1px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
 }
 
 /* texto */
