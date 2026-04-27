@@ -203,15 +203,18 @@ body {
   /* 👁️ iris + pupila juntas */
   background: radial-gradient(
     circle at center,
-    #001a0f 15%,   /* pupila escura */
-    #00ff66 40%,   /* iris */
-    #00cc55 60%,
+    #000 12%,          /* pupila */
+    #003d1f 22%,       /* transição escura */
+    #00ff66 40%,       /* iris viva */
+    #00cc55 60%,       /* degrade */
+    #001a0f 75%,       /* borda escura */
     #000 100%
   );
 
   box-shadow:
-    0 0 20px #00ff66,
-    0 0 40px #00ff00;
+    inset 0 0 25px #00ff66,
+    0 0 25px #00ff00,
+    0 0 60px #00ff00;
 
   animation: eyeMove 12s infinite;
 }
