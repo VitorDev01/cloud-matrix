@@ -969,3 +969,119 @@ input::placeholder {
   background: #00ff00;
   color: black;
 }
+
+/* ===== TÍTULO VERMELHO ===== */
+.creep-title {
+  color: #ff2b2b;
+
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #ff0000;
+
+  cursor: pointer;
+}
+
+/* ===== BOTÃO VERMELHO ===== */
+.btn-creep {
+  font-family: 'Share Tech Mono', monospace;
+  height: 45px;
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff4d4d;
+  text-decoration: none;
+
+  border-radius: 6px;
+  border: 2px solid #ff0000;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.2),
+    rgba(255, 0, 0, 0.05)
+  );
+
+  box-shadow:
+    0 0 5px #ff4d4d,
+    inset 0 0 5px #ff0000;
+
+  margin: 8px auto;
+
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* hover */
+.btn-creep:hover {
+  background: #ff0000;
+  color: #1a0000;
+
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 25px #ff0000,
+    0 0 50px #ff3333;
+}
+
+/* ===== FUNDO ESCURO ===== */
+.dica-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+}
+
+/* ===== CAIXA ===== */
+.dica-content {
+  background: #000;
+  border: 2px solid #ff0000;
+
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+
+  border-radius: 8px;
+
+  color: #ff4d4d;
+  text-align: center;
+
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 30px #ff0000;
+}
+
+/* TEXTO */
+.dica-content p {
+  margin-bottom: 15px;
+}
+
+/* BOTÃO FECHAR */
+.dica-content button {
+  background: transparent;
+  border: 1px solid #ff0000;
+  color: #ff4d4d;
+
+  padding: 6px 12px;
+  cursor: pointer;
+
+  border-radius: 4px;
+
+  box-shadow: 0 0 5px #ff0000;
+}
+
+.dica-content button:hover {
+  background: #ff0000;
+  color: #000;
+}
