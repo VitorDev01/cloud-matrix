@@ -156,10 +156,7 @@ function scanRJ() {
             clearInterval(anim);
 
             res.innerHTML = `
-            <p> === PERFIL SOCIAL – RIO DE JANEIRO ===</p>
-
-            <br>
-
+            
             <p>✟ Católicos: 38,9%</p>
             <p>✝ Evangélicos: 32%</p>
             <p>☥ Espíritas: 3,5%</p>
