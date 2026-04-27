@@ -587,6 +587,12 @@ opacity:1;
   align-items:center; /* centraliza tudo */
 }
 
+.btn-container .matrix-btn{
+  width:90%;
+  max-width:400px;
+  margin:0 auto;
+}
+
 /* ===== BOTÃO VERDE (MATRIX) ===== */
 .btn-matrix{
   font-family:'Share Tech Mono', monospace;
