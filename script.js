@@ -48,9 +48,7 @@ function verificarSenha() {
     } else {
 
         alert("ACESSO NEGADO");
-
     }
-
 }
 
 window.onload = function () {
@@ -143,17 +141,27 @@ document.addEventListener("mousemove", (e) => {
 // ibge rj
 function scanRJ() {
     const res = document.getElementById("resultadoRJ");
+     // 👉 SE JÁ ESTIVER ABERTO → FECHA
+    if (res.style.display === "block") {
+        res.style.display = "none";
+        return;
+    }
+
+    // 👉 SE ESTIVER FECHADO → ABRE E ESCANEIA
     res.style.display = "block";
+    res.classList.add("scanning");
 
     let progresso = 0;
 
     let anim = setInterval(() => {
         progresso++;
 
-        res.innerHTML = `🔍 Escaneando dados do RJ... ${progresso}%`;
+        res.innerHTML = `🔍 Escaneando RJ/BR... ${progresso}%`;
 
         if (progresso >= 100) {
             clearInterval(anim);
+
+            res.classList.remove("scanning");
 
             res.innerHTML = `
             <p>➢ População Brasil: 212 milhões</p>
