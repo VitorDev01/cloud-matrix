@@ -142,7 +142,7 @@ body {
 /* ===== CHUVA (LETRAS) ===== */
 .text {
   position: absolute;
-  top: 10px; /* 👈 começa na nuvem */
+  top: 14px; /*  começa na nuvem */
 
   color: #00ff66;
   font-family: 'Share Tech Mono', monospace;
