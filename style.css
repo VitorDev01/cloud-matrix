@@ -986,7 +986,7 @@ input::placeholder {
 .btn-creep {
   font-family: 'Share Tech Mono', monospace;
   height: 45px;
-  width: 100%;
+  width: 90%;
   max-width: 600px;
 
   display: flex;
