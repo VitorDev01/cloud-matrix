@@ -22,8 +22,6 @@ A proposta do projeto é reunir, organizar e disponibilizar recursos de investig
 
 ## 📂 Categorias Disponíveis
 
-<img width="1536" height="1024" alt="Categorias" src="https://github.com/VitorDev01/cloud-matrix/blob/gh-pages/eye.png?raw=true" />
-
 O Cloud Matrix organiza os recursos nas seguintes categorias:
 
 * 🔎 **Busca por Imagem**
