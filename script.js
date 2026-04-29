@@ -156,7 +156,7 @@ function scanRJ() {
     let anim = setInterval(() => {
         progresso++;
 
-        res.innerHTML = `🔍 Escaneando RJ/BR... ${progresso}%`;
+        res.innerHTML = `Leia Com Atenção... ${progresso}%`;
 
         if (progresso >= 100) {
             clearInterval(anim);
@@ -164,39 +164,18 @@ function scanRJ() {
             res.classList.remove("scanning");
 
             res.innerHTML = `
-            <p>➢ População Brasil: 212 milhões</p>
-            <p>➢ População RJ: 17 milhões</p>
-            <p>⛫ Capital RJ: 6,7 milhões</p>
-            <p>⛱︎ Angra dos Reis: 179 mil</p>
-            
+            <p>➢ Esta página foi criada com o intuito principal de ajudar as pessoas a se protegerem contra golpes na internet, sejam eles aplicados através de sites falsos, phishing, ou através da lábia e manipulação de pessoas mal intencionadas.</p>
             <br>
             
-            <p>✟ Católicos: 38,9%</p>
-            <p>✝ Evangélicos: 32%</p>
-            <p>☥ Espíritas: 3,5%</p>
-            <p>✪ Umbanda/Candomblé: 2,6%</p>
-            <p>☠ Sem religião: 16,9%</p>
-            <p>☮ Outras: 5,8%</p>
+            <p>As ferramentas e técnicas OSINT disponibilizadas aqui utilizam apenas informações de fontes abertas e públicas (Open Source Intelligence), sem qualquer tipo de acesso indevido a dados privados, invasão de sistemas ou violação da Lei Geral de Proteção de Dados (LGPD).</p>
+            <p>O objetivo é conscientizar sobre os rastros que todos deixamos na internet e ajudar na identificação de características e comportamentos suspeitos.</p>
 
             <br>
 
-            <p>☉ LGBTQIA+ (oficial IBGE): 1,8%</p>
-            <p>☉ LGBTQIA+ (estimado real): 9% - 12%</p>
+            <p>A a seção "Creepypasta"</p>
+            <p>A seção de creepypasta/casos cabeludos tem caráter satírico. Ela serve para destacar situações absurdas, exageradas ou inesperadas que as pessoas encontram (ou criam) na internet. Não deve ser levada a sério como verdade absoluta, e sim como uma forma leve de mostrar o que não esperar de alguém (ou o que esperar demais).</p>
 
             <br>
-
-            <p>❥ Infidelidade (estimativa BR):</p>
-            <p>♔ Homens: 50% - 70%</p>
-            <p>♕ Mulheres: 30% - 56%</p>
-
-            <br>
-
-            <p>☢ Consumo de pornografia (estimativa global):</p>
-            <p>♂ Homens: 70% - 80%</p>
-            <p>♀ Mulheres: 20% - 30%</p>
-
-            <br>
-            <p>Dados baseados em IBGE + estudos sociais</p>
             `;
         }
     }, 20);
