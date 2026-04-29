@@ -343,8 +343,7 @@ h1{
 
 /*img*/
 .img-app {
-  height:20px;
-  width: 100%;
+  width: 95%;
   display: block;
   margin: 10px auto; /* centraliza e aproxima */
 
