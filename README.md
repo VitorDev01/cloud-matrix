@@ -1,91 +1,118 @@
-# 🟢 Cloud Matrix OSINT
-<img width="1536" height="1024" alt="ChatGPT Image Mar 27, 2026, 09_09_28 AM" src="https://github.com/user-attachments/assets/ff3df3ec-2d24-45ef-a3bc-b9ed7d768ada" />
+# 🟢 Cloud Matrix OSINT — Olho de Deus
 
-Cloud Matrix é um hub de ferramentas OSINT (Open Source Intelligence) desenvolvido para centralizar recursos de investigação digital em um único lugar.
+<img width="1536" height="1024" alt="Cloud Matrix Banner" src="https://github.com/user-attachments/assets/ff3df3ec-2d24-45ef-a3bc-b9ed7d768ada" />
 
-O projeto reúne diversas ferramentas úteis para coleta e análise de informações públicas na internet, organizadas de forma simples, rápida e acessível.
+## 📌 Sobre o Projeto
+
+O **Cloud Matrix OSINT** é um hub centralizado de ferramentas de **Open Source Intelligence (OSINT)**, desenvolvido para facilitar a coleta e análise de informações públicas disponíveis na internet.
+
+A proposta do projeto é reunir, organizar e disponibilizar recursos de investigação digital em uma interface simples, rápida e acessível.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- 🔎 Busca por ferramentas OSINT
-- 🧠 Organização por categorias
-- 🌐 Links diretos para ferramentas externas
-- 📱 Interface simples e responsiva
-- 🟢 Estilo visual inspirado no tema Matrix / hacker
+* 🔎 Pesquisa rápida por ferramentas OSINT
+* 🧠 Organização estruturada por categorias
+* 🌐 Acesso direto a ferramentas externas
+* 📱 Interface responsiva (mobile e desktop)
+* 🟢 Design inspirado no estilo *Matrix / Cyberpunk*
 
 ---
 
-## 📂 Categorias
-<img width="1536" height="1024" alt="ChatGPT Image Mar 27, 2026, 09_09_28 AM" src="https://github.com/VitorDev01/cloud-matrix/blob/gh-pages/eye.png?raw=true" />
-O Cloud Matrix organiza as ferramentas em categorias como:
+## 📂 Categorias Disponíveis
 
-- 🔎 **Busca por Imagem**
-- 👤 **Username / Nickname**
-- 📱 **Telefone**
-- 🌐 **Redes Sociais**
-- 🇧🇷 **Dados Públicos (Brasil)**
-- 📧 **Email**
-- 🌍 **Geolocalização**
+<img width="1536" height="1024" alt="Categorias" src="https://github.com/VitorDev01/cloud-matrix/blob/gh-pages/eye.png?raw=true" />
+
+O Cloud Matrix organiza os recursos nas seguintes categorias:
+
+* 🔎 **Busca por Imagem**
+* 👤 **Username / Nickname**
+* 📱 **Telefone**
+* 🌐 **Redes Sociais**
+* 🇧🇷 **Dados Públicos (Brasil)**
+* 📧 **Email**
+* 🌍 **Geolocalização**
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
+* **HTML5**
+* **CSS3**
+* **JavaScript**
 
 ---
 
 ## 🎯 Objetivo
 
-O objetivo do projeto é facilitar o acesso a ferramentas OSINT, ajudando investigadores, estudantes e profissionais de cibersegurança a encontrarem recursos de forma rápida e organizada.
+Fornecer uma plataforma prática e eficiente para:
+
+* Investigadores digitais
+* Estudantes de cibersegurança
+* Profissionais da área de OSINT
+
+O foco é otimizar o tempo na busca por ferramentas e melhorar a organização dos recursos disponíveis.
 
 ---
 
-## ⚠️ Aviso
+## ⚠️ Aviso Legal
 
-Este projeto tem fins **educacionais e informativos**.
+Este projeto possui finalidade **educacional e informativa**.
 
-O uso das ferramentas listadas é de total responsabilidade do usuário.  
-Respeite sempre a privacidade, a legislação e a ética ao realizar qualquer tipo de investigação.
+O uso das ferramentas listadas é de total responsabilidade do usuário.
+É fundamental respeitar:
 
----
-
-## 📈 Futuras melhorias
-
-- 🔍 Sistema de busca interna
-- ⭐ Sistema de favoritos
-- 🧩 Adição de novas ferramentas
-- 🌙 Modo dark aprimorado
-- 📊 Organização avançada por tags
+* A privacidade de terceiros
+* A legislação vigente
+* Os princípios éticos na investigação digital
 
 ---
 
-## 🤝 Contribuição
+## 📈 Roadmap (Melhorias Futuras)
+
+* 🔍 Sistema de busca interna avançado
+* ⭐ Sistema de favoritos
+* 🧩 Expansão da base de ferramentas
+* 🌙 Modo dark aprimorado
+* 📊 Filtros e organização por tags
+
+---
+
+## 🤝 Contribuições
 
 Contribuições são bem-vindas!
 
-Sinta-se livre para abrir uma issue ou enviar um pull request com melhorias.
+Você pode colaborar através de:
+
+* Abertura de *issues*
+* Envio de *pull requests*
+* Sugestão de novas ferramentas
+
+---
+
+## 🔒 Direitos Autorais
+
+© 2026 **VitorDev01**. Todos os direitos reservados.
+
+Este projeto não pode ser copiado, reproduzido ou distribuído sem autorização prévia.
+
+---
+
+## 🌐 Deploy
+
+A aplicação está disponível via GitHub Pages:
+
+🔗 https://vitordev01.github.io/cloud-matrix/
 
 ---
 
 ## 🧠 Autor
 
-Desenvolvido por VitorDev01
+Desenvolvido por **VitorDev01**
 
 ---
 
-## 🟢 Status do projeto
+## 🟢 Status do Projeto
 
-🚧 Em desenvolvimento
-
-## 📌 Deploy
-
-Este projeto utiliza GitHub Pages para hospedagem.
-
-A versão em produção é sempre mantida atualizada com os arquivos mais recentes:
-
-🔗 https://vitordev01.github.io/cloud-matrix/
+🚧 Em Fase Final 
