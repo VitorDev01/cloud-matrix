@@ -870,3 +870,13 @@ function toggleDica() {
     box.style.display = "flex";
   }
 }
+
+function toggleDica() {
+  const box = document.getElementById("dicainsta");
+
+  if (box.style.display === "flex") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "flex";
+  }
+}
