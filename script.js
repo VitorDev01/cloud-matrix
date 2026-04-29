@@ -880,3 +880,13 @@ function toggleDicas() {
     box.style.display = "flex";
   }
 }
+
+function toggleDicasx() {
+  const box = document.getElementById("dicax");
+
+  if (box.style.display === "flex") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "flex";
+  }
+}
