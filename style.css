@@ -343,14 +343,26 @@ h1{
 
 /*img*/
 .img-app {
-  width: 95%;
-  display: block;
-  margin: 10px auto; /* centraliza e aproxima */
+  width: 90%;
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 12px;
 
-  filter: 
-    drop-shadow(0 0 5px #00ff00)
-    drop-shadow(0 0 10px #00ff00)
-    drop-shadow(0 0 20px #00ff00);
+  border: 2px solid #00ff66;
+  border-radius: 8px;
+
+  text-align: center;
+
+  font-family: 'Courier New', monospace;
+  color: #00ff66;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  background: rgba(0, 20, 10, 0.6);
+
+  box-shadow:
+    0 0 6px #00ff66,
+    inset 0 0 6px #00ff66;
 }
 
 /*scanner rj*/
