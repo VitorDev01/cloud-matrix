@@ -871,7 +871,7 @@ function toggleDica() {
   }
 }
 
-function toggleDica() {
+function toggleDicas() {
   const box = document.getElementById("dicainsta");
 
   if (box.style.display === "flex") {
