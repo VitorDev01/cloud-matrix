@@ -418,6 +418,25 @@ function buscarHornet() {
     window.open(url, "_blank");
 }
 
+// ====================== GAROTOS COM LOCAL ======================
+function buscarGarotosComLocal() {
+    let nome = document.getElementById("garotosComLocal").value.trim();
+    if (!nome) return alert("Digite um nome!");
+    
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotoscomlocal`;
+    window.open(url, "_blank");
+}
+
+// ====================== GAROTAS COM LOCAL ======================
+function buscarGarotasComLocal() {
+    let nome = document.getElementById("garotasComLocal").value.trim();
+    if (!nome) return alert("Digite um nome!");
+    
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotascomlocal`;
+    window.open(url, "_blank");
+}
+
+
 // ============== busca facebook =====================
 function buscarFacebook() {
     const input = document.getElementById("userFacebook");
