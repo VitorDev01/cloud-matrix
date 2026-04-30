@@ -70,60 +70,6 @@ window.onload = function () {
 
   animateScroll();
 };
-/*animação h1
-
-const lines = [
-    "(root㉿Olho De Deus)-[~/©vitordev01]",
-    "└#Investigação Digital & Cyber Segurança ",
-];
-
-let lineIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-const speed = 50;
-
-function typeEffect() {
-    const el = document.querySelector(".typing");
-
-    let currentLine = lines[lineIndex];
-
-    if (!isDeleting) {
-        el.innerHTML = lines
-            .slice(0, lineIndex)
-            .join("<br>") +
-            (lineIndex > 0 ? "<br>" : "") +
-            currentLine.substring(0, charIndex++);
-
-    } else {
-        el.innerHTML = lines
-            .slice(0, lineIndex)
-            .join("<br>") +
-            (lineIndex > 0 ? "<br>" : "") +
-            currentLine.substring(0, charIndex--);
-    }
-
-    if (!isDeleting && charIndex === currentLine.length) {
-        setTimeout(() => {
-            if (lineIndex < lines.length - 1) {
-                lineIndex++;
-                charIndex = 0;
-            } else {
-                isDeleting = true;
-            }
-        }, 800);
-    } else if (isDeleting && charIndex === 0) {
-        if (lineIndex > 0) {
-            lineIndex--;
-            charIndex = lines[lineIndex].length;
-        } else {
-            isDeleting = false;
-        }
-    }
-
-    setTimeout(typeEffect, isDeleting ? 40 : speed);
-}
-
-typeEffect();*/
 
 //olho 
 const iris = document.querySelector(".iris");
@@ -163,6 +109,14 @@ function scanRJ() {
 
             res.classList.remove("scanning");
 
+            res.style.maxWidth = "800px";
+            res.style.width = "90%";
+            res.style.margin = "20px auto";   // centraliza + margem lateral
+            res.style.padding = "16px";
+            res.style.boxSizing = "border-box";
+            res.style.width = "calc(100% - 20px)";
+            res.style.margin = "20px auto";
+            
             res.innerHTML = `
             <p>➢ Esta página foi criada com o intuito principal de ajudar as pessoas a se protegerem contra golpes na internet, sejam eles aplicados através de sites falsos, phishing, ou através da lábia e manipulação de pessoas mal intencionadas.</p>
             <br>
