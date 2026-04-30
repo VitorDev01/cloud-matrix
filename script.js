@@ -87,13 +87,13 @@ document.addEventListener("mousemove", (e) => {
 // ibge rj
 function scanRJ() {
     const res = document.getElementById("resultadoRJ");
-     // 👉 SE JÁ ESTIVER ABERTO → FECHA
+     // SE JÁ ESTIVER ABERTO → FECHA
     if (res.style.display === "block") {
         res.style.display = "none";
         return;
     }
 
-    // 👉 SE ESTIVER FECHADO → ABRE E ESCANEIA
+    // SE ESTIVER FECHADO → ABRE E ESCANEIA
     res.style.display = "block";
     res.classList.add("scanning");
 
@@ -109,13 +109,13 @@ function scanRJ() {
 
             res.classList.remove("scanning");
 
-            res.style.maxWidth = "800px";
-            res.style.width = "90%";
-            res.style.margin = "20px auto";   // centraliza + margem lateral
-            res.style.padding = "16px";
-            res.style.boxSizing = "border-box";
-            res.style.width = "calc(100% - 20px)";
-            res.style.margin = "20px auto";
+           Object.assign(res.style, {
+            maxWidth: "700px",   // menor que antes
+            width: "85%",        // ocupa menos da tela
+            margin: "20px auto",
+            padding: "16px",
+            boxSizing: "border-box"
+           });
             
             res.innerHTML = `
             <p>➢ Esta página foi criada com o intuito principal de ajudar as pessoas a se protegerem contra golpes na internet, sejam eles aplicados através de sites falsos, phishing, ou através da lábia e manipulação de pessoas mal intencionadas.</p>
