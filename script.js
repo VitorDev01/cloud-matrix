@@ -436,6 +436,23 @@ function buscarGarotasComLocal() {
     window.open(url, "_blank");
 }
 
+// ====================== FATALMODEL GAROTOS ======================
+function buscarFatalmodelGarotos() {
+    let nome = document.getElementById("fatalmodelGarotos").value.trim();
+    if (!nome) return alert("Digite um nome!");
+    
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+fatalmodel`;
+    window.open(url, "_blank");
+}
+
+// ====================== FATALMODEL GAROTAS ======================
+function buscarFatalmodelGarotas() {
+    let nome = document.getElementById("fatalmodelGarotas").value.trim();
+    if (!nome) return alert("Digite um nome!");
+    
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+fatalmodel`;
+    window.open(url, "_blank");
+}
 
 // ============== busca facebook =====================
 function buscarFacebook() {
