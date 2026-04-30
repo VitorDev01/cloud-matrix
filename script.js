@@ -132,7 +132,7 @@ function scanRJ() {
               border-left: 3px solid #00ff66;
               padding-left: 10px;
               margin-top: 10px;
-             ">A seção de creepypasta/casos cabeludos tem caráter satírico. Ela serve para destacar situações absurdas, exageradas ou inesperadas que as pessoas encontram (ou criam) na internet. 
+             ">A seção de creepypastac,asos cabeludos, tem caráter satírico. Ela serve para destacar situações absurdas, exageradas ou inesperadas que as pessoas encontram (ou criam) na internet. 
               Não deve ser levada a sério como verdade absoluta, e sim como uma forma leve de mostrar o que não esperar de alguém (ou o que esperar demais).</p>
             
               `;
