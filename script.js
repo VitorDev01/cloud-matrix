@@ -119,7 +119,6 @@ function scanRJ() {
             
             res.innerHTML = `
             <p>➢ Esta página foi criada com o intuito principal de ajudar as pessoas a se protegerem contra golpes na internet, sejam eles aplicados através de sites falsos, phishing, ou através da lábia e manipulação de pessoas mal intencionadas.</p>
-            <br>
             
             <p>As ferramentas e técnicas OSINT disponibilizadas aqui utilizam apenas informações de fontes abertas e públicas (Open Source Intelligence), sem qualquer tipo de acesso indevido a dados privados, invasão de sistemas ou violação da Lei Geral de Proteção de Dados (LGPD).</p>
             <p>O objetivo é conscientizar sobre os rastros que todos deixamos na internet e ajudar na identificação de características e comportamentos suspeitos.</p>
