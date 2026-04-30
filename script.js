@@ -102,20 +102,20 @@ function scanRJ() {
     let anim = setInterval(() => {
         progresso++;
 
-        res.innerHTML = `Leia Com Atenção... ${progresso}%`;
-
-        if (progresso >= 100) {
-            clearInterval(anim);
-
-            res.classList.remove("scanning");
-
-           Object.assign(res.style, {
+         Object.assign(res.style, {
             maxWidth: "700px",   // menor que antes
             width: "85%",        // ocupa menos da tela
             margin: "20px auto",
             padding: "16px",
             boxSizing: "border-box"
            });
+
+        res.innerHTML = `Leia Com Atenção... ${progresso}%`;
+
+        if (progresso >= 100) {
+            clearInterval(anim);
+
+            res.classList.remove("scanning");
             
             res.innerHTML = `
             <p>➢ Esta página foi criada com o intuito principal de ajudar as pessoas a se protegerem contra golpes na internet, sejam eles aplicados através de sites falsos, phishing, ou através da lábia e manipulação de pessoas mal intencionadas.</p>
