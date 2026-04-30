@@ -293,29 +293,6 @@ body {
   100% { transform: translate(-50%, -50%) translateX(0); }
 }
 
-.info-box {
-  max-width: 800px;       /* limita largura em telas grandes */
-  margin: 20px auto;      /* centraliza + espaço nas laterais */
-  padding: 16px;          /* espaço interno */
-  
-  background: #0d0d0d;    /* opcional (combina com teu estilo) */
-  color: #00ff66;         /* estilo matrix */
-  
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,255,102,0.3);
-
-  width: 90%;             /* importante pra mobile */
-}
-
-/* Ajuste fino pra telas pequenas */
-@media (max-width: 600px) {
-  .info-box {
-    width: 95%;
-    padding: 12px;
-    font-size: 14px;
-  }
-}
-
 /* texto */
 .scan-text{
   margin-top:20px;
