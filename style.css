@@ -179,7 +179,7 @@ body {
   }
 
   100% {
-    transform: translateY(250px); /* 👈 menor queda = mais natural */
+    transform: translateY(290px); /*  queda = mais natural */
     opacity: 0;
   }
 }
