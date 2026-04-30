@@ -89,7 +89,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 115px; /* sobe a nuvem (ajuste aqui se quiser mais alto) */
+  margin-top: 100px; /* sobe a nuvem (ajuste aqui se quiser mais alto) */
   position: relative;
 }
 
@@ -97,7 +97,6 @@ body {
 .cloud {
   display: flex;
   position: relative;
-  margin-top: 115px;
   width: 320px;
   height: 100px;
   background: #fff;
