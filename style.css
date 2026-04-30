@@ -103,7 +103,7 @@ body {
   background: #fff;
   border-radius: 100px;
   z-index: 100;
-
+  filter: drop-shadow(8px 8px 0 #0005);
   animation: animateCloud 0.9s steps(1) infinite;
 }
 
@@ -129,6 +129,16 @@ body {
       brightness(1);
   }
 }
+
+.cloud::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  border-radius: 100px;
+  z-index: 1000;
+}
+
 /* topo da nuvem */
 .cloud::before {
   content: '';
