@@ -98,15 +98,31 @@ body {
   position: relative;
   width: 320px;
   height: 100px;
-
   background: #fff;
   border-radius: 100px;
-
   filter: drop-shadow(8px 8px 0 #0005);
-
-  animation: animateCloud 2s ease-in-out infinite;
 }
 
+/* RELÂMPAGO / FLASH */
+.cloud::after {
+  content: '';
+  position: absolute;
+  inset: -40px; /* maior que a nuvem */
+  background: radial-gradient(circle, rgba(0,255,150,0.4) 0%, transparent 70%);
+  z-index: -1;
+  opacity: 0;
+
+  animation: lightning 1.5s infinite;
+}
+
+@keyframes lightning {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  15%  { opacity: 0; }
+  30%  { opacity: 0.8; }
+  35%  { opacity: 0; }
+  100% { opacity: 0; }
+}
 /* topo da nuvem */
 .cloud::before {
   content: '';
@@ -121,22 +137,6 @@ body {
   background: #fff;
 
   box-shadow: 90px 0 0 30px #fff;
-}
-
-/* base da nuvem */
-.cloud::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #fff;
-  border-radius: 100px;
-}
-
-/* animação glow */
-@keyframes animateCloud {
-  0% { filter: drop-shadow(8px 8px 0 #0005) brightness(1); }
-  50% { filter: drop-shadow(8px 8px 0 #0005) brightness(1.5); }
-  100% { filter: drop-shadow(8px 8px 0 #0005) brightness(1); }
 }
 
 /* ===== CHUVA (LETRAS) ===== */
