@@ -95,33 +95,39 @@ body {
 
 /* ===== NUVEM ===== */
 .cloud {
+  display: flex;
   position: relative;
+  margin-top: 130px;
   width: 320px;
   height: 100px;
   background: #fff;
   border-radius: 100px;
-  filter: drop-shadow(8px 8px 0 #0005);
+  z-index: 100;
+
+  animation: animateCloud 0.9s steps(1) infinite;
 }
 
-/* RELÂMPAGO / FLASH */
-.cloud::after {
-  content: '';
-  position: absolute;
-  inset: -40px; /* maior que a nuvem */
-  background: radial-gradient(circle, rgba(0,255,150,0.4) 0%, transparent 70%);
-  z-index: -1;
-  opacity: 0;
+@keyframes animateCloud {
+  0% {
+    filter:
+      drop-shadow(8px 8px 0 #0005)
+      drop-shadow(0 0 0px #fff)
+      brightness(1);
+  }
 
-  animation: lightning 1.5s infinite;
-}
+  92% {
+    filter:
+      drop-shadow(8px 8px 0 #0005)
+      drop-shadow(0 0 60px #fff)
+      brightness(12);
+  }
 
-@keyframes lightning {
-  0%   { opacity: 0; }
-  10%  { opacity: 1; }
-  15%  { opacity: 0; }
-  30%  { opacity: 0.8; }
-  35%  { opacity: 0; }
-  100% { opacity: 0; }
+  100% {
+    filter:
+      drop-shadow(8px 8px 0 #0005)
+      drop-shadow(0 0 0px #fff)
+      brightness(1);
+  }
 }
 /* topo da nuvem */
 .cloud::before {
