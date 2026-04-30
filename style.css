@@ -89,7 +89,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 100px; /* sobe a nuvem (ajuste aqui se quiser mais alto) */
+  margin-top: 115px; /* sobe a nuvem (ajuste aqui se quiser mais alto) */
   position: relative;
 }
 
@@ -103,7 +103,7 @@ body {
   border-radius: 100px;
   z-index: 100;
   filter: drop-shadow(8px 8px 0 #0005);
-  animation: animateCloud 0.9s steps(1) infinite;
+  animation: animateCloud 0.7s steps(1) infinite;
 }
 
 @keyframes animateCloud {
