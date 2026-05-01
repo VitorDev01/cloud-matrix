@@ -858,6 +858,15 @@ function toggleInfo() {
   }
 }
 
+// ====================== RECLAME AQUI ======================
+function buscarReclameAqui() {
+    let nome = document.getElementById("reclameAqui").value.trim();
+    if (!nome) return alert("Digite um nome!");
+    
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+reclame+aqui`;
+    window.open(url, "_blank");
+}
+
 function toggleDica() {
   const box = document.getElementById("dicaBox");
 
