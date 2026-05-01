@@ -118,7 +118,7 @@ function scanRJ() {
             res.classList.remove("scanning");
             
             res.innerHTML = `
-            <p>➢ Em dezembro de 2020, uma grave falha de segurança no Ministério da Saúde expôs dados pessoais de aproximadamente 243 milhões de brasileiros (vivos e falecidos).</p>
+            <p>➢ Em dezembro de 2020, uma grave falha de segurança no Ministério da Saúde expôs dados pessoais de aproximadamente 243 milhões de brasileiros (vivos e falecidos) <a href="https://g1.globo.com/economia/tecnologia/noticia/2020/12/02/nova-falha-do-ministerio-da-saude-expoe-dados-de-243-milhoes-de-brasileiros-na-internet-diz-jornal.ghtml">fonte</a>.</p>
             
             <p>O vazamento ocorreu no sistema e-SUS Notifica e deixou expostos por vários meses informações como:</p>
 
@@ -137,8 +137,6 @@ function scanRJ() {
              Dados de cadastro no SUS e em planos de saúde</p>
             
             <p>Mesmo sendo um vazamento antigo (2020), esses dados ainda circulam em fóruns, grupos de Telegram, marketplaces da deep web e são usados até hoje para golpes de engenharia social, phishing, tentativas de roubo de conta, empréstimos fraudulentos e chantagem.</p>
-
-            <br>
 
             <p style="
               color:#ff4d4d;
