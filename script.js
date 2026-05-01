@@ -439,7 +439,7 @@ function buscarGarotosComLocal() {
     let nome = document.getElementById("garotosComLocal").value.trim();
     if (!nome) return alert("Digite um nome!");
     
-    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotoscomlocal`;
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotocomlocal`;
     window.open(url, "_blank");
 }
 
@@ -448,7 +448,7 @@ function buscarGarotasComLocal() {
     let nome = document.getElementById("garotasComLocal").value.trim();
     if (!nome) return alert("Digite um nome!");
     
-    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotascomlocal`;
+    const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotacomlocal`;
     window.open(url, "_blank");
 }
 
