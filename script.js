@@ -151,7 +151,7 @@ function scanRJ() {
               text-shadow: 0 0 5px #ff1a1a, 0 0 10px #ff0000;
              ">Como seus dados básicos (nome + CPF + telefone + endereço) provavelmente já vazaram, o mais importante é fortalecer todas as suas contas para dificultar que golpistas usem essas informações contra você.</p>
              <p>Mude suas senhas de gmail e se possviel de gmail, mude telefone, evite expor seu nome todo ou nome do meio etc.., cuidado com quem você compartilha seu novo número, e sempre verifique a veracidade de sites antes de passar dados sensíveis,
-             você pode usar as ferramentas da minha página para procurar informações suas que estão aderiva na internet, ou eu menso posso fazer esse serviço para você. - (@vitordev01</p>
+             você pode usar as ferramentas da minha página para procurar informações suas que estão aderiva na internet, ou eu mesmo posso fazer esse serviço para você. - (@vitordev01)</p>
             
               `;
         }
