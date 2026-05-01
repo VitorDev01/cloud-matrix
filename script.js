@@ -71,7 +71,7 @@ window.onload = function () {
   animateScroll();
 };
 
-//olho 
+// ======== OLHO ANIMADO ============ 
 const iris = document.querySelector(".iris");
 
 document.addEventListener("mousemove", (e) => {
@@ -84,7 +84,7 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
-// ibge rj
+//   ======== FUNÇÃO ESCANER ========
 function scanRJ() {
     const res = document.getElementById("resultadoRJ");
      // SE JÁ ESTIVER ABERTO → FECHA
@@ -103,8 +103,8 @@ function scanRJ() {
         progresso++;
 
          Object.assign(res.style, {
-            maxWidth: "700px",   // menor que antes
-            width: "85%",        // ocupa menos da tela
+            maxWidth: "700px",   // MENOR QUE ANTES
+            width: "85%",        // OCUPA MENOS TELA
             margin: "20px auto",
             padding: "16px",
             boxSizing: "border-box"
@@ -156,7 +156,7 @@ function scanRJ() {
         }
     }, 20);
 }
-//caixa zap
+// ===== ABRE ZAP NUMERO ==========
 function buscarWhats() {
     let numero = document.getElementById("userWhats").value.trim();
 
@@ -175,7 +175,7 @@ function buscarWhats() {
     }
 }
 
-// caixa id gmail
+// ========= = CAIXA ID GMAIL = ====== 
 function abrirEmail() {
     let email = document.getElementById("userEmail").value.trim();
 
@@ -251,7 +251,7 @@ searchInput.addEventListener("keypress", function(event) {
 
 searchBtn.addEventListener("click", buscarTagging);
 
-//x posts
+// === POSTS APAGADOS TWITTER X =======
 const archiveInput = document.getElementById("archiveInput");
 const archiveBtn = document.getElementById("archiveBtn");
 
@@ -273,7 +273,8 @@ archiveInput.addEventListener("keypress", function(event) {
 });
 
 archiveBtn.addEventListener("click", buscarArchive);
-//processos
+
+// ===== BUSCADOR DE PROCESSOS ========
 function buscarProcessos() {
     const nome = document.getElementById("userProcesso").value.trim();
 
@@ -288,7 +289,7 @@ function buscarProcessos() {
     window.open(`https://www.escavador.com/busca?q=${q}`, "_blank");
 }
 
-// maçonaria
+// ====== NOME MAÇONARIA ==========
 function buscarMacon() {
     const nome = document.getElementById("userMacon").value.trim();
 
@@ -308,7 +309,7 @@ document.getElementById("userMacon").addEventListener("keydown", function(e) {
 });
 
 
-//curtidos do insta
+// === POSTS CURTIDOS NO INSTAGRAM =====
 function buscar() {
     const input = document.getElementById("userInput");
 
@@ -330,7 +331,7 @@ function buscar() {
     window.open(url, "_blank");
 }
 
-// ENTER funcionando
+// ENTER 
 document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("userInput");
 
@@ -470,7 +471,7 @@ function buscarFatalmodelGarotas() {
     window.open(url, "_blank");
 }
 
-// ============== busca facebook =====================
+// ============== BUSCA FACEBOOK =====================
 function buscarFacebook() {
     const input = document.getElementById("userFacebook");
 
