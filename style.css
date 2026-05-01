@@ -380,21 +380,6 @@ h1{
     inset 0 0 6px #00ff66;
 }
 
- iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 90%;
-  border: none;
-  border-radius: 15px;
-   /* neon atrás */
-  box-shadow:
-    0 0 5px #00ff00,
-    0 0 10px #00aa00,
-    0 0 20px #00aa00;
-}
-
 /*scanner rj*/
 #resultadoRJ{
   width:90%;
