@@ -118,10 +118,25 @@ function scanRJ() {
             res.classList.remove("scanning");
             
             res.innerHTML = `
-            <p>➢ Esta página foi criada com o intuito principal de ajudar as pessoas a se protegerem contra golpes na internet, sejam eles aplicados através de sites falsos, phishing, ou através da lábia e manipulação de pessoas mal intencionadas.</p>
+            <p>➢ Em dezembro de 2020, uma grave falha de segurança no Ministério da Saúde expôs dados pessoais de aproximadamente 243 milhões de brasileiros (vivos e falecidos).</p>
             
-            <p>As ferramentas e técnicas OSINT disponibilizadas aqui utilizam apenas informações de fontes abertas e públicas (Open Source Intelligence), sem qualquer tipo de acesso indevido a dados privados, invasão de sistemas ou violação da Lei Geral de Proteção de Dados (LGPD).</p>
-            <p>O objetivo é conscientizar sobre os rastros que todos deixamos na internet e ajudar na identificação de características e comportamentos suspeitos.</p>
+            <p>O vazamento ocorreu no sistema e-SUS Notifica e deixou expostos por vários meses informações como:</p>
+
+             <p style="
+              color:#ff4d4d;
+              font-style: italic;
+              border-left: 3px solid #ff1a1a;
+              padding-left: 10px;
+              margin-top: 10px;
+              text-shadow: 0 0 5px #ff1a1a, 0 0 10px #ff0000;
+             ">
+             Nome completo
+             CPF
+             Endereço
+             Telefone
+             Dados de cadastro no SUS e em planos de saúde</p>
+            
+            <p>Mesmo sendo um vazamento antigo (2020), esses dados ainda circulam em fóruns, grupos de Telegram, marketplaces da deep web e são usados até hoje para golpes de engenharia social, phishing, tentativas de roubo de conta, empréstimos fraudulentos e chantagem.</p>
 
             <br>
 
@@ -132,8 +147,8 @@ function scanRJ() {
               padding-left: 10px;
               margin-top: 10px;
               text-shadow: 0 0 5px #ff1a1a, 0 0 10px #ff0000;
-             ">A seção de creepypasta, casos cabeludos, tem caráter satírico. Ela serve para destacar situações absurdas, exageradas ou inesperadas que as pessoas encontram (ou criam) na internet. 
-              Não deve ser levada a sério como verdade absoluta, e sim como uma forma leve de mostrar o que não esperar de alguém (ou o que esperar demais).</p>
+             ">Como seus dados básicos (nome + CPF + telefone + endereço) provavelmente já vazaram, o mais importante é fortalecer todas as suas contas para dificultar que golpistas usem essas informações contra você.</p>
+             <p>Mude suas senhas de gmail e se possviel de gmail, mude telefone, evite expor seu nome todo ou nome do meio etc.., cuidado com quem você compartilha seu novo número, e sempre verifique a veracidade de sites antes de passar dados sensíveis</p>
             
               `;
         }
