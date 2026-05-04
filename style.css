@@ -83,7 +83,6 @@ body {
   100% { transform: translateY(0); }
 }
 
-
 /* NUVEM */
 /* ===== CONTAINER ===== */
 .container {
@@ -182,8 +181,8 @@ body {
     opacity: 0;
   }
 }
-/* ===== OLHO SCANNER ===== */
 
+/* ===== OLHO SCANNER ===== */
 .eye-container{
   margin-top:80px;
   display:flex;
@@ -230,7 +229,6 @@ body {
     inset 0 0 25px #00ff66,
     0 0 25px #00ff00,
     0 0 60px #00ff00;
-
   animation: eyeMove 12s infinite;
 }
 
@@ -254,7 +252,6 @@ body {
   background:#020b0a;
   top:-100%;
   left:0;
-
   animation: blink 4s infinite;
 }
 
@@ -382,6 +379,7 @@ h1{
 
 iframe {
   border-radius: 15px;
+  max-width:500px;
    /* neon atrás */
   box-shadow:
     0 0 5px #00ff00,
@@ -424,6 +422,7 @@ iframe {
   margin:6px 0;
   line-height:1.4;
 }
+
 /* lista de links */
 ul{
  list-style:none;
