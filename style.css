@@ -359,13 +359,20 @@ h1{
   max-width: 420px;
   margin: 20px auto;
   border-radius: 50%;
-  overflow: hidden; /* ESSENCIAL */
+  overflow: hidden;
+
+  border: 3px solid #00ff66; /* 🔥 ESSA É A BORDA REAL */
 
   box-shadow:
-    0 0 10px #00ff66,
+    0 0 8px #00ff66,
     0 0 20px #00ff66,
-    inset 0 0 10px #00ff66;
+    0 0 40px #00ff66;
+}
 
+.img-app img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
 }
 
 iframe {
