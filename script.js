@@ -39,20 +39,6 @@ setInterval(function() {
     rain()
 }, 20);
 
-//function verificarSenha() {
-
-    /*let senha = prompt("Parece que vc não tem permissão aqui :):");
-
-    if (senha === "vocemeachou") {
-
-        window.open("https://www.google.com/search?q=inurl%3At.me+intext%3Apuxadas", "_blank");
-
-    } else {
-
-        alert("ACESSO NEGADO");
-    }
-}*/
-
 window.onload = function () {
   const text = document.getElementById("scrollText");
 
@@ -159,6 +145,38 @@ function scanRJ() {
         }
     }, 20);
 }
+
+// ==== BUACADOR PEDO ABU EUA ========= 
+function buscarOffender() {
+    let query = document.getElementById("userOffender").value.trim();
+
+    if (!query) {
+        alert("Digite um nome ou cidade!");
+        return;
+    }
+
+    const encoded = encodeURIComponent(query);
+
+    // Federal (principal)
+    window.open(`https://www.nsopw.gov/search?query=${encoded}`, "_blank");
+
+    // Google dork (mais agressivo OSINT)
+    window.open(`https://www.google.com/search?q=${encoded}+sex+offender+site:.gov`, "_blank");
+}
+
+// busca profunda 
+
+function buscarOffenderAvancado() {
+    let nome = document.getElementById("userOffender").value.trim();
+    if (!nome) return;
+
+    const dork = `"${nome}" ("sex offender" OR "registered offender" OR "Megan's Law")`;
+
+    const url = "https://www.google.com/search?q=" + encodeURIComponent(dork);
+
+    window.open(url, "_blank");
+}
+
 // ===== ABRE ZAP NUMERO ==========
 function buscarWhats() {
     let numero = document.getElementById("userWhats").value.trim();
