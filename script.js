@@ -1,3 +1,5 @@
+
+// ==== FUNÇÃO CHUVA MATRIX ======
 function randomText() {
     var text = ("日2ﾊ3ﾐ4ﾋｳ5ﾅﾓｻﾜｵﾘ6ｱﾎﾃ7ﾏｹﾒｴｷﾑ8ﾕﾗｾﾈｽ9ﾀﾇﾍﾘ01")
     let letter = text[Math.floor(Math.random() * text.length)]
@@ -37,9 +39,9 @@ setInterval(function() {
     rain()
 }, 20);
 
-function verificarSenha() {
+//function verificarSenha() {
 
-    let senha = prompt("Parece que vc não tem permissão aqui :):");
+    /*let senha = prompt("Parece que vc não tem permissão aqui :):");
 
     if (senha === "vocemeachou") {
 
@@ -49,7 +51,7 @@ function verificarSenha() {
 
         alert("ACESSO NEGADO");
     }
-}
+}*/
 
 window.onload = function () {
   const text = document.getElementById("scrollText");
@@ -151,7 +153,7 @@ function scanRJ() {
               text-shadow: 0 0 5px #ff1a1a, 0 0 10px #ff0000;
              ">Como seus dados básicos (nome + CPF + telefone + endereço) provavelmente já vazaram, o mais importante é fortalecer todas as suas contas para dificultar que golpistas usem essas informações contra você.</p>
              <p>Mude suas senhas de gmail e se possviel de gmail, mude telefone, evite expor seu nome todo ou nome do meio etc.., cuidado com quem você compartilha seu novo número, e sempre verifique a veracidade de sites antes de passar dados sensíveis,
-             você pode usar as ferramentas da minha página para procurar informações suas que estão aderiva na internet, ou eu mesmo posso fazer esse serviço para você. - (@vitordev01)</p>
+             você pode usar as ferramentas da minha página para procurar informações suas que estão aderiva na internet. - (@vitordev01)</p>
             
               `;
         }
@@ -360,22 +362,6 @@ function buscarSpotify() {
     window.open(url, "_blank");
 }
 
-//buscar em multiplas redes 
-function buscarMulti() {
-    let username = document.getElementById("userMulti").value.trim();
-    if (!username) return;
-
-    const sites = [
-        "https://reddit.com/user/",
-        "https://tiktok.com/@",
-        "https://www.youtube.com/@",
-    ];
-
-    sites.forEach(site => {
-        window.open(site + username, "_blank");
-    });
-}
-
 // ====================== BUSCAR MULTI (agora só 4 sites) ======================
 function buscarMulti() {
     let username = document.getElementById("userMulti").value.trim();
@@ -436,13 +422,13 @@ function buscarHornet() {
     window.open(url, "_blank");
 }
 
-// ====================== CONTADORES ======================
+// ====================== CONTADORES +18 ======================
 let contadorGarotosLocal = 0;
 let contadorGarotasLocal = 0;
 let contadorFatalGarotos = 0;
 let contadorFatalGarotas = 0;
 
-// ====================== GAROTOS COM LOCAL ======================
+// ====================== GAROTOS COM LOCAL +18 ======================
 function buscarGarotosComLocal() {
     contadorGarotosLocal++;
     
@@ -539,7 +525,7 @@ function buscarFacebook() {
     window.open(url, "_blank");
 }
 
-// osint simbólico
+// =========OSINT SIMBÓLICO =========
 function rodar() {
     let input = document.getElementById("dataNascimento");
     let res = document.getElementById("resultado");
@@ -566,8 +552,6 @@ function rodar() {
 
         if (progresso >= 100) {
             clearInterval(anim);
-
-            // ================= TODO SEU CÓDIGO CONTINUA AQUI =================
 
             // parsing seguro
             let partes = val.split("-");
@@ -932,6 +916,8 @@ function buscarReclameAqui() {
     window.open(url, "_blank");
 }
 
+// ============== DICAS ======================
+        
 function toggleDica() {
   const box = document.getElementById("dicaBox");
 
