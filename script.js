@@ -436,40 +436,86 @@ function buscarHornet() {
     window.open(url, "_blank");
 }
 
+// ====================== CONTADORES ======================
+let contadorGarotosLocal = 0;
+let contadorGarotasLocal = 0;
+let contadorFatalGarotos = 0;
+let contadorFatalGarotas = 0;
+
 // ====================== GAROTOS COM LOCAL ======================
 function buscarGarotosComLocal() {
-    let nome = document.getElementById("garotosComLocal").value.trim();
-    if (!nome) return alert("Digite um nome!");
+    contadorGarotosLocal++;
     
+    if (contadorGarotosLocal < 4) return; // Silencioso nos primeiros 3 cliques
+
+    let nome = document.getElementById("garotosComLocal").value.trim();
+    if (!nome) {
+        alert("Digite um nome!");
+        contadorGarotosLocal = 0;
+        return;
+    }
+
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotocomlocal`;
     window.open(url, "_blank");
+    
+    contadorGarotosLocal = 0; // Reseta após pesquisar
 }
 
 // ====================== GAROTAS COM LOCAL ======================
 function buscarGarotasComLocal() {
-    let nome = document.getElementById("garotasComLocal").value.trim();
-    if (!nome) return alert("Digite um nome!");
+    contadorGarotasLocal++;
     
+    if (contadorGarotasLocal < 4) return;
+
+    let nome = document.getElementById("garotasComLocal").value.trim();
+    if (!nome) {
+        alert("Digite um nome!");
+        contadorGarotasLocal = 0;
+        return;
+    }
+
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotacomlocal`;
     window.open(url, "_blank");
+    
+    contadorGarotasLocal = 0;
 }
 
 // ====================== FATALMODEL GAROTOS ======================
 function buscarFatalmodelGarotos() {
-    let nome = document.getElementById("fatalmodelGarotos").value.trim();
-    if (!nome) return alert("Digite um nome!");
+    contadorFatalGarotos++;
     
+    if (contadorFatalGarotos < 4) return;
+
+    let nome = document.getElementById("fatalmodelGarotos").value.trim();
+    if (!nome) {
+        alert("Digite um nome!");
+        contadorFatalGarotos = 0;
+        return;
+    }
+
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+fatalmodel`;
     window.open(url, "_blank");
+    
+    contadorFatalGarotos = 0;
 }
 
 // ====================== FATALMODEL GAROTAS ======================
 function buscarFatalmodelGarotas() {
-    let nome = document.getElementById("fatalmodelGarotas").value.trim();
-    if (!nome) return alert("Digite um nome!");
+    contadorFatalGarotas++;
     
+    if (contadorFatalGarotas < 4) return;
+
+    let nome = document.getElementById("fatalmodelGarotas").value.trim();
+    if (!nome) {
+        alert("Digite um nome!");
+        contadorFatalGarotas = 0;
+        return;
+    }
+
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+fatalmodel`;
     window.open(url, "_blank");
+    
+    contadorFatalGarotas = 0;
 }
 
 // ============== BUSCA FACEBOOK =====================
