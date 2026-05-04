@@ -177,6 +177,21 @@ function buscarOffenderAvancado() {
     window.open(url, "_blank");
 }
 
+// ==== BUSCA PEDO BR ======
+
+function buscarCrimeBR() {
+    let nome = document.getElementById("userCrimeBR").value.trim();
+
+    if (!nome) {
+        alert("Digite um nome!");
+        return;
+    }
+
+    const encoded = encodeURIComponent(`"${nome}" (preso por pedofilia OR abuso sexual de menores OR estrupo de vulneravel OR alissiador de menores)`);
+
+    window.open(`https://www.google.com/search?q=${encoded}`, "_blank");
+}
+
 // ===== ABRE ZAP NUMERO ==========
 function buscarWhats() {
     let numero = document.getElementById("userWhats").value.trim();
