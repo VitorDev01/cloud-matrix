@@ -355,24 +355,17 @@ h1{
 
 /*img*/
 .img-app {
-  width: 90%;
-  max-width: 420px;
+  width: clamp(180px, 40vw, 260px);
   margin: 20px auto;
-  border-radius: 60%;
+  border-radius: 50%;
   overflow: hidden;
-
-  border: 3px solid #00ff66; /* 🔥 ESSA É A BORDA REAL */
-
-  box-shadow:
-    0 0 8px #00ff66,
-    0 0 20px #00ff66,
-    0 0 40px #00ff66;
+  border: 2px solid #00ff66;
+  box-shadow: 0 0 15px #00ff66;
 }
 
 .img-app img {
   width: 100%;
   display: block;
-  border-radius: 60%;
 }
 
 iframe {
