@@ -355,7 +355,6 @@ h1{
 
 /*img*/
 .img-app {
-  .img-app {
   width: 90%;
   max-width: 420px;
   margin: 20px auto;
@@ -366,7 +365,7 @@ h1{
     0 0 10px #00ff66,
     0 0 20px #00ff66,
     inset 0 0 10px #00ff66;
-}
+
 }
 
 iframe {
