@@ -355,22 +355,18 @@ h1{
 
 /*img*/
 .img-app {
+  .img-app {
   width: 90%;
   max-width: 420px;
   margin: 20px auto;
-  padding: 12px;
-  border-radius: 100%;
-  text-align: center;
-  font-family: 'Courier New', monospace;
-  color: #00ff66;
-  font-size: 16px;
-  letter-spacing: 2px;
-
-  background: rgba(0, 20, 10, 0.6);
+  border-radius: 50%;
+  overflow: hidden; /* ESSENCIAL */
 
   box-shadow:
-    0 0 6px #00ff66,
-    inset 0 0 6px #00ff66;
+    0 0 10px #00ff66,
+    0 0 20px #00ff66,
+    inset 0 0 10px #00ff66;
+}
 }
 
 iframe {
