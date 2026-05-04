@@ -189,6 +189,20 @@ function abrirEmail() {
     window.location.href = url;
 }
 
+// ====================== BUSCA AVANÇADA (Nome entre aspas) ======================
+function buscarAvancado() {
+    let nome = document.getElementById("userDork").value.trim();
+    
+    if (!nome) {
+        return alert("Digite o nome completo!");
+    }
+
+    // Pesquisa com o nome entre aspas (ex: "paulo marcos da silva")
+    const url = `https://www.google.com/search?q=%22${encodeURIComponent(nome)}%22`;
+    
+    window.open(url, "_blank");
+}
+
 //caixa pinterest
 function buscarPinterest() {
     const user = document.getElementById("userPinterest").value.trim();
