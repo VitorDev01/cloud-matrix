@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Olho De Deus</title>
+      <link rel="stylesheet" href="style.css">
+       <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+       <link rel="icon" type="image/png" href="eye.png">
+     <link rel="shortcut icon" href="eye.png">
+    <link rel="apple-touch-icon" href="eye.png"> 
+</head>
+<body>
+ <div class="container">
+ <div class="cloud"></div>
+</div>
+<br>
+   
+<div class="top-bar">
+  <div class="scroll-wrapper">
+    <div id="scrollText">
+      <span>
+        Pois não há nada oculto que não venha a ser revelado, nem nada oculto que não venha a ser conhecido e trazido à luz Lucas 8-17
+      </span>
+      <span>
+        Pois não há nada oculto que não venha a ser revelado,nem nada oculto que não venha a ser conhecido e trazido à luz Lucas 8-17
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="eye-container">
+  <div class="eye">
+
+    <div class="scan-line"></div>
+
+    <div class="iris"></div>
+    <div class="pupil"></div>
+
+    <div class="eyelid"></div>
+
+  </div>
+</div>
+
+<div class="scan-text">[ 𝛂 עין אלוהים Ω ]</div>
+
+<!--<br>
+  <img src="1777030062852.png" class="img-app">
+<br>-->
+<div class="btn-container">
+<button class="btn-matrix" onclick="scanRJ()" style="font-size:15px; border-radius:15px; width:80%;">☞ - Leia Antes - ☜</button>
+</div>
+
+<div id="resultadoRJ" style="display:none; margin-top:20px;"></div>
+
+<h1 class="accordion-title">▼ Mundo Br Rj ⛱</h1>
+<div class="accordion-content">
+
+   <iframe width="90%" height="215" src="https://www.youtube.com/embed/D7it36l9zqU?si=oQ-0BtnHDP2zOicb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+<div class="btn-container">
+  <a href="https://www.rj.gov.br/transparencia/" class="btn-matrix">Portal transparência</a>
+   <a href="https://pro.similarweb.com/#/digitalsuite/websiteanalysis/home" class="btn-matrix">Verifica Web</a>
+    <a href="https://www.siteconfiavel.com.br/" class="btn-matrix">Verifica Sites</a>
+  <a href="https://cybdetective.com/osintmap/" class="btn-matrix">Cyber Global</a>
+ <a href="https://www.google.com/maps/d/u/0/viewer?mid=1lnMoFlzrZEwwlsqdNuPDPUtnoIUGBbU&g_ep=CAESCjExLjEyMC4xMDIYACDdYioSLDQ3MDc1OTE1LDQ3MDg0MzkzQgJCUg%3D%3D&shorturl=1&ll=-22.93721881592617%2C-43.16550334581837&z=13" class="btn-red">Mapa Das Facções</a>
+</div>
+</div>
+<ul class="links">
+
+<h1 class="accordion-title">▼ Buscadores Universais ☂︎</h1>
+<div class="accordion-content">
+<li>
+<a class="matrix-btn" href="https://donodozap.com/" target="_blank">
+<i class="fa-solid fa-user"></i>&nbsp;Dono Do Zap &nbsp;<i class="fa-brands fa-whatsapp"></i>
+</a>
+</li>
+   
+<!--caixa zap-->
+<div class="input-wrapper">
+  <input type="text" id="userWhats" placeholder="(ex: 5599999999999)">
+  <button class="enter-btn" onclick="buscarWhats()"><i class="fa-brands fa-whatsapp"></i>&nbsp;enviar</button>
+</div>
+   
+<!--caixa idgoogle-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="email" id="userEmail" placeholder="gmail = foto">
+  <button class="enter-btn" onclick="abrirEmail()">Email</button>
+</div>
+
+<!--caixa spotify-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userSpotify" placeholder="user spotify">
+  <button class="enter-btn" onclick="buscarSpotify()"><i class="fa-brands fa-spotify"></i>&nbsp;Espace</button>
+</div>
+
+<!--caixa pinterest-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userPinterest" placeholder="user pinterest">
+  <button class="enter-btn" onclick="buscarPinterest()"><i class="fa-brands fa-pinterest"></i>&nbsp;Alt</button>
+</div>
+
+<div class="box">
+  <div class="input-wrapper" style="margin-top:8px;">
+    <input type="text" id="usernameInput" placeholder="Insta user = threads">
+    <button class="enter-btn" id="enterBtn"><i class="fa-brands fa-threads"></i>&nbsp;Esc</button>
+  </div>
+</div>
+   
+<!--1. BLOCO: Username MULTIPLATAFORMA-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userMulti" placeholder="Multi Busca">
+  <button class="enter-btn" onclick="buscarMulti()">
+     <i class="fa-brands fa-tiktok"></i>&nbsp;
+      <i class="fa-brands fa-reddit"></i>&nbsp;
+       <i class="fa-brands fa-youtube"></i>&nbsp;
+     <i class="fa-brands fa-snapchat"></i>
+  </button>
+</div>
+    
+<!--3. BLOCO: Enumeração de Email-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userEmailEnum" placeholder="Username → gmail">
+  <button class="enter-btn" onclick="buscarEmail()"><i class="fa-solid fa-gmail"></i>&nbsp;<i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
+
+<!--4. BLOCO: Número OSINT (Google + Zap)-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userNumber" placeholder="+55 Numero vazado">
+  <button class="enter-btn" onclick="buscarNumero()"><i class="fa-solid fa-phone"></i>&nbsp;<i class="fa-solid fa-info"></i>&nbsp;</button>
+</div>
+
+
+<!--marcados insta-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="searchInput" placeholder="insta user = marcado ">
+  <button class="enter-btn" id="searchBtn"><i class="fa-brands fa-instagram"></i>&nbsp;Tab</button>
+</div>
+
+
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userInput" placeholder="curtido pelo user">
+  <button class="enter-btn" onclick="buscar()"><i class="fa-brands fa-instagram"></i>&nbsp;Enter</button>
+</div>
+
+<!--caixa x apagdos-->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="archiveInput" placeholder="X user Post Apagado">
+  <button class="enter-btn" id="archiveBtn"><i class="fa-brands fa-x-twitter"></i>&nbsp;Ctrl</button>
+</div>
+
+<!-- FACEBOOK PEOPLE SEARCH -->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userFacebook" placeholder="Nome Facebook">
+  <button class="enter-btn" onclick="buscarFacebook()">
+    <i class="fa-brands fa-facebook"></i>&nbsp;Enter
+  </button>
+</div>
+
+<div class="input-wrapper macon-box" style="margin-top:8px;">
+  <input type="text" id="userMacon" placeholder="Nome + Maçonaria">
+  <button class="enter-btn" onclick="buscarMacon()" style="border:none;">
+  <i class="fa-solid fa-compass"></i>
+  </button>
+</div>
+
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="userProcesso" placeholder="Processos/justiça">
+  <button class="enter-btn" onclick="buscarProcessos()">
+    <i class="fa-solid fa-scale-balanced"></i>
+  </button>
+</div>
+   
+<li>
+<a class="matrix-btn icon-btn" 
+href="https://g1.globo.com/economia/tecnologia/noticia/2020/12/02/nova-falha-do-ministerio-da-saude-expoe-dados-de-243-milhoes-de-brasileiros-na-internet-diz-jornal.ghtml"
+target="_blank">
+
+<i class="fa fa-search"></i>
+ Vazamentos SUS #01
+<i class="fa-solid fa-user-secret"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://behindtheemail.com/" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-eye"></i>&nbsp;Varredura Gmail&nbsp;<i class="fa-brands fa-google"></i>
+</a>
+</li>
+   
+<li>
+<a class="matrix-btn" href="https://haveibeenpwned.com/" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-envelope"></i>&nbsp;Vazamentos #02&nbsp;<i class="fa-solid fa-key"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://epieos.com/" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-info"></i>&nbsp; Id Foto Maps&nbsp;<i class="fa-brands fa-google"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://whatsmyname.app/" target="_blank" style="margin-top:5px;">
+?WhAtS My NaMe? 
+</a>
+</li>
+   
+<li>
+<a class="matrix-btn" href="https://cnpja.com/" target="_blank" style="margin-top:5px;">
+<i class="fas fa-map-marker-alt"></i>&nbsp;CNPJ Dados&nbsp;<i class="fa fa-book"></i>
+</a>
+</li>
+
+<!-- BADOO - Ícone de Coração (estilo dating) -->
+<div class="input-wrapper" style="margin-top:5px;">
+  <input type="text" id="userBadoo" placeholder="badoo global">
+  <button class="enter-btn" onclick="buscarBadoo()" 
+          style="border: none;">
+    <i class="fa-solid fa-heart fa-lg"></i>
+  </button>
+</div>
+
+<!-- HORNET - Ícone de Abelha -->
+<div class="input-wrapper" style="margin-top:5px;">
+  <input type="text" id="userHornet" placeholder="vale global">
+  <button class="enter-btn" onclick="buscarHornet()" 
+          style="border: none;">
+    <i class="fab fa-forumbee"></i>
+  </button>
+</div>
+
+<!-- GAROTOS COM LOCAL -->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="garotosComLocal" placeholder="Ele da golpe? ">
+  <button class="enter-btn" onclick="buscarGarotosComLocal()"
+          style="border: none;">
+    <i class="fa-solid fa-ban"></i>
+  </button>
+</div>
+
+<!-- GAROTAS COM LOCAL -->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="garotasComLocal" placeholder="Ela da golpe?">
+  <button class="enter-btn" onclick="buscarGarotasComLocal()"
+          style="border: none;">
+    <i class="fa-solid fa-ban"></i>
+  </button>
+</div>
+
+<!-- FATALMODEL - GAROTOS -->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="fatalmodelGarotos" placeholder="Ele é famosinho?">
+  <button class="enter-btn" onclick="buscarFatalmodelGarotos()"
+          style="border: none;">
+    <i class="fa-solid fa-ban"></i>
+  </button>
+</div>
+
+<!-- FATALMODEL - GAROTAS -->
+<div class="input-wrapper" style="margin-top:8px;">
+  <input type="text" id="fatalmodelGarotas" placeholder="Ela é famosinha?">
+  <button class="enter-btn" onclick="buscarFatalmodelGarotas()"
+          style="border: none;">
+    <i class="fa-solid fa-ban"></i>
+  </button>
+</div>
+   
+</div>
+   
+<h1 class="accordion-title">▼ Busca Reversa Imagem ⌕ ⛶</h1>
+<div class="accordion-content">
+<h1>└─▼ Sites</h1>
+
+<li>
+<a class="matrix-btn" href="https://picarta.ai/" target="_blank">
+<i class="fa-solid fa-robot"></i> &nbsp;Geolocalização IA&nbsp;<i class="fa-solid fa-images"></i>
+</a>
+</li>
+   
+<li>
+<a class="matrix-btn" href="https://yandex.com/images/" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-magnifying-glass"></i> &nbsp;Yandex Images &nbsp;<i class="fa-solid fa-images"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://pimeyes.com/en" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-magnifying-glass"></i> &nbsp;Pin Eyes &nbsp;<i class="fa-solid fa-images"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://facecheck.id/pt" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-face-smile"></i>&nbspFace Check&nbsp;<i class="fa-brands fa-google"></i>
+</a>
+</li>
+
+<li>
+<a class="matrix-btn" href="https://exiftool.org/" target="_blank" style="margin-top:5px;">
+<i class="fa-solid fa-clock"></i>&nbsp;Meta Dados IMG&nbsp;<i class="fa-solid fa-info"></i>
+</a>
+</li>
+</div>
+
+<h1 class="accordion-title">▼ Osint Simbólico Data 𝄜</h1>
+<div class="accordion-content">
+<h1>└─▼ Data Nascimento</h1>
+
+<li>
+  <div class="input-wrapper">
+    <input type="date" id="dataNascimento" placeholder="dd/mm/aaaa">
+    <button class="enter-btn" onclick="rodar()"><i class="fa-solid fa-calendar-days"></i>&nbsp;<i class="fa-solid fa-id-card"></i></button>
+  </div>
+
+  <div id="resultado"></div>
+</li>
+</div>
+
+<h1 class="toggle-title" onclick="togglePesquisa()">
+▼ Espiritual Do Indivíduo ⚜
+</h1>
+
+<div id="pesquisaBox" style="display:none;">
+<h1>└─▼ % Bastardia</h1>
+<br>
+  <a href="https://youtu.be/LGzTYvTXLu8?si=DMXeV-1Y-XBlbb7w" target="_blank"><img src="bastardia.jpg" class="img-app" style="border-radius: 15px; width:90%">
+<br></a>
+<div class="input-wrapper" style="margin-top:5px; text-align:left;">
+
+  <p>Seus pais te conceberam casados?</p>
+  <label><input type="radio" name="q1" value="sim"> Sim</label>
+  <label><input type="radio" name="q1" value="nao"> Não</label>
+
+  <p>Seus pais estão separados atualmente?</p>
+  <label><input type="radio" name="q2" value="sim"> Sim</label>
+  <label><input type="radio" name="q2" value="nao"> Não</label>
+
+  <p>Eles tiveram relações com outras pessoas antes de gerar você?</p>
+  <label><input type="radio" name="q3" value="sim"> Sim</label>
+  <label><input type="radio" name="q3" value="nao"> Não</label>
+
+  <p>Você foi criado só por pai ou mãe?</p>
+  <label><input type="radio" name="q4" value="sim"> Sim</label>
+  <label><input type="radio" name="q4" value="nao"> Não</label>
+
+  <br><br>
+
+  <button class="matrix-btn" onclick="calcularBastardia()">Analisar </button>
+
+  <div id="resultadoBastardia" style="margin-top:10px;"></div>
+
+</div>
+
+<h1>
+└─▼ Zona Tóxica
+</h1>
+
+<br>
+  <img src="toxico1.jpg" class="img-app" style="border-radius: 15px; width:90%">
+<br>
+<div class="input-wrapper">
+
+  <p>Consome drogas (cigarro, etc)?</p>
+  <label><input type="radio" name="t1" value="sim"> Sim</label>
+  <label><input type="radio" name="t1" value="nao"> Não</label>
+
+  <p>Consome álcool?</p>
+  <label><input type="radio" name="t2" value="sim"> Sim</label>
+  <label><input type="radio" name="t2" value="nao"> Não</label>
+
+  <p>Assiste conteúdo +18?</p>
+  <label><input type="radio" name="t3" value="sim"> Sim</label>
+  <label><input type="radio" name="t3" value="nao"> Não</label>
+
+  <p>Tem processos na justiça?</p>
+  <label><input type="radio" name="t4" value="sim"> Sim</label>
+  <label><input type="radio" name="t4" value="nao"> Não</label>
+
+  <p>Tem traços narcisistas?</p>
+  <label><input type="radio" name="t5" value="sim"> Sim</label>
+  <label><input type="radio" name="t5" value="nao"> Não</label>
+
+  <br><br>
+
+  <button class="matrix-btn" onclick="calcularToxico()">Analisar</button>
+
+  <div id="resultadoToxico"></div>
+
+</div>
+</div>
+
+<h1 class="accordion-title">▼ Registros De Pedófilos USA/BR 𓅃</h1>
+<div class="accordion-content">
+
+  <img src="justica.png" class="img-app">
+   
+  <!-- BUSCA CENTRAL -->
+  <div class="input-wrapper" style="margin-top:8px; max-width:400px;">
+     
+    <input type="text" id="userOffender" placeholder="Nome/cidade EUA">
+    <button class="enter-btn" onclick="buscarOffenderAvancado()">Buscar <i class="fa-solid fa-flag-usa"></i></button>
+  </div>
+
+  <div class="input-wrapper" style="margin-top:8px; max-width:400px;">
+  <input type="text" id="userCrimeBR" placeholder="Nome completo Do Jack BR">
+  
+  <button class="enter-btn" onclick="buscarCrimeBR()">Buscar <i class="fa fa-flag" aria-hidden="true"></i></button>
+  </div>
+   
+  <!-- BOTÕES DIRETOS -->
+  <div class="btn-container">
+
+    <a href="https://www.offenderradar.com/" target="_blank" class="btn-matrix">
+     Radar Amplo Abusadores 
+    </a>
+     
+    <a href="https://www.nsopw.gov" target="_blank" class="btn-matrix">
+      Buscador oficial governo
+    </a>
+
+    <a href="https://www.criminaljustice.ny.gov/SomsSUBDirectory/search_index.jsp" target="_blank" class="btn-matrix">
+      Estado Nova York
+    </a>
+
+  </div>
+
+  <!-- AVISO -->
+  <p style="margin-top:15px; font-size:12px; color:#aaa;">
+    Dados públicos do governo dos EUA e Google.
+  </p>
+
+</div>
+   
+   <!-- ===== SEÇÃO CREEP PASTA ===== -->
+<h1 class="accordion-title creep-title">▼ Seção Creepy Pasta ☢</h1>
+
+<div class="accordion-content">
+
+  <div class="input-wrapper">
+  <input type="text" id="reclameAqui" placeholder="Nome Reclame Aqui" style="width:95%; max-width:400px;"> 
+  <button class="enter-btn" onclick="buscarReclameAqui()"> ☢ </button>
+  </div>
+   
+  <div>
+    <a class="btn-creep" href="https://github.com/kaifcodec/user-scanner" target="_blank">
+      user-scanner -linux
+    </a>
+  </div>
+
+  <div>
+    <a class="btn-creep" href="https://whatsmyname.app/" target="_blank">
+      What's My Name - web
+    </a>
+  </div>
+
+  <div>
+    <button class="btn-creep" onclick="toggleDica()">
+      Interesses Cabeludos Facebook
+    </button>
+  </div>
+
+<!-- ===== CAIXA DE DICA ===== -->
+<div id="dicaBox" class="dica-box">
+  <div class="dica-content">
+    <p>
+      Dica: Acesse o Facebook da pessoa pela versão de computador, vá até a aba "Curtidas".
+      se estiver pública, você podera encontrar informações reveladoras sobre interesses,
+      páginas seguidas e possíveis conexões.
+    </p>
+    <button onclick="toggleDica()">Fechar</button>
+  </div>
+</div>
+
+<div>
+    <button class="btn-creep" onclick="toggleDicas()">
+      ABC do Instagram 
+    </button>
+</div>
+
+<!-- ===== CAIXA DE DICA ===== -->
+<div id="dicainsta" class="dica-box">
+  <div class="dica-content">
+    <p>
+      Dica: Se esta procurando uma pessoa especifica nos seguidores, va na barra de pesquisa e digite a 
+      primeira letra do nome, o instagram vai retonar pessoas com aquela inicial, na barra de pesuisas geral também 
+      fica salva as pessoas buscadas com aquela letra.
+    </p>
+    <button onclick="toggleDicas()">Fechar</button>
+  </div>
+</div>
+
+<div>
+    <button class="btn-creep" onclick="toggleDicasx()">
+      Seu passadoXtwitter te condena  
+    </button>
+</div>
+
+<!-- ===== CAIXA DE DICA ===== -->
+<div id="dicax" class="dica-box">
+  <div class="dica-content">
+    <p>
+      Para ver posts e stories apagados do Twitter tenha em mãos o usuário va na aba > buscadores 
+      universais, > Posts apagados X > cole o user, vai retornar tudo que a maquina do tempo
+      salvou sobre aquele perfil ( ! posts +18 podem aparecer esteja ciente dessa pesquisa ! )
+    </p>
+    <button onclick="toggleDicasx()">Fechar</button>
+  </div>
+</div>
+
+   
+</div>
+<br>
+<footer class="footer-fixed">
+  <div class="footer-content">
+
+    <!-- texto -->
+    <span>© vitordev01 2026</span>
+
+    <!-- ícone info (CENTRO) -->
+    <i class="fa-solid fa-circle-info info-icon" onclick="toggleInfo()"></i>
+
+    <!-- github -->
+    <a href="https://github.com/vitordev01" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-github"></i>
+    </a>
+
+  </div>
+</footer>
+
+<div id="infoBox" class="info-box">
+  <div class="info-content">
+    <p>
+      Nenhum dado inserido nesta página é armazenado ou compartilhado.  
+      Todas as consultas são processadas localmente no seu navegador.  
+      O uso indevido das ferramentas é de total responsabilidade do usuário.
+    </p>
+    <button onclick="toggleInfo()">Fechar</button>
+  </div>
+</div>
+
+   
+<br>
+<script src="script.js" defer></script>
+</body>
+</html>
