@@ -1,5 +1,6 @@
 * {
   -webkit-tap-highlight-color: transparent;
+   box-sizing:border-box;
 }
 
 body{
@@ -9,7 +10,9 @@ body{
   padding:0;
   text-align:center;
   color:white;
-  align-items: center;
+  overflow-x:hidden;
+  width:100%;
+
 }
 
 /* ===== TOPO FIXO ESTILO LETREIRO ===== */
@@ -1190,4 +1193,13 @@ input::placeholder {
 .dica-content button:hover {
   background: #ff0000;
   color: #000;
+}
+
+button,
+.matrix-btn,
+.btn-blue,
+.btn-red,
+.btn-creep,
+.btn-matrix {
+  width:min(90%, 400px);
 }
