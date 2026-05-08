@@ -222,6 +222,18 @@ function abrirEmail() {
     window.location.href = url;
 }
 
+// ====================== T.ME INTEXT ======================
+function buscarTmeIntext() {
+    let texto = document.getElementById("tmeIntext").value.trim();
+    
+    if (!texto) {
+        return alert("Digite uma palavra ou nome!");
+    }
+
+    const url = `https://www.google.com/search?q=t.me+intext:${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+}
+
 // ====================== BUSCA AVANÇADA (Nome entre aspas) ======================
 function buscarAvancado() {
     let nome = document.getElementById("userDork").value.trim();
