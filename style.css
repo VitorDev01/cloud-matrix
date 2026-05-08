@@ -729,70 +729,63 @@ opacity:1;
   }
 }
 /*caixa insta*/
-.box {
-      text-align: center;
-      width: 100%;
-    }
+/* ==================== INPUTS + BOTÕES ==================== */
 
-    .input-wrapper {
-      position: relative;
-      display: block;
-      width: 100%;
-      max-width: 600px;
-      margin: 10px auto; /* centraliza */
-      margin-top: 8px;
-    }
+/* Caixa que envolve input + botão */
+.input-wrapper {
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    margin: 12px auto;
+}
 
-   /* ===== INPUT NORMAL (SO PRA TEXT, NAO RADIO) ===== */
-    input {
-      font-family: 'Share Tech Mono', monospace !important;
-    } 
-    input:not([type="radio"]) {
-      background: black;
-      border: 1px solid #00ff00;
-      color: #00ff00;
-      width: 100%;
-      outline: none;
-      font-size: 16px;
-      border-radius: 6px;
-      padding: 14px 12px;
-      box-shadow: 0 0 5px #00ff00, inset 0 0 5px #00ff00;
-      box-sizing: border-box;
-    }
+/* Input principal */
+.input-wrapper input:not([type="radio"]) {
+    width: 100%;
+    background: black;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 14px 55px 14px 16px;   /* espaço maior pro botão */
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 0 0 6px #00ff00, 
+                inset 0 0 6px #00ff00;
+    box-sizing: border-box;
+}
 
-    input::placeholder {
-      color: #00aa00;
-    }
+.input-wrapper input::placeholder {
+    color: #00aa00;
+}
 
-    input:focus {
-      box-shadow: 0 0 10px #00ff00, inset 0 0 10px #00ff00;
-    }
+.input-wrapper input:focus {
+    box-shadow: 0 0 12px #00ff00, 
+                inset 0 0 10px #00ff00;
+}
 
-    input {
-      caret-color: #00ff00;
-    }
+/* Botão dentro do input */
+.enter-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 0 6px #00ff00;
+    transition: all 0.3s;
+    min-width: 42px;
+    text-align: center;
+}
 
-    .enter-btn {
-      position: absolute;
-      right: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: transparent;
-      border: 1px solid #00ff00;
-      color: #00ff00;
-      padding: 4px 8px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-family: "Courier New", monospace;
-
-      box-shadow: 0 0 5px #00ff00;
-    }
-
-    .enter-btn:hover {
-      background: #00ff00;
-      color: black;
-      box-shadow: 0 0 10px #00ff00;
-    }
+.enter-btn:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 0 0 12px #00ff00;
+}
 
     @media (max-width: 600px) {
   .input-wrapper {
