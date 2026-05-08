@@ -1194,12 +1194,3 @@ input::placeholder {
   background: #ff0000;
   color: #000;
 }
-
-button,
-.matrix-btn,
-.btn-blue,
-.btn-red,
-.btn-creep,
-.btn-matrix {
-  width:min(90%, 400px);
-}
