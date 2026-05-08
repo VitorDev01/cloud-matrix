@@ -414,6 +414,31 @@ iframe {
   line-height:1.4;
 }
 
+.enter-btn{
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 70%;
+    padding: 0 15px;
+
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+
+    background: black;
+    color: #00ff00;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
 /* lista de links */
 ul{
  list-style:none;
