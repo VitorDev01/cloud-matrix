@@ -12,7 +12,28 @@
     <link rel="apple-touch-icon" href="eye.png"> 
 </head>
 <body>
- <div class="container">
+
+   <!-- TELA DE ACESSO -->
+<div id="lockScreen">
+
+  <div class="lock-box">
+
+    <h1 class="lock-title">USUÁRIO PADRÃO</h1>
+
+    <div class="input-wrapper lock-input">
+      <input type="password" id="accessKey" placeholder="chave de acesso">
+
+      <button class="enter-btn" onclick="unlockPage()">
+        <i class="fa-solid fa-key"></i>
+      </button>
+    </div>
+
+    <p id="errorText"></p>
+
+  </div>
+</div>
+
+<div class="container">
  <div class="cloud"></div>
 </div>
 <br>
