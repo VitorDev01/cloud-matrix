@@ -1307,3 +1307,18 @@ input::placeholder {
 body.locked{
   overflow:hidden;
 }
+
+.lock-subtitle{
+  color:#00cc66;
+
+  font-size:11px;
+
+  margin-top:-12px;
+  margin-bottom:20px;
+
+  letter-spacing:1px;
+
+  text-shadow:0 0 5px #00ff00;
+
+  opacity:0.8;
+}
