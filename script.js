@@ -1,3 +1,54 @@
+/* =========================
+   CHAVE DE ACESSO
+========================= */
+
+const ACCESS_PASSWORD = "0101$";
+
+document.body.classList.add("locked");
+
+function unlockPage(){
+
+  const input = document.getElementById("accessKey");
+  const error = document.getElementById("errorText");
+
+  if(input.value === ACCESS_PASSWORD){
+
+    const lock = document.getElementById("lockScreen");
+
+    lock.style.transition = "0.5s";
+    lock.style.opacity = "0";
+
+    setTimeout(() => {
+      lock.style.display = "none";
+      document.body.classList.remove("locked");
+    }, 500);
+
+  } else {
+
+    error.innerText = "[ CHAVE INVÁLIDA ]";
+
+    input.style.border = "1px solid red";
+
+    setTimeout(() => {
+      input.style.border = "1px solid #00ff00";
+    }, 1000);
+  }
+}
+
+/* ENTER libera */
+document.addEventListener("keydown", function(e){
+
+  if(e.key === "Enter"){
+
+    const lock = document.getElementById("lockScreen");
+
+    if(lock.style.display !== "none"){
+      unlockPage();
+    }
+
+  }
+
+});
 
 // ==== FUNÇÃO CHUVA MATRIX ======
 function randomText() {
