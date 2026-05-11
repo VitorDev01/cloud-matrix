@@ -1310,15 +1310,9 @@ body.locked{
 
 .lock-subtitle{
   color:#00cc66;
-
-  font-size:11px;
-
+  font-size:15px;
   margin-top:7px;
-  margin-bottom:20px;
-
   letter-spacing:1px;
-
   text-shadow:0 0 5px #00ff00;
-
   opacity:0.8;
 }
