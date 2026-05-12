@@ -1,52 +1,52 @@
 /* =========================
-   CHAVE DE ACESSO
+   CHAVE DE ACESSO ( para os curiosos )
 ========================= */
 
 const ACCESS_PASSWORD = "0101$";
 
 document.body.classList.add("locked");
 
-function unlockPage(){
+function unlockPage() {
 
-  const input = document.getElementById("accessKey");
-  const error = document.getElementById("errorText");
+    const input = document.getElementById("accessKey");
+    const error = document.getElementById("errorText");
 
-  if(input.value === ACCESS_PASSWORD){
+    if (input.value === ACCESS_PASSWORD) {
 
-    const lock = document.getElementById("lockScreen");
+        const lock = document.getElementById("lockScreen");
 
-    lock.style.transition = "0.5s";
-    lock.style.opacity = "0";
+        lock.style.transition = "0.5s";
+        lock.style.opacity = "0";
 
-    setTimeout(() => {
-      lock.style.display = "none";
-      document.body.classList.remove("locked");
-    }, 500);
+        setTimeout(() => {
+            lock.style.display = "none";
+            document.body.classList.remove("locked");
+        }, 500);
 
-  } else {
+    } else {
 
-    error.innerText = "[ CHAVE INVÁLIDA ]";
+        error.innerText = "[ CHAVE INVÁLIDA ]";
 
-    input.style.border = "1px solid red";
+        input.style.border = "1px solid red";
 
-    setTimeout(() => {
-      input.style.border = "1px solid #00ff00";
-    }, 1000);
-  }
+        setTimeout(() => {
+            input.style.border = "1px solid #00ff00";
+        }, 1000);
+    }
 }
 
 /* ENTER libera */
-document.addEventListener("keydown", function(e){
+document.addEventListener("keydown", function(e) {
 
-  if(e.key === "Enter"){
+    if (e.key === "Enter") {
 
-    const lock = document.getElementById("lockScreen");
+        const lock = document.getElementById("lockScreen");
 
-    if(lock.style.display !== "none"){
-      unlockPage();
+        if (lock.style.display !== "none") {
+            unlockPage();
+        }
+
     }
-
-  }
 
 });
 
@@ -90,24 +90,24 @@ setInterval(function() {
     rain()
 }, 20);
 
-window.onload = function () {
-  const text = document.getElementById("scrollText");
+window.onload = function() {
+    const text = document.getElementById("scrollText");
 
-  let pos = 0;
+    let pos = 0;
 
-  function animateScroll() {
-    pos -= 1.0;
+    function animateScroll() {
+        pos -= 1.0;
 
-    if (Math.abs(pos) >= text.scrollWidth / 2) {
-      pos = 0;
+        if (Math.abs(pos) >= text.scrollWidth / 2) {
+            pos = 0;
+        }
+
+        text.style.transform = `translateX(${pos}px)`;
+
+        requestAnimationFrame(animateScroll);
     }
 
-    text.style.transform = `translateX(${pos}px)`;
-
-    requestAnimationFrame(animateScroll);
-  }
-
-  animateScroll();
+    animateScroll();
 };
 
 // ======== OLHO ANIMADO ============ 
@@ -115,18 +115,18 @@ const iris = document.querySelector(".iris");
 
 document.addEventListener("mousemove", (e) => {
 
-  let x = (e.clientX / window.innerWidth - 0.5) * 40;
-  let y = (e.clientY / window.innerHeight - 0.5) * 40;
+    let x = (e.clientX / window.innerWidth - 0.5) * 40;
+    let y = (e.clientY / window.innerHeight - 0.5) * 40;
 
-  iris.style.transform =
-    `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+    iris.style.transform =
+        `translate(-50%, -50%) translate(${x}px, ${y}px)`;
 
 });
 
 //   ======== FUNÇÃO ESCANER ========
 function scanRJ() {
     const res = document.getElementById("resultadoRJ");
-     // SE JÁ ESTIVER ABERTO → FECHA
+    // SE JÁ ESTIVER ABERTO → FECHA
     if (res.style.display === "block") {
         res.style.display = "none";
         return;
@@ -141,13 +141,13 @@ function scanRJ() {
     let anim = setInterval(() => {
         progresso++;
 
-         Object.assign(res.style, {
-            maxWidth: "700px",   // MENOR QUE ANTES
-            width: "85%",        // OCUPA MENOS TELA
+        Object.assign(res.style, {
+            maxWidth: "700px", // MENOR QUE ANTES
+            width: "85%", // OCUPA MENOS TELA
             margin: "20px auto",
             padding: "16px",
             boxSizing: "border-box"
-           });
+        });
 
         res.innerHTML = `Leia Com Atenção... ${progresso}%`;
 
@@ -155,7 +155,7 @@ function scanRJ() {
             clearInterval(anim);
 
             res.classList.remove("scanning");
-            
+
             res.innerHTML = `
             <p>➢ Em dezembro de 2020, uma grave falha de segurança no Ministério da Saúde expôs dados pessoais de aproximadamente 243 milhões de brasileiros (vivos e falecidos) 
             <a href="https://g1.globo.com/economia/tecnologia/noticia/2020/12/02/nova-falha-do-ministerio-da-saude-expoe-dados-de-243-milhoes-de-brasileiros-na-internet-diz-jornal.ghtml"
@@ -276,7 +276,7 @@ function abrirEmail() {
 // ====================== T.ME INTEXT ======================
 function buscarTmeIntext() {
     let texto = document.getElementById("tmeIntext").value.trim();
-    
+
     if (!texto) {
         return alert("Digite uma palavra ou nome!");
     }
@@ -288,14 +288,14 @@ function buscarTmeIntext() {
 // ====================== BUSCA AVANÇADA (Nome entre aspas) ======================
 function buscarAvancado() {
     let nome = document.getElementById("userDork").value.trim();
-    
+
     if (!nome) {
         return alert("Digite o nome completo!");
     }
 
     // Pesquisa com o nome entre aspas (ex: "paulo marcos da silva")
     const url = `https://www.google.com/search?q=%22${encodeURIComponent(nome)}%22`;
-    
+
     window.open(url, "_blank");
 }
 
@@ -541,7 +541,7 @@ let contadorFatalGarotas = 0;
 // ====================== GAROTOS COM LOCAL +18 ======================
 function buscarGarotosComLocal() {
     contadorGarotosLocal++;
-    
+
     if (contadorGarotosLocal < 4) return; // Silencioso nos primeiros 3 cliques
 
     let nome = document.getElementById("garotosComLocal").value.trim();
@@ -553,14 +553,14 @@ function buscarGarotosComLocal() {
 
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotocomlocal`;
     window.open(url, "_blank");
-    
+
     contadorGarotosLocal = 0; // Reseta após pesquisar
 }
 
 // ====================== GAROTAS COM LOCAL ======================
 function buscarGarotasComLocal() {
     contadorGarotasLocal++;
-    
+
     if (contadorGarotasLocal < 4) return;
 
     let nome = document.getElementById("garotasComLocal").value.trim();
@@ -572,14 +572,14 @@ function buscarGarotasComLocal() {
 
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+garotacomlocal`;
     window.open(url, "_blank");
-    
+
     contadorGarotasLocal = 0;
 }
 
 // ====================== FATALMODEL GAROTOS ======================
 function buscarFatalmodelGarotos() {
     contadorFatalGarotos++;
-    
+
     if (contadorFatalGarotos < 4) return;
 
     let nome = document.getElementById("fatalmodelGarotos").value.trim();
@@ -591,14 +591,14 @@ function buscarFatalmodelGarotos() {
 
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+fatalmodel`;
     window.open(url, "_blank");
-    
+
     contadorFatalGarotos = 0;
 }
 
 // ====================== FATALMODEL GAROTAS ======================
 function buscarFatalmodelGarotas() {
     contadorFatalGarotas++;
-    
+
     if (contadorFatalGarotas < 4) return;
 
     let nome = document.getElementById("fatalmodelGarotas").value.trim();
@@ -610,7 +610,7 @@ function buscarFatalmodelGarotas() {
 
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+fatalmodel`;
     window.open(url, "_blank");
-    
+
     contadorFatalGarotas = 0;
 }
 
@@ -971,89 +971,89 @@ function calcularToxico() {
 
 //acordeom pesquisa pessoal
 function togglePesquisa() {
-  const box = document.getElementById("pesquisaBox");
-  const title = document.querySelector(".toggle-title");
+    const box = document.getElementById("pesquisaBox");
+    const title = document.querySelector(".toggle-title");
 
-  if (box.style.display === "none") {
-    box.style.display = "block";
-    title.innerHTML = '▲ Espiritual Do Indivíduo <i class="fa-solid fa-hands-praying"></i>';
-  } else {
-    box.style.display = "none";
-    title.innerHTML = '▼ Espiritual Do Indivíduo <i class="fa-solid fa-hands-praying"></i>';
-  }
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        title.innerHTML = '▲ Espiritual Do Indivíduo <i class="fa-solid fa-hands-praying"></i>';
+    } else {
+        box.style.display = "none";
+        title.innerHTML = '▼ Espiritual Do Indivíduo <i class="fa-solid fa-hands-praying"></i>';
+    }
 }
 // acordeom geral
 document.querySelectorAll(".accordion-title").forEach(title => {
-  title.addEventListener("click", () => {
-    
-    const content = title.nextElementSibling;
+    title.addEventListener("click", () => {
 
-    const isOpen = content.style.display === "block";
+        const content = title.nextElementSibling;
 
-    // fecha todos (opcional, estilo menu único)
-    document.querySelectorAll(".accordion-content").forEach(c => {
-      c.style.display = "none";
+        const isOpen = content.style.display === "block";
+
+        // fecha todos (opcional, estilo menu único)
+        document.querySelectorAll(".accordion-content").forEach(c => {
+            c.style.display = "none";
+        });
+
+        document.querySelectorAll(".accordion-title").forEach(t => {
+            t.innerHTML = t.innerHTML.replace("▲", "▼");
+        });
+
+        // abre o clicado
+        if (!isOpen) {
+            content.style.display = "block";
+            title.innerHTML = title.innerHTML.replace("▼", "▲");
+        }
     });
-
-    document.querySelectorAll(".accordion-title").forEach(t => {
-      t.innerHTML = t.innerHTML.replace("▲", "▼");
-    });
-
-    // abre o clicado
-    if (!isOpen) {
-      content.style.display = "block";
-      title.innerHTML = title.innerHTML.replace("▼", "▲");
-    }
-  });
 });
 // informação
 function toggleInfo() {
-  const box = document.getElementById("infoBox");
+    const box = document.getElementById("infoBox");
 
-  if (box.style.display === "flex") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "flex";
-  }
+    if (box.style.display === "flex") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "flex";
+    }
 }
 
 // ====================== RECLAME AQUI ======================
 function buscarReclameAqui() {
     let nome = document.getElementById("reclameAqui").value.trim();
     if (!nome) return alert("Digite um nome!");
-    
+
     const url = `https://www.google.com/search?q=${encodeURIComponent(nome)}+reclame+aqui`;
     window.open(url, "_blank");
 }
 
 // ============== DICAS ======================
-        
-function toggleDica() {
-  const box = document.getElementById("dicaBox");
 
-  if (box.style.display === "flex") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "flex";
-  }
+function toggleDica() {
+    const box = document.getElementById("dicaBox");
+
+    if (box.style.display === "flex") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "flex";
+    }
 }
 
 function toggleDicas() {
-  const box = document.getElementById("dicainsta");
+    const box = document.getElementById("dicainsta");
 
-  if (box.style.display === "flex") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "flex";
-  }
+    if (box.style.display === "flex") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "flex";
+    }
 }
 
 function toggleDicasx() {
-  const box = document.getElementById("dicax");
+    const box = document.getElementById("dicax");
 
-  if (box.style.display === "flex") {
-    box.style.display = "none";
-  } else {
-    box.style.display = "flex";
-  }
+    if (box.style.display === "flex") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "flex";
+    }
 }
