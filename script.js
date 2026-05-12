@@ -976,10 +976,10 @@ function togglePesquisa() {
 
   if (box.style.display === "none") {
     box.style.display = "block";
-    title.innerHTML = "▲ Espiritual Do Indivíduo ";
+    title.innerHTML = "▲ Espiritual Do Indivíduo <i class="fa-solid fa-hands-praying"></i>";
   } else {
     box.style.display = "none";
-    title.innerHTML = "▼ Espiritual Do Indivíduo ";
+    title.innerHTML = "▼ Espiritual Do Indivíduo <i class="fa-solid fa-hands-praying"></i>";
   }
 }
 // acordeom geral
