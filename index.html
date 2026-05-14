@@ -692,60 +692,100 @@ eventos privados • convites • localização
     </a>
   </div>
 
-  <div>
-    <button class="btn-creep" onclick="toggleDica()">
-      Interesses Cabeludos Facebook
-    </button>
-  </div>
+   <!-- ================= DICA FACEBOOK ================= -->
 
-<!-- ===== CAIXA DE DICA ===== -->
+<div>
+  <button class="btn-creep" onclick="toggleDica('dicaBox')">
+    Interesses Cabeludos Facebook
+  </button>
+</div>
+
 <div id="dicaBox" class="dica-box">
   <div class="dica-content">
     <p>
-      Dica: Acesse o Facebook da pessoa pela versão de computador, vá até a aba "Curtidas".
-      se estiver pública, você podera encontrar informações reveladoras sobre interesses,
+      Dica: Acesse o Facebook da pessoa pela versão de computador,
+      vá até a aba "Curtidas". Se estiver pública, você poderá
+      encontrar informações reveladoras sobre interesses,
       páginas seguidas e possíveis conexões.
     </p>
-    <button onclick="toggleDica()">Fechar</button>
+
+    <button onclick="toggleDica('dicaBox')">
+      Fechar
+    </button>
   </div>
 </div>
 
+<!-- ================= DICA INSTAGRAM ================= -->
+
 <div>
-    <button class="btn-creep" onclick="toggleDicas()">
-      ABC do Instagram 
-    </button>
+  <button class="btn-creep" onclick="toggleDica('dicainsta')">
+    ABC do Instagram
+  </button>
 </div>
 
-<!-- ===== CAIXA DE DICA ===== -->
 <div id="dicainsta" class="dica-box">
   <div class="dica-content">
     <p>
-      Dica: Se esta procurando uma pessoa especifica nos seguidores, va na barra de pesquisa e digite a 
-      primeira letra do nome, o instagram vai retonar pessoas com aquela inicial, na barra de pesuisas geral também 
-      fica salva as pessoas buscadas com aquela letra.
+      Dica: Se está procurando uma pessoa específica nos seguidores,
+      vá na barra de pesquisa e digite a primeira letra do nome.
+      O Instagram pode retornar pessoas com aquela inicial.
+      Na barra de pesquisa geral também ficam salvas pessoas
+      buscadas anteriormente com aquela letra.
     </p>
-    <button onclick="toggleDicas()">Fechar</button>
+
+    <button onclick="toggleDica('dicainsta')">
+      Fechar
+    </button>
   </div>
 </div>
 
+<!-- ================= DICA TWITTER/X ================= -->
+
 <div>
-    <button class="btn-creep" onclick="toggleDicasx()">
-      Seu passadoXtwitter te condena  
-    </button>
+  <button class="btn-creep" onclick="toggleDica('dicax')">
+    Seu passadoXtwitter te condena
+  </button>
 </div>
 
-<!-- ===== CAIXA DE DICA ===== -->
 <div id="dicax" class="dica-box">
   <div class="dica-content">
     <p>
-      Para ver posts e stories apagados do Twitter tenha em mãos o usuário va na aba > buscadores 
-      universais, > Posts apagados X > cole o user, vai retornar tudo que a maquina do tempo
-      salvou sobre aquele perfil ( ! posts +18 podem aparecer esteja ciente dessa pesquisa ! )
+      Para ver posts e stories apagados do Twitter/X,
+      tenha em mãos o usuário. Vá na aba:
+      Buscadores Universais → Posts apagados X →
+      cole o user. Pode retornar conteúdos salvos
+      pela Wayback Machine sobre aquele perfil.
     </p>
-    <button onclick="toggleDicasx()">Fechar</button>
+
+    <button onclick="toggleDica('dicax')">
+      Fechar
+    </button>
   </div>
 </div>
-   
+
+<!-- ================= DICA PIX ================= -->
+
+<div>
+  <button class="btn-creep" onclick="toggleDica('dicaPix')">
+    Nome todo por chaves Pix
+  </button>
+</div>
+
+<div id="dicaPix" class="dica-box">
+  <div class="dica-content">
+    <p>
+      Dica: Algumas chaves Pix como telefone,
+      CPF ou e-mail podem revelar o nome completo
+      cadastrado ao iniciar uma transferência.
+      Isso pode ajudar na confirmação de identidade.
+    </p>
+
+    <button onclick="toggleDica('dicaPix')">
+      Fechar
+    </button>
+  </div>
+</div>
+  
 </div>
 <br>
 <footer class="footer-fixed">
