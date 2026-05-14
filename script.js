@@ -1028,8 +1028,8 @@ function buscarReclameAqui() {
 
 // ============== DICAS ======================
 
-function toggleDica() {
-    const box = document.getElementById("dicaBox");
+function toggleDica(id) {
+    const box = document.getElementById(id);
 
     if (box.style.display === "flex") {
         box.style.display = "none";
@@ -1038,22 +1038,3 @@ function toggleDica() {
     }
 }
 
-function toggleDicas() {
-    const box = document.getElementById("dicainsta");
-
-    if (box.style.display === "flex") {
-        box.style.display = "none";
-    } else {
-        box.style.display = "flex";
-    }
-}
-
-function toggleDicasx() {
-    const box = document.getElementById("dicax");
-
-    if (box.style.display === "flex") {
-        box.style.display = "none";
-    } else {
-        box.style.display = "flex";
-    }
-}
