@@ -667,126 +667,116 @@ eventos privados • convites • localização
 
 </div>
    
-   <!-- ===== SEÇÃO CREEP PASTA ===== -->
-<h1 class="accordion-title creep-title">
-   ▼ Lupa Do Investigador <i class="fa-solid fa-search"></i>
-</h1>
+<!-- ================= BOTÃO MENU ================= -->
 
-<div class="accordion-content">
+<button class="menu-toggle" onclick="toggleMenu()">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
 
-  <div class="input-wrapper">
-  <input type="text" id="reclameAqui" placeholder="Nome Reclame Aqui"> 
-  <button class="enter-btn" onclick="buscarReclameAqui()"
-      style="border: none;"> ☢ </button>
-  </div>
-   
-  <div>
-    <a class="btn-creep" href="https://github.com/kaifcodec/user-scanner" target="_blank">
-      user-scanner -linux
-    </a>
-  </div>
+<!-- ================= MENU LATERAL ================= -->
 
-  <div>
-    <a class="btn-creep" href="https://whatsmyname.app/" target="_blank">
-      What's My Name - web
-    </a>
+<div id="menuLupa" class="menu-lupa">
+
+  <!-- TOPO -->
+  <div class="menu-header">
+    <h2>Lupa do Investigador</h2>
+
+    <button class="close-menu" onclick="toggleMenu()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
   </div>
 
-   <!-- ================= DICA FACEBOOK ================= -->
+  <!-- DICAS -->
 
-<div>
-  <button class="btn-creep" onclick="toggleDica('dicaBox')">
+  <button class="menu-btn" onclick="toggleDica('dicaBox')">
     Interesses Cabeludos Facebook
   </button>
+
+  <button class="menu-btn" onclick="toggleDica('dicainsta')">
+    ABC do Instagram
+  </button>
+
+  <button class="menu-btn" onclick="toggleDica('dicax')">
+    Seu passadoXtwitter te condena
+  </button>
+
+  <button class="menu-btn" onclick="toggleDica('dicaPix')">
+    Nome todo por chaves Pix
+  </button>
+
 </div>
+
+<!-- ================= OVERLAY ESCURO ================= -->
+
+<div id="overlayMenu" class="overlay-menu" onclick="toggleMenu()"></div>
+
+<!-- ================================================= -->
+<!-- =================== DICAS ======================= -->
+<!-- ================================================= -->
 
 <div id="dicaBox" class="dica-box">
   <div class="dica-content">
+
     <p>
       Dica: Acesse o Facebook da pessoa pela versão de computador,
       vá até a aba "Curtidas". Se estiver pública, você poderá
-      encontrar informações reveladoras sobre interesses,
-      páginas seguidas e possíveis conexões.
+      encontrar interesses, páginas seguidas e conexões.
     </p>
 
     <button onclick="toggleDica('dicaBox')">
       Fechar
     </button>
+
   </div>
-</div>
-
-<!-- ================= DICA INSTAGRAM ================= -->
-
-<div>
-  <button class="btn-creep" onclick="toggleDica('dicainsta')">
-    ABC do Instagram
-  </button>
 </div>
 
 <div id="dicainsta" class="dica-box">
   <div class="dica-content">
+
     <p>
-      Dica: Se está procurando uma pessoa específica nos seguidores,
-      vá na barra de pesquisa e digite a primeira letra do nome.
-      O Instagram pode retornar pessoas com aquela inicial.
-      Na barra de pesquisa geral também ficam salvas pessoas
-      buscadas anteriormente com aquela letra.
+      Dica: Digite a primeira letra do nome na busca
+      de seguidores do Instagram para encontrar pessoas
+      relacionadas àquela inicial.
     </p>
 
     <button onclick="toggleDica('dicainsta')">
       Fechar
     </button>
+
   </div>
-</div>
-
-<!-- ================= DICA TWITTER/X ================= -->
-
-<div>
-  <button class="btn-creep" onclick="toggleDica('dicax')">
-    Seu passadoXtwitter te condena
-  </button>
 </div>
 
 <div id="dicax" class="dica-box">
   <div class="dica-content">
+
     <p>
-      Para ver posts e stories apagados do Twitter/X,
-      tenha em mãos o usuário. Vá na aba:
-      Buscadores Universais → Posts apagados X →
-      cole o user. Pode retornar conteúdos salvos
-      pela Wayback Machine sobre aquele perfil.
+      Para encontrar posts antigos do X/Twitter,
+      utilize serviços de arquivamento e buscas históricas.
     </p>
 
     <button onclick="toggleDica('dicax')">
       Fechar
     </button>
+
   </div>
-</div>
-
-<!-- ================= DICA PIX ================= -->
-
-<div>
-  <button class="btn-creep" onclick="toggleDica('dicaPix')">
-    Nome todo por chaves Pix
-  </button>
 </div>
 
 <div id="dicaPix" class="dica-box">
   <div class="dica-content">
+
     <p>
-      Dica: Algumas chaves Pix como telefone,
-      CPF ou e-mail podem revelar o nome completo
-      cadastrado ao iniciar uma transferência.
-      Isso pode ajudar na confirmação de identidade.
+      Algumas chaves Pix podem revelar o nome cadastrado
+      durante uma simulação de transferência.
     </p>
 
     <button onclick="toggleDica('dicaPix')">
       Fechar
     </button>
+
   </div>
 </div>
-  
-</div>
+
+   
 <br>
 <footer class="footer-fixed">
   <div class="footer-content">
