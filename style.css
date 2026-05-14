@@ -1316,3 +1316,101 @@ body.locked{
   text-shadow:0 0 5px #00ff00;
   opacity:0.8;
 }
+
+/* ================= BOTÃO DA LUPA ================= */
+
+.menu-toggle{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:12px;
+    background:#050505;
+    color:#00ff88;
+    font-size:20px;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 0 15px rgba(0,255,120,0.3);
+}
+
+/* ================= MENU LATERAL ================= */
+
+.menu-lupa{
+    position:fixed;
+    top:0;
+    left:-320px;
+    width:300px;
+    height:100%;
+    background:#050505;
+    border-right:2px solid #00ff88;
+    padding:20px;
+    transition:0.3s;
+    z-index:99999;
+    overflow-y:auto;
+}
+
+/* MENU ABERTO */
+
+.menu-lupa.active{
+    left:0;
+}
+
+/* ================= HEADER ================= */
+
+.menu-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.menu-header h2{
+    color:#00ff88;
+    font-size:22px;
+}
+
+/* ================= FECHAR ================= */
+
+.close-menu{
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* ================= BOTÕES ================= */
+
+.menu-btn{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:10px;
+    background:#0d0d0d;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
+    border:1px solid #1f1f1f;
+}
+
+.menu-btn:hover{
+    background:#111;
+    border-color:#00ff88;
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay-menu{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    z-index:9990;
+}
+
+.overlay-menu.active{
+    display:block;
+}
