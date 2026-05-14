@@ -1026,14 +1026,26 @@ function buscarReclameAqui() {
     window.open(url, "_blank");
 }
 
-// ============== DICAS ======================
+// ================= MENU =================
 
-function toggleDica(id) {
+function toggleMenu(){
+
+    const menu = document.getElementById("menuLupa");
+    const overlay = document.getElementById("overlayMenu");
+
+    menu.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+
+// ================= DICAS =================
+
+function toggleDica(id){
+
     const box = document.getElementById(id);
 
-    if (box.style.display === "flex") {
+    if(box.style.display === "flex"){
         box.style.display = "none";
-    } else {
+    }else{
         box.style.display = "flex";
     }
 }
