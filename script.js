@@ -649,10 +649,10 @@ function checkPornhub() {
         return;
     }
 
-    const url = `https://www.pornhub.com/account/checkemail?email=${encodeURIComponent(email)}`;
+    // Pornhub mudou o endpoint. Vamos tentar o mais atual:
+    const url = `https://www.pornhub.com/signup?email=${encodeURIComponent(email)}`;
     window.open(url, '_blank');
 }
-
 
 // ============== BUSCA FACEBOOK =====================
 function buscarFacebook() {
