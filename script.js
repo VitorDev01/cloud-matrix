@@ -654,6 +654,28 @@ function checkPornhub() {
     window.open(url, '_blank');
 }
 
+// ====================== FATAL MODEL ======================
+function abrirFatalModel() {
+    const texto = document.getElementById('userFatalModel').value.trim().toLowerCase();
+    
+    if (texto.includes("fatalmodel") || texto.includes("fatal")) {
+        window.open("https://fatalmodel.com/app/consumer/register/", '_blank');
+    } else {
+        alert("comando errado!");
+    }
+}
+
+// ====================== GAROTOS COM LOCAL ======================
+function abrirGarotoComLocal() {
+    const texto = document.getElementById('userGarotoLocal').value.trim().toLowerCase();
+    
+    if (texto.includes("garotocomlocal") || texto.includes("garoto") || texto.includes("gcl")) {
+        window.open("https://garotocomlocal.com.br/wp-login.php?action=lostpassword", '_blank');
+    } else {
+        alert("comando errado!");
+    }
+}
+
 // ============== BUSCA FACEBOOK =====================
 function buscarFacebook() {
     const input = document.getElementById("userFacebook");
