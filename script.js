@@ -619,7 +619,7 @@ function checkXVideos() {
     const email = document.getElementById('userXVideos').value.trim();
     
     if (!email || !email.includes('@')) {
-        alert("❌ Digite um e-mail válido!");
+        alert("Digite um e-mail válido!");
         return;
     }
 
@@ -632,7 +632,7 @@ function checkXNXX() {
     const email = document.getElementById('userXNXX').value.trim();
     
     if (!email || !email.includes('@')) {
-        alert("❌ Digite um e-mail válido!");
+        alert("Digite um e-mail válido!");
         return;
     }
 
@@ -645,11 +645,11 @@ function checkPornhub() {
     const email = document.getElementById('userPornhub').value.trim();
     
     if (!email || !email.includes('@')) {
-        alert("❌ Digite um e-mail válido!");
+        alert("Digite um e-mail válido!");
         return;
     }
 
-    // Pornhub mudou o endpoint. Vamos tentar o mais atual:
+    // Pornhub mudou o endpoint, então teste o gamil no input do próprio site:
     const url = `https://www.pornhub.com/signup?email=${encodeURIComponent(email)}`;
     window.open(url, '_blank');
 }
