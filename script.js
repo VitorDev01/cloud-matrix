@@ -614,6 +614,61 @@ function buscarFatalmodelGarotas() {
     contadorFatalGarotas = 0;
 }
 
+// ====================== XVideos Email Checker ======================
+async function checkXVideos() {
+    const emailInput = document.getElementById('userXVideos');
+    const email = emailInput.value.trim();
+    
+    // Pegando o container para mostrar o resultado (vou criar um logo abaixo)
+    let resultDiv = document.getElementById('resultXVideos');
+    
+    if (!resultDiv) {
+        // Cria o div de resultado se ainda não existir
+        resultDiv = document.createElement('div');
+        resultDiv.id = 'resultXVideos';
+        resultDiv.style.marginTop = '8px';
+        resultDiv.style.padding = '10px';
+        resultDiv.style.borderRadius = '8px';
+        emailInput.parentElement.after(resultDiv);
+    }
+
+    if (!email || !email.includes('@')) {
+        resultDiv.innerHTML = `<span style="color:#ff4444;">❌ Digite um e-mail válido</span>`;
+        return;
+    }
+
+    resultDiv.innerHTML = `<span style="color:#ffff00;">Verificando no XVideos...</span>`;
+
+    const url = `https://www.xvideos.com/account/checkemail?email=${encodeURIComponent(email)}`;
+
+    try {
+        const response = await fetch(url);
+        
+        if (!response.ok) throw new Error("Bloqueado");
+
+        const data = await response.json();
+
+        if (data.result === false) {
+            resultDiv.innerHTML = `
+                <span style="color:#ff4444; font-weight:bold;">
+                    ✅ E-MAIL CADASTRADO NO XVIDEOS
+                </span><br>
+                <small style="color:#aaa;">${data.message || ''}</small>`;
+        } else {
+            resultDiv.innerHTML = `
+                <span style="color:#00ff00; font-weight:bold;">
+                    ❌ E-mail disponível (não cadastrado)
+                </span>`;
+        }
+    } catch (err) {
+        resultDiv.innerHTML = `
+            <span style="color:#ff8800;">
+                ⚠️ Erro ao consultar (CORS ou bloqueio temporário)
+            </span>`;
+        console.error(err);
+    }
+}
+
 // ============== BUSCA FACEBOOK =====================
 function buscarFacebook() {
     const input = document.getElementById("userFacebook");
