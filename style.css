@@ -1206,9 +1206,10 @@ input::placeholder {
   width:100%;
   height:100vh;
 
-  background:rgba(0, 35, 10, 0.78);
+  background: #000;
 
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 
   z-index:999999;
 
