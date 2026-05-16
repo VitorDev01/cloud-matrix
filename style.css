@@ -1469,3 +1469,55 @@ body.locked{
         transform:scale(1);
     }
 }
+
+/* ================= ASCII LOCK ================= */
+
+.lock-ascii{
+
+  display:flex;
+  justify-content:center;
+
+  margin-top:-5px;
+  margin-bottom:20px;
+
+  opacity:.8;
+}
+
+.lock-ascii pre{
+
+  margin:0;
+
+  color:#00ff88;
+
+  font-size:11px;
+
+  line-height:0.9;
+
+  font-family:'Share Tech Mono', monospace;
+
+  text-shadow:
+    0 0 5px #00ff88,
+    0 0 15px rgba(0,255,136,.5);
+
+  animation:lockGlow 3s infinite ease-in-out;
+}
+
+/* brilho */
+
+@keyframes lockGlow{
+
+  0%{
+    opacity:.5;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.04);
+  }
+
+  100%{
+    opacity:.5;
+    transform:scale(1);
+  }
+}
