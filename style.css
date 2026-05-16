@@ -1414,3 +1414,58 @@ body.locked{
 .overlay-menu.active{
     display:block;
 }
+
+/* ================= ASCII MENU ================= */
+
+.menu-ascii{
+    margin-top:25px;
+    padding-top:20px;
+
+    border-top:1px solid rgba(0,255,136,0.2);
+
+    display:flex;
+    justify-content:center;
+
+    opacity:0.75;
+}
+
+/* ASCII */
+
+.menu-ascii pre{
+    margin:0;
+
+    color:#00ff88;
+
+    font-size:9px;
+    line-height:1.1;
+
+    font-family:'Share Tech Mono', monospace;
+
+    text-align:left;
+
+    text-shadow:
+      0 0 5px #00ff88,
+      0 0 10px rgba(0,255,136,0.4);
+
+    animation:asciiPulse 3s infinite ease-in-out;
+}
+
+/* brilho suave */
+
+@keyframes asciiPulse{
+
+    0%{
+        opacity:0.45;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.02);
+    }
+
+    100%{
+        opacity:0.45;
+        transform:scale(1);
+    }
+}
