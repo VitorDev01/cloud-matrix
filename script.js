@@ -341,25 +341,51 @@ input.addEventListener("keypress", function(event) {
 btn.addEventListener("click", abrirPerfil);
 
 // === perfil em anonimato ======
-const picnobInput = document.getElementById('picnobInput');
-const picnobBtn = document.getElementById('picnobBtn');
 
-function abrirNoPicnob() {
-    let user = picnobInput.value.trim();
-    if (!user) {
-        alert('Digite o nome de usuário do Instagram');
-        picnobInput.focus();
+<script>
+// ==================== Picnob ====================
+document.getElementById('picnobBtn').addEventListener('click', () => abrirViewer('picnob'));
+document.getElementById('picnobInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') abrirViewer('picnob'); });
+
+// ==================== Imginn ====================
+document.getElementById('imginnBtn').addEventListener('click', () => abrirViewer('imginn'));
+document.getElementById('imginnInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') abrirViewer('imginn'); });
+
+// ==================== Dumpor ====================
+document.getElementById('dumporBtn').addEventListener('click', () => abrirViewer('dumpor'));
+document.getElementById('dumporInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') abrirViewer('dumpor'); });
+
+// ==================== Inflact ====================
+document.getElementById('inflactBtn').addEventListener('click', () => abrirViewer('inflact'));
+document.getElementById('inflactInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') abrirViewer('inflact'); });
+
+function abrirViewer(tipo) {
+    let inputId = tipo + 'Input';
+    let username = document.getElementById(inputId).value.trim();
+    
+    if (username === '') {
+        alert('Digite um usuário do Instagram!');
         return;
     }
-    
-    user = user.replace('@', '').trim();
-    window.open(`https://www.picnob.com/profile/${user}/`, '_blank');
-}
 
-picnobBtn.addEventListener('click', abrirNoPicnob);
-picnobInput.addEventListener('keypress', e => {
-    if (e.key === 'Enter') abrirNoPicnob();
-});
+    username = username.replace('@', '').trim();
+
+    let url = '';
+
+    if (tipo === 'picnob') {
+        url = `https://www.picnob.com/profile/${username}/`;
+    } else if (tipo === 'imginn') {
+        url = `https://imginn.com/${username}/`;
+    } else if (tipo === 'dumpor') {
+        url = `https://dumpor.io/v/${username}`;
+    } else if (tipo === 'inflact') {
+        url = `https://inflact.com/instagram-viewer/profile/?username=${username}`;
+    }
+
+    if (url) {
+        window.open(url, '_blank');
+    }
+}
 
 // === marcados instagram ======
 const searchInput = document.getElementById("searchInput");
