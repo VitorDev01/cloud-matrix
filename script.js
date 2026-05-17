@@ -340,7 +340,28 @@ input.addEventListener("keypress", function(event) {
 
 btn.addEventListener("click", abrirPerfil);
 
+// === perfil em anonimato ======
+const picnobInput = document.getElementById('picnobInput');
+const picnobBtn = document.getElementById('picnobBtn');
 
+function abrirNoPicnob() {
+    let user = picnobInput.value.trim();
+    if (!user) {
+        alert('Digite o nome de usuário do Instagram');
+        picnobInput.focus();
+        return;
+    }
+    
+    user = user.replace('@', '').trim();
+    window.open(`https://www.picnob.com/profile/${user}/`, '_blank');
+}
+
+picnobBtn.addEventListener('click', abrirNoPicnob);
+picnobInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') abrirNoPicnob();
+});
+
+// === marcados instagram ======
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
