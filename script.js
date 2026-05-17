@@ -342,7 +342,6 @@ btn.addEventListener("click", abrirPerfil);
 
 // === perfil em anonimato ======
 
-<script>
 // ==================== Picnob ====================
 document.getElementById('picnobBtn').addEventListener('click', () => abrirViewer('picnob'));
 document.getElementById('picnobInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') abrirViewer('picnob'); });
