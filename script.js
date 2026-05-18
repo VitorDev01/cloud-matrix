@@ -110,6 +110,24 @@ window.onload = function() {
     animateScroll();
 };
 
+const texts = [
+  "[ 𝛂 עין אלוהים Ω ]",      // Hebraico
+  "[ 𝛂 Lord Eye Ω ]",         // Inglês
+  "[ 𝛂 Olho de Deus Ω ]",     // Português
+  "[ 𝛂 神の目 Ω ]",            // Japonês
+  "[ 𝛂 Глаз Бога Ω ]",        // Russo
+  "[ 𝛂 Occhio di Dio Ω ]"     // Italiano
+];
+
+let index = 0;
+
+const element = document.querySelector(".scan-text");
+
+setInterval(() => {
+  index = (index + 1) % texts.length;
+  element.textContent = texts[index];
+}, 3000);
+
 // ======== OLHO ANIMADO ============ 
 const iris = document.querySelector(".iris");
 
