@@ -628,6 +628,7 @@ opacity:1;
   font-family:'Share Tech Mono', monospace;
   height:45px;
   width:90%;
+  margin-top:8px;
   max-width:400px;
   margin:0 auto;   /* centraliza */
   display:flex;
@@ -669,6 +670,7 @@ opacity:1;
   font-family:'Share Tech Mono', monospace;
   height:45px;
   width:90%;
+  margin-top:8px;
   max-width:400px;
   margin:0 auto;   /* centraliza */
   display:flex;
