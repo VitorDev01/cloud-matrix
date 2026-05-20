@@ -774,7 +774,7 @@ function rodar() {
     let val = input.value;
 
     if (!val) {
-        res.innerHTML = "⚠️ Selecione uma data";
+        res.innerHTML = "⚠Selecione uma data";
         return;
     }
 
@@ -784,7 +784,7 @@ function rodar() {
     let anim = setInterval(() => {
         progresso++;
 
-        res.innerHTML = `🔍 Escaneando dados... ${progresso}%`;
+        res.innerHTML = `Escaneando dados... ${progresso}%`;
 
         if (progresso >= 100) {
             clearInterval(anim);
@@ -794,7 +794,7 @@ function rodar() {
             let nascimento = new Date(partes[0], partes[1] - 1, partes[2]);
 
             if (isNaN(nascimento)) {
-                res.innerHTML = "❌ Data inválida";
+                res.innerHTML = "Data inválida";
                 return;
             }
 
@@ -1175,4 +1175,3 @@ function toggleDica(id){
         box.style.display = "flex";
     }
 }
-
