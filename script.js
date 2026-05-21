@@ -1052,10 +1052,10 @@ function calcularBastardia() {
             if (atual >= porcentagem) {
                 clearInterval(intervalo);
 
-                res.innerHTML = `⚠️ ${porcentagem}% BASTARDIA`;
+                res.innerHTML = ` ${porcentagem}% BASTARDIA`;
             } else {
                 atual++;
-                res.innerHTML = `⚠️ ${atual}%`;
+                res.innerHTML = ` ${atual}%`;
             }
         }, 20);
 
@@ -1175,3 +1175,79 @@ function toggleDica(id){
         box.style.display = "flex";
     }
 }
+
+// ==================== SINCRONIZAÇÃO AUTOMÁTICA ADULTOS ====================
+function syncAdultUsernames() {
+    const inputs = document.querySelectorAll('.adult-username');
+    
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const value = this.value.trim();
+            inputs.forEach(otherInput => {
+                if (otherInput !== this) {
+                    otherInput.value = value;
+                }
+            });
+        });
+    });
+}
+
+// ==================== FUNÇÕES ADULT CHECKERS ====================
+function checkOnlyFans() {
+    const user = document.getElementById("userOnlyFans").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://onlyfans.com/${user}`, '_blank');
+}
+
+function checkXVideos() {
+    const user = document.getElementById("userXVideos").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://www.xvideos.com/channels/${user}`, '_blank');
+}
+
+function checkXHamster() {
+    const user = document.getElementById("userXHamster").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://xhamster.com/users/${user}`, '_blank');
+}
+
+function checkPornhub() {
+    const user = document.getElementById("userPornhub").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://www.pornhub.com/model/${user}`, '_blank');
+}
+
+function checkChaturbate() {
+    const user = document.getElementById("userChaturbate").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://chaturbate.com/${user}`, '_blank');
+}
+
+function checkStripchat() {
+    const user = document.getElementById("userStripchat").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://stripchat.com/${user}`, '_blank');
+}
+
+function checkFansly() {
+    const user = document.getElementById("userFansly").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://fansly.com/${user}`, '_blank');
+}
+
+function checkManyVids() {
+    const user = document.getElementById("userManyVids").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://www.manyvids.com/Profile/${user}`, '_blank');
+}
+
+function checkFatalModel() {
+    const user = document.getElementById("userFatalModel").value.trim();
+    if (!user) return alert("Digite um username");
+    window.open(`https://www.fatalmodel.com/${user}`, '_blank');
+}
+
+// Inicializa quando a página carregar
+document.addEventListener('DOMContentLoaded', () => {
+    syncAdultUsernames();
+});
