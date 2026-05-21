@@ -1202,7 +1202,8 @@ function checkOnlyFans() {
 function checkXVideos() {
     const user = document.getElementById("userXVideos").value.trim();
     if (!user) return alert("Digite um username");
-    window.open(`https://www.xvideos.com/channels/${user}`, '_blank');
+    // Nova URL mais confiável em 2026
+    window.open(`https://www.xvideos.com/profiles/${user}`, '_blank');
 }
 
 function checkXHamster() {
@@ -1214,37 +1215,8 @@ function checkXHamster() {
 function checkPornhub() {
     const user = document.getElementById("userPornhub").value.trim();
     if (!user) return alert("Digite um username");
+    // Pornhub prefere /model/ para a maioria dos perfis
     window.open(`https://www.pornhub.com/model/${user}`, '_blank');
-}
-
-function checkChaturbate() {
-    const user = document.getElementById("userChaturbate").value.trim();
-    if (!user) return alert("Digite um username");
-    window.open(`https://chaturbate.com/${user}`, '_blank');
-}
-
-function checkStripchat() {
-    const user = document.getElementById("userStripchat").value.trim();
-    if (!user) return alert("Digite um username");
-    window.open(`https://stripchat.com/${user}`, '_blank');
-}
-
-function checkFansly() {
-    const user = document.getElementById("userFansly").value.trim();
-    if (!user) return alert("Digite um username");
-    window.open(`https://fansly.com/${user}`, '_blank');
-}
-
-function checkManyVids() {
-    const user = document.getElementById("userManyVids").value.trim();
-    if (!user) return alert("Digite um username");
-    window.open(`https://www.manyvids.com/Profile/${user}`, '_blank');
-}
-
-function checkFatalModel() {
-    const user = document.getElementById("userFatalModel").value.trim();
-    if (!user) return alert("Digite um username");
-    window.open(`https://www.fatalmodel.com/${user}`, '_blank');
 }
 
 // Inicializa quando a página carregar
