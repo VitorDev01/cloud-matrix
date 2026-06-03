@@ -679,40 +679,41 @@ function buscarFatalmodelGarotas() {
 }
 
 // ====================== CHECK EMAIL SIMPLES ======================
-// ====================== CHECK EMAIL +18 (FORÇADO) ======================
+// ====================== CONVERSÃO AUTOMÁTICA @ → %40 ======================
+
+function convertAtToPercent(input) {
+    let value = input.value;
+    if (value.includes('@')) {
+        input.value = value.replace(/@/g, '%40');
+    }
+}
+
+// ====================== CHECK FUNCTIONS ======================
 
 function checkXVideos() {
     let email = document.getElementById('userXVideos').value.trim();
     
-    if (!email || !email.includes('@')) {
+    if (!email || !email.includes('%40')) {
         alert("❌ Digite um email válido!");
         return;
     }
     
-    // Força a conversão
-    const encodedEmail = email.replace('@', '%40');
-    const url = `https://www.xvideos.com/account/checkemail?email=${encodedEmail}`;
-    
-    console.log("🔗 URL gerada XVideos:", url); // Para você ver no console
-    
+    const url = `https://www.xvideos.com/account/checkemail?email=${email}`;
     window.open(url, '_blank');
 }
 
 function checkXNXX() {
     let email = document.getElementById('userXNXX').value.trim();
     
-    if (!email || !email.includes('@')) {
+    if (!email || !email.includes('%40')) {
         alert("❌ Digite um email válido!");
         return;
     }
     
-    const encodedEmail = email.replace('@', '%40');
-    const url = `https://www.xnxx.com/account/checkemail?email=${encodedEmail}`;
-    
-    console.log("🔗 URL gerada XNXX:", url);
-    
+    const url = `https://www.xnxx.com/account/checkemail?email=${email}`;
     window.open(url, '_blank');
 }
+
 // ====================== FATAL MODEL ======================
 function abrirFatalModel() {
     const texto = document.getElementById('userFatalModel').value.trim().toLowerCase();
