@@ -678,70 +678,35 @@ function buscarFatalmodelGarotas() {
     contadorFatalGarotas = 0;
 }
 
-// ====================== CHECK EMAIL +18 COM INTERPRETAÇÃO ======================
+// ====================== CHECK EMAIL SIMPLES ======================
 
-async function checkXVideos() {
-    const emailInput = document.getElementById('userXVideos');
-    const email = emailInput.value.trim();
-    const resultDiv = document.getElementById('resultadoEmail');
-
+function checkXVideos() {
+    let email = document.getElementById('userXVideos').value.trim();
+    
     if (!email || !email.includes('@')) {
-        resultDiv.innerHTML = `<span style="color:#ff4444;">❌ Digite um email válido!</span>`;
+        alert("❌ Digite um email válido!");
         return;
     }
-
-    resultDiv.innerHTML = `<span style="color:#00ff88;">🔍 Verificando no XVideos...</span>`;
-
-    try {
-        const encodedEmail = encodeURIComponent(email);
-        const url = `https://www.xvideos.com/account/checkemail?email=${encodedEmail}`;
-
-        // Usando CORS Proxy (necessário para ler a resposta)
-        const proxyUrl = `https://corsproxy.io/?` + encodeURIComponent(url);
-        const response = await fetch(proxyUrl);
-        const text = await response.text();
-
-        // Interpretação
-        if (text.includes('true') || text.includes('"exists":true')) {
-            resultDiv.innerHTML = `<span style="color:#ff4444;">❌ O Gmail <strong>JÁ ESTÁ CADASTRADO</strong> (indisponível)</span>`;
-        } else {
-            resultDiv.innerHTML = `<span style="color:#00ff88;">✅ O Gmail <strong>NÃO ESTÁ CADASTRADO</strong> (disponível)</span>`;
-        }
-    } catch (e) {
-        resultDiv.innerHTML = `<span style="color:#ffaa00;">⚠️ Não foi possível verificar (abra o link manualmente)</span>`;
-        window.open(`https://www.xvideos.com/account/checkemail?email=${encodeURIComponent(email)}`, '_blank');
-    }
+    
+    // Força a conversão do @ para %40
+    const encodedEmail = encodeURIComponent(email);
+    const url = `https://www.xvideos.com/account/checkemail?email=${encodedEmail}`;
+    
+    window.open(url, '_blank');
 }
 
-async function checkXNXX() {
-    const emailInput = document.getElementById('userXNXX');
-    const email = emailInput.value.trim();
-    const resultDiv = document.getElementById('resultadoEmail');
-
+function checkXNXX() {
+    let email = document.getElementById('userXNXX').value.trim();
+    
     if (!email || !email.includes('@')) {
-        resultDiv.innerHTML = `<span style="color:#ff4444;">❌ Digite um email válido!</span>`;
+        alert("❌ Digite um email válido!");
         return;
     }
-
-    resultDiv.innerHTML = `<span style="color:#00ff88;">🔍 Verificando no XNXX...</span>`;
-
-    try {
-        const encodedEmail = encodeURIComponent(email);
-        const url = `https://www.xnxx.com/account/checkemail?email=${encodedEmail}`;
-
-        const proxyUrl = `https://corsproxy.io/?` + encodeURIComponent(url);
-        const response = await fetch(proxyUrl);
-        const text = await response.text();
-
-        if (text.includes('true') || text.includes('"exists":true')) {
-            resultDiv.innerHTML = `<span style="color:#ff4444;">❌ O Gmail <strong>JÁ ESTÁ CADASTRADO</strong> (indisponível)</span>`;
-        } else {
-            resultDiv.innerHTML = `<span style="color:#00ff88;">✅ O Gmail <strong>NÃO ESTÁ CADASTRADO</strong> (disponível)</span>`;
-        }
-    } catch (e) {
-        resultDiv.innerHTML = `<span style="color:#ffaa00;">⚠️ Não foi possível verificar (abra o link manualmente)</span>`;
-        window.open(`https://www.xnxx.com/account/checkemail?email=${encodeURIComponent(email)}`, '_blank');
-    }
+    
+    // Deixa como estava (sem forçar encode extra)
+    const url = `https://www.xnxx.com/account/checkemail?email=${encodeURIComponent(email)}`;
+    
+    window.open(url, '_blank');
 }
 
 // ====================== FATAL MODEL ======================
