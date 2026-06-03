@@ -678,28 +678,28 @@ function buscarFatalmodelGarotas() {
     contadorFatalGarotas = 0;
 }
 
-// ====================== XVideos ======================
+// ====================== CHECK EMAIL +18 (VERSÃO CORRETA) ======================
+
 function checkXVideos() {
     const email = document.getElementById('userXVideos').value.trim();
     
     if (!email || !email.includes('@')) {
-        alert("Digite um e-mail válido!");
+        alert("❌ Digite um email válido!");
         return;
     }
-
+    
     const url = `https://www.xvideos.com/account/checkemail?email=${encodeURIComponent(email)}`;
-    window.open(url, '_blank');   // Abre em nova aba
+    window.open(url, '_blank');
 }
 
-// ====================== XNXX ======================
 function checkXNXX() {
     const email = document.getElementById('userXNXX').value.trim();
     
     if (!email || !email.includes('@')) {
-        alert("Digite um e-mail válido!");
+        alert("❌ Digite um email válido!");
         return;
     }
-
+    
     const url = `https://www.xnxx.com/account/checkemail?email=${encodeURIComponent(email)}`;
     window.open(url, '_blank');
 }
