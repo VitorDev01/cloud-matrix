@@ -1203,10 +1203,17 @@ function checkOnlyFans() {
 }
 
 function checkXVideos() {
-    const user = document.getElementById("userXVideos").value.trim();
-    if (!user) return alert("Digite um username");
-    // Nova URL mais confiável em 2026
-    window.open(`https://www.xvideos.com/profiles/${user}`, '_blank');
+    let email = document.getElementById('userXVideos').value.trim();
+    
+    if (!email || !email.includes('@')) {
+        alert("Digite um email válido!");
+        return;
+    }
+    
+    const encodedEmail = encodeURIComponent(email);
+    const url = `https://www.xvideos.com/account/checkemail?email=${encodedEmail}`;
+    
+    window.open(url, '_blank');
 }
 
 function checkXHamster() {
