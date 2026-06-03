@@ -678,16 +678,7 @@ function buscarFatalmodelGarotas() {
     contadorFatalGarotas = 0;
 }
 
-// ====================== CONVERSÃO AUTOMÁTICA @ → %40 ======================
 
-function convertAtToPercent(input) {
-    let value = input.value;
-    if (value.includes('@')) {
-        input.value = value.replace(/@/g, '%40');
-    }
-}
-
-// ====================== CHECK FUNCTIONS ======================
 // ====================== CHECK EMAIL +18 (VERSÃO CORRETA) ======================
 
 function checkXVideos() {
