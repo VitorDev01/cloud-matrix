@@ -679,6 +679,7 @@ function buscarFatalmodelGarotas() {
 }
 
 // ====================== CHECK EMAIL SIMPLES ======================
+// ====================== CHECK EMAIL +18 (VERSÃO LIMPA) ======================
 
 function checkXVideos() {
     let email = document.getElementById('userXVideos').value.trim();
@@ -688,7 +689,7 @@ function checkXVideos() {
         return;
     }
     
-    // Força a conversão do @ para %40
+    // Converte o @ para %40 (importante para o XVideos funcionar)
     const encodedEmail = encodeURIComponent(email);
     const url = `https://www.xvideos.com/account/checkemail?email=${encodedEmail}`;
     
@@ -703,12 +704,11 @@ function checkXNXX() {
         return;
     }
     
-    // Deixa como estava (sem forçar encode extra)
-    const url = `https://www.xnxx.com/account/checkemail?email=${encodeURIComponent(email)}`;
+    const encodedEmail = encodeURIComponent(email);
+    const url = `https://www.xnxx.com/account/checkemail?email=${encodedEmail}`;
     
     window.open(url, '_blank');
 }
-
 // ====================== FATAL MODEL ======================
 function abrirFatalModel() {
     const texto = document.getElementById('userFatalModel').value.trim().toLowerCase();
