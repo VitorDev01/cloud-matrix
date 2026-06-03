@@ -704,20 +704,6 @@ function checkXNXX() {
     window.open(url, '_blank');
 }
 
-// ====================== Pornhub ======================
-function checkPornhub() {
-    const email = document.getElementById('userPornhub').value.trim();
-    
-    if (!email || !email.includes('@')) {
-        alert("Digite um e-mail válido!");
-        return;
-    }
-
-    // Pornhub mudou o endpoint, então teste o gamil no input do próprio site:
-    const url = `https://www.pornhub.com/signup?email=${encodeURIComponent(email)}`;
-    window.open(url, '_blank');
-}
-
 // ====================== FATAL MODEL ======================
 function abrirFatalModel() {
     const texto = document.getElementById('userFatalModel').value.trim().toLowerCase();
