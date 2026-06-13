@@ -680,6 +680,53 @@ function buscarFatalmodelGarotas() {
     contadorFatalGarotas = 0;
 }
 
+// ====================== FACEBOOK - ABRIR SEGUINDO ======================
+
+function abrirSeguindoFacebook() {
+    let input = document.getElementById('fbLinkInput').value.trim();
+    
+    if (!input) {
+        alert("❌ Cole um link do Facebook!");
+        return;
+    }
+
+    let userId = extrairFacebookID(input);
+
+    if (!userId) {
+        alert("❌ Não consegui identificar o ID do perfil.\nTente colar um link completo.");
+        return;
+    }
+
+    // Abre direto na aba "Seguindo"
+    const urlFinal = `https://www.facebook.com/profile.php?id=${userId}&sk=following`;
+    
+    console.log("🔗 Abrindo:", urlFinal);
+    window.open(urlFinal, '_blank');
+}
+
+// Função que extrai o ID de vários formatos de link do Facebook
+function extrairFacebookID(url) {
+    // Remove espaços e aspas
+    url = url.trim().replace(/["']/g, '');
+
+    // Caso 1: Link com /profile.php?id=XXXXX
+    let match = url.match(/profile\.php\?id=(\d+)/);
+    if (match) return match[1];
+
+    // Caso 2: Link com facebook.com/XXXXX (username)
+    match = url.match(/facebook\.com\/([a-zA-Z0-9._-]+)/);
+    if (match) {
+        const possibleId = match[1];
+        // Se for só números, provavelmente é ID
+        if (/^\d+$/.test(possibleId)) return possibleId;
+        // Se for username, podemos tentar, mas o Facebook redireciona melhor com ID
+    }
+
+    // Caso 3: Já é só o ID (números)
+    if (/^\d{5,}$/.test(url)) return url;
+
+    return null;
+}
 
 // ====================== CHECK EMAIL +18 (VERSÃO CORRETA) ======================
 
