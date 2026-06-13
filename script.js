@@ -681,6 +681,7 @@ function buscarFatalmodelGarotas() {
 }
 
 // ====================== FACEBOOK - ABRIR SEGUINDO ======================
+// ====================== FACEBOOK - VER SEGUINDO (FORÇADO DESKTOP) ======================
 
 function abrirSeguindoFacebook() {
     let input = document.getElementById('fbLinkInput').value.trim();
@@ -697,33 +698,30 @@ function abrirSeguindoFacebook() {
         return;
     }
 
-    // Abre direto na aba "Seguindo"
-    const urlFinal = `https://www.facebook.com/profile.php?id=${userId}&sk=following`;
-    
-    console.log("🔗 Abrindo:", urlFinal);
+    // Força versão desktop + evita abrir no app
+    const urlFinal = `https://www.facebook.com/profile.php?id=${userId}&sk=following&ref=external`;
+
+    console.log("🔗 Abrindo Facebook Seguindo:", urlFinal);
     window.open(urlFinal, '_blank');
 }
 
-// Função que extrai o ID de vários formatos de link do Facebook
+// Função que extrai o ID do Facebook
 function extrairFacebookID(url) {
-    // Remove espaços e aspas
-    url = url.trim().replace(/["']/g, '');
+    url = url.trim();
 
-    // Caso 1: Link com /profile.php?id=XXXXX
-    let match = url.match(/profile\.php\?id=(\d+)/);
+    // Link com profile.php?id=
+    let match = url.match(/profile\.php\?id=(\d+)/i);
     if (match) return match[1];
 
-    // Caso 2: Link com facebook.com/XXXXX (username)
-    match = url.match(/facebook\.com\/([a-zA-Z0-9._-]+)/);
+    // Link com facebook.com/username ou ID
+    match = url.match(/facebook\.com\/([a-zA-Z0-9._-]+)/i);
     if (match) {
-        const possibleId = match[1];
-        // Se for só números, provavelmente é ID
-        if (/^\d+$/.test(possibleId)) return possibleId;
-        // Se for username, podemos tentar, mas o Facebook redireciona melhor com ID
+        let possible = match[1];
+        if (/^\d+$/.test(possible)) return possible;
     }
 
-    // Caso 3: Já é só o ID (números)
-    if (/^\d{5,}$/.test(url)) return url;
+    // Só o ID puro (números)
+    if (/^\d{8,}$/.test(url)) return url;
 
     return null;
 }
