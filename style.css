@@ -15,6 +15,9 @@ body{
 
 }
 
+hr {
+  color:black; 
+}
 /* ===== TOPO FIXO ESTILO LETREIRO ===== */
 .top-bar {
   position: fixed;
